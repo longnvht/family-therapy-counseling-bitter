@@ -3,202 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toàn Bộ Sách: Lý Thuyết Và Thực Hành Trị Liệu Gia Đình | James Robert Bitter</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Chương 1: Giới Thiệu và Tổng Quan Về Trị Liệu Gia Đình | Theory and Practice of Family Therapy and Counseling</title>
+  <link rel="stylesheet" href="../style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-  <style>
-    .chapter-divider {
-      height: 3px;
-      background: linear-gradient(to right, transparent, var(--border-color), transparent);
-      margin: 4rem 0;
-      page-break-after: always;
-    }
-    .master-cover {
-      text-align: center;
-      padding: 5rem 1rem;
-      border-bottom: 3px double var(--border-color);
-      margin-bottom: 4rem;
-    }
-    .master-cover h1 {
-      font-size: 2.8rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-    }
-    .master-cover .author-line {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-    }
-  </style>
 </head>
 <body>
+  <!-- Top Toolbar -->
   <header class="top-toolbar">
     <div class="toolbar-left">
-      <a href="index.html" class="btn-tool">&#127968; Trang chủ</a>
-      <span class="book-badge">Bản Toàn Văn</span>
-      <span class="book-title-mini">Lý Thuyết Và Thực Hành Trị Liệu Gia Đình (Bản In)</span>
+      <button class="btn-tool" id="btn-toggle-sidebar" title="Đóng/Mở Mục lục">&#9776; Mục lục</button>
+      <a href="../index.html" class="btn-tool" title="Về trang chủ">&#127968; Trang chủ</a>
+      <span class="book-badge">Yalom & Leszcz (6th Ed.)</span>
+      <span class="book-title-mini">Chương 1: Giới Thiệu và Tổng Quan Về Trị Liệu Gia Đình</span>
     </div>
     <div class="toolbar-right">
-      <button class="btn-tool" id="btn-font-dec">A-</button>
-      <button class="btn-tool" id="btn-font-inc">A+</button>
-      <button class="btn-tool" id="btn-theme"><span>☀️ Sáng</span></button>
-      <button class="btn-tool" id="btn-print">&#128438; In / Xuất PDF</button>
+      <button class="btn-tool" id="btn-font-dec" title="Giảm cỡ chữ">A-</button>
+      <button class="btn-tool" id="btn-font-inc" title="Tăng cỡ chữ">A+</button>
+      <button class="btn-tool" id="btn-theme" title="Đổi giao diện sáng/tối"><span>☀️ Sáng</span></button>
+      <button class="btn-tool" id="btn-print" title="In hoặc lưu PDF">&#128438; In</button>
     </div>
   </header>
 
-  <div class="main-wrapper full-width">
-    <div class="content-article" style="max-width: 900px;">
-      <div class="master-cover">
-        <h1>LÝ THUYẾT VÀ THỰC HÀNH TRỊ LIỆU GIA ĐÌNH</h1>
-        <div style="font-size: 1.2rem; font-style: italic; color: var(--text-secondary); margin-bottom: 1rem;">
-          Theory and Practice of Family Therapy and Counseling (2009)
-        </div>
-        <div class="author-line">
-          <strong>Irvin D. Yalom, MD</strong> &bull; <strong>Molyn Leszcz, MD</strong>
-        </div>
-        <div style="color: var(--text-secondary); font-size: 0.95rem;">
-          Bản Dịch Tiếng Việt Học Thuật &bull; Định Dạng HTML E-Book Chuyên Biệt
-        </div>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-search">
+        <input type="text" id="toc-search-input" placeholder="Tìm kiếm chương...">
       </div>
-
-      <section class="book-chapter-section" id="00_loi_tua_va_loi_mo_dau">
-
-        <header class="book-header">
-          <div class="chapter-number">Lời tựa & Lời mở đầu (Trang 25 - 36)</div>
-          <h1 class="chapter-title">Lời Tựa của Gerald Corey & Lời Mở Đầu</h1>
-          <div class="chapter-authors">Nguyên tác: <em>FOREWORD BY GERALD COREY & PREFACE</em> &bull; James Robert Bitter, Ed.D.</div>
-        </header>
-
-        <div class="chapter-body">
-          <p>Lời nói đầu</p>
-<p>Khi tôi đang theo đuổi nghiên cứu tiến sĩ về tư vấn vào những năm 1960, tôi chưa bao giờ tham gia một khóa học nào về trị liệu gia đình và tôi không bao giờ nhớ mình đã nghe bất kỳ đề cập nào đến cách tiếp cận hệ thống gia đình trong bất kỳ khóa học nào của mình. Tôi đã xem qua toàn bộ chương trình của mình với suy nghĩ rằng cách duy nhất để nghiên cứu về tư vấn là hiểu được động lực của mỗi cá nhân. Bạn và đồng nghiệp của tôi, Tiến sĩ Jim Bitter, là một trong những người chủ chốt giới thiệu tôi với một người nổi tiếng.</p>
-<p>cách tiếp cận có tính hệ thống và hệ thống trong việc tư vấn và trị liệu tâm lý. Việc tiếp xúc với quan điểm hệ thống đã mở rộng quan điểm của tôi về việc tư vấn cá nhân và làm việc với các cá nhân trong liệu pháp nhóm. Thật vậy, tôi đã học được tầm quan trọng của việc biết điều gì đó về nguồn gốc gia đình của một cá nhân nếu chúng ta hy vọng có thể tư vấn cho một người một cách hiệu quả.</p>
-<p>Tôi đoán rằng sẽ có nhiều độc giả của Lý thuyết và Thực hành Trị liệu và Tư vấn Gia đình sẽ không biết nhiều về quan điểm của hệ thống gia đình. Nếu bạn</p>
-<p>là một trong những độc giả mới tìm hiểu về liệu pháp hệ thống gia đình, hãy để tôi đảm bảo với bạn</p>
-<p>rằng cuốn sách này sẽ là một cái nhìn tổng quan toàn diện về lĩnh vực này và ở đây sẽ có nhiều điều hơn những gì bạn có thể nắm bắt được trong một khóa học trong một học kỳ. Tuy nhiên, cuốn sách này sẽ phục vụ như</p>
-<p>một lời giới thiệu tuyệt vời về lĩnh vực trị liệu gia đình. Bạn sẽ không chỉ tìm hiểu về 10 lý thuyết khác nhau về trị liệu gia đình mà Jim Bitter còn là người hướng dẫn và cố vấn cho bạn trong việc hỗ trợ bạn bắt đầu phát triển phương pháp tiếp cận tích hợp cá nhân khi làm việc với gia đình.</p>
-<p>Gần như thể Jim là gia sư riêng của bạn khi bạn đang tìm hiểu về nhiều cách tiếp cận khác nhau đối với liệu pháp hệ thống gia đình.</p>
-<p>Có một số đặc điểm khiến cuốn sách này trở thành cuốn sách độc đáo trong các sách giáo khoa trị liệu gia đình. Trước hết, tác giả sử dụng một định dạng chung để sắp xếp từng chương lý thuyết, điều này sẽ giúp công việc so sánh các phương pháp tiếp cận này của bạn trở nên thực tế hơn. Hai chương đầu tiên cung cấp cho bạn phần giới thiệu hay về phần còn lại của cuốn sách, và trong hai chương này bạn</p>
-<p>có được cảm nhận thực sự về Jim Bitter, con người, tác giả, giáo viên và nhà trị liệu gia đình. Mỗi chương lý thuyết đều có những phần đặc biệt rõ ràng về các khái niệm, mục tiêu và kỹ thuật chính. Bạn sẽ được giới thiệu về họ Quest và sau đó theo dõi họ này qua từng chương lý thuyết. Ví dụ trường hợp này đưa ra một minh họa cụ thể về cách mỗi lý thuyết có thể được áp dụng để tư vấn cho cùng một gia đình. Các bài tập cá nhân xuất hiện ở cuối mỗi chương sẽ hỗ trợ bạn cá nhân hóa việc học của mình và giúp bạn áp dụng những gì bạn đã học.</p>
-<p>đang đọc để hiểu đầy đủ hơn về ảnh hưởng hiện tại của hoàn cảnh gia đình đến cá nhân và nghề nghiệp của bạn. Có hai chương về các phương pháp tích hợp nhằm mục đích hỗ trợ bạn suy nghĩ về sự tổng hợp của riêng bạn. Jim đã làm rất tốt việc hướng dẫn bạn trong quá trình học cách tập trung vào các khía cạnh của các lý thuyết khác nhau phù hợp với con người bạn.</p>
-<p>Tôi nhận thấy phần tóm tắt là hữu ích nhất trong việc tập hợp các ý chính của</p>
-<p>chương; hơn nữa, các phần về đóng góp cho các vấn đề đa văn hóa và giới tính sẽ hữu ích nhất trong việc xem xét các ứng dụng thực tế. Bạn sẽ tìm thấy rất nhiều gợi ý về phần tiếp theo của chương này nếu bạn muốn tìm hiểu thêm về bất kỳ lý thuyết nào. Đừng nhầm lẫn: Đây không phải lúc nào cũng dễ đọc và bạn sẽ gặp khó khăn trong việc suy nghĩ và suy ngẫm về những gì bạn đang đọc. Đọc một chương sẽ không thể hiểu hết được. Tuy nhiên, tôi tin rằng bạn sẽ cảm thấy được khích lệ khi đọc cuốn sách này với mong muốn hiểu rõ hơn về lịch sử gia đình hiện tại có tác động như thế nào đến bạn và việc trở thành một nhà thực hành gia đình.</p>
-<p>Xi</p>
-<p>Xil LỜI NÓI ĐẦU</p>
-<p>[đã đọc cuốn sách này nhiều lần và nó giúp tôi hiểu rõ hơn về nội dung của trị liệu gia đình. Tôi hy vọng rằng bạn cũng sẽ được khuyến khích làm những gì cần thiết để trở thành một người thực hành gia đình hiệu quả - và cuốn sách này có thể là một phần trải nghiệm.</p>
-<p>Gerald Corey, Ed.D., Giáo sư danh dự của ABPP, Dịch vụ Nhân sinh và Tư vấn. Đại học bang California, Fullerton</p>
-<p>Lời nói đầu</p>
-<p>cuốn sách của ông dành cho sinh viên đại học và sau đại học quan tâm đến lĩnh vực trị liệu gia đình và tham vấn gia đình. Cuốn sách này được thiết kế để phù hợp với nhiều quan điểm, bao gồm cả những quan điểm được đại diện bởi Hiệp hội Trị liệu Hôn nhân và Gia đình Hoa Kỳ (AAMFT), Hiệp hội Quốc tế về Hôn nhân và Gia đình.</p>
-<p>selors (IAMFC) và các lĩnh vực tư vấn, dịch vụ con người, điều dưỡng, tư vấn mục vụ, tâm thần học, tâm lý học và công tác xã hội. Nó khảo sát các lý thuyết và thực tiễn chính của hệ thống gia đình hiện đại và tìm cách hỗ trợ sự phát triển thực hành gia đình cá nhân, nghề nghiệp và đạo đức. Quan trọng nhất, cuốn sách cung cấp một mô hình để tích hợp thành công nhiều quan điểm.</p>
-<p>Tôi đã có một số mục tiêu khi viết cuốn sách này. Tôi muốn:</p>
-<p>e giải quyết việc sử dụng các mô hình lý thuyết trên nhiều lĩnh vực, cân nhắc nhiều đến</p>
-<p>quan tâm đến sức khỏe, sự tăng trưởng và khả năng phục hồi như tôi đã làm với việc đánh giá và khắc phục;</p>
-<p>® trình bày một số mô hình chưa có trong các văn bản khác;</p>
-<p>¢ cung cấp các ví dụ thực tế về chất lượng công việc cho từng phương pháp tiếp cận, cũng như làm việc với một phương pháp duy nhất</p>
-<p>họ có thể được sử dụng để so sánh giữa các mô hình;</p>
-<p>° tập trung vào phát triển cá nhân cũng như phát triển nghề nghiệp; Và</p>
-<p>¢ Tôi muốn viết bằng giọng điệu đàm thoại đã làm cho các cuốn sách giáo khoa khác trở nên hấp dẫn hơn.</p>
-<p>thành công.</p>
-<p>Cuốn sách này được chia thành ba phần. Phần <sup class="footnote-ref">[1]</sup> đề cập đến ngôn ngữ, các khái niệm và các vấn đề nền tảng cho thực hành gia đình. Chương 1 cung cấp cái nhìn tổng quan về cuốn sách và các lĩnh vực trị liệu gia đình và tham vấn gia đình. Nó định nghĩa</p>
-<p>ngôn ngữ và suy nghĩ gắn liền với lý thuyết hệ thống gia đình. Trong Chương 1, tôi cũng kể cho người đọc một chút về lịch sử gia đình tôi và nó liên quan như thế nào đến sự phát triển cá nhân và nghề nghiệp của tôi. Tôi hy vọng cuốn tiểu sử tóm tắt này có thể dùng làm hình mẫu cho những sinh viên có thể đang bắt đầu những khám phá cá nhân của riêng mình để chuẩn bị cho sự nghiệp trong các ngành nghề trợ giúp.</p>
-<p>Chương <sup class="footnote-ref">[2]</sup> đề cập đến sự phát triển cá nhân và nghề nghiệp một cách trực tiếp hơn. Trong chương này, tôi sử dụng một số quy trình tôi đã học được sau 10 năm đào tạo với Virginia Satir, một nhà tiên phong vĩ đại và quá cố về trị liệu gia đình. Chúng được thiết kế để giúp người đọc khám phá bản thân trong bối cảnh gia đình và xem xét ảnh hưởng to lớn của hệ thống gia đình đối với mỗi chúng ta với tư cách là những cố vấn và nhà trị liệu đang phát triển. Tôi cũng liệt kê một số đặc điểm cá nhân và nghề nghiệp.</p>
-<p>những kiến ​​thức đặc biệt hữu ích trong thực tiễn gia đình; một số ý tưởng về cách bắt đầu với</p>
-<p>gia đình; mối quan hệ của học bổng với thực hành trong lĩnh vực trị liệu gia đình và tham vấn gia đình; và cái nhìn đầu tiên về một mô hình hội nhập sẽ được phát triển đầy đủ hơn</p>
-<p>ở Phần 3.</p>
-<p>Chương 3 giới thiệu đến người đọc những vấn đề đạo đức, nghề nghiệp và pháp lý đã định hình nên sự phát triển của thực hành gia đình. Chương về đạo đức ứng dụng này được đồng tác giả với người bạn và đồng nghiệp của tôi, David Kleist. Chúng tôi tập trung vào việc học cách suy nghĩ về các vấn đề đạo đức từ góc độ đạo đức, quy tắc đạo đức nghề nghiệp và các yêu cầu pháp lý trong</p>
-<p>cánh đồng. Chương này xem xét hướng dẫn và nhiệm vụ của nhiều quy tắc đạo đức, bao gồm cả những quy tắc được phát triển bởi Hiệp hội Trị liệu Hôn nhân và Gia đình Hoa Kỳ (AAMFT), Hiệp hội Tư vấn Hoa Kỳ (ACA), Hiệp hội Tâm lý Hoa Kỳ.</p>
-<p>xiii</p>
-<p>MỞ ĐẦU XiV</p>
-<p>Hiệp hội (APA), Hiệp hội Tư vấn Hôn nhân và Gia đình Quốc tế</p>
-<p>(IAMFC), Hiệp hội Nhân viên Xã hội Quốc gia (NASW) và Ủy ban Quốc gia về</p>
-<p>Cố vấn được chứng nhận (NBCC).</p>
-<p>Phần <sup class="footnote-ref">[2]</sup> được dành để xem xét 10 mô hình trị liệu và tham vấn gia đình, cùng với</p>
-<p>một chương đặc biệt về cách nuôi dạy con cái hiệu quả trong thế kỷ 21. Nó bắt đầu bằng phần trình bày về tiểu sử và sơ đồ gen của họ Quest, một họ sẽ là một phần của mỗi chương lý thuyết. 10 chương lý thuyết được tổ chức thống nhất để học sinh có thể so sánh, đối chiếu các mô hình khác nhau. Mỗi chương lý thuyết đều bắt đầu bằng phần giới thiệu về mô hình, trong đó xác định các đặc điểm chính và xác định những người sáng lập ra nó. Tiếp theo phần giới thiệu là bản ghi lại buổi tham vấn gia đình hoặc trị liệu gia đình thực tế, thường có người đóng góp chính cho phương pháp đó. Tôi muốn người đọc có</p>
-<p>ghi nhớ những buổi học này khi họ xem xét các khái niệm chính, mục tiêu trị liệu, vai trò và chức năng của nhà trị liệu cũng như các kỹ thuật tiếp theo. Ở cuối mỗi chương, tôi trình bày một buổi trị liệu khác với gia đình Quest, sử dụng mô hình được trình bày trong chương đó. Tôi kết thúc mỗi chương lý thuyết bằng phần tóm tắt chương, bài tập kinh nghiệm phát triển cá nhân, xem xét các vấn đề về giới và văn hóa, các bài đọc gợi ý, phần giới thiệu về video đi kèm và tài liệu tham khảo. Mặc dù trọng tâm là tạo ra giọng điệu đàm thoại trong các chương này, nhưng mỗi chương đều được tham khảo đầy đủ các bài báo và sách mới nhất.</p>
-<p>Phần <sup class="footnote-ref">[3]</sup> đề cập đến việc tích hợp và ứng dụng các mô hình. Có hai chương về hội nhập. Chương <sup class="footnote-ref">[15]</sup> được thiết kế để giúp người đọc khám phá một mô hình hoặc một tập hợp các mô hình</p>
-<p>phù hợp với thế giới quan và quan điểm của cá nhân về thực hành gia đình. Nhấn mạnh vào việc đánh giá các giá trị và niềm tin cá nhân, đồng thời sử dụng băng video về công việc ban đầu để suy ngẫm và phát triển với tư cách là cố vấn gia đình hoặc nhà trị liệu đang được đào tạo. Một quy trình bốn giai đoạn để tiến hành các buổi họp gia đình cũng được mô tả, bao gồm các quy trình hình thành các mối quan hệ, gia đình và</p>
-<p>đánh giá, đưa ra giả thuyết và chia sẻ ý nghĩa, tạo điều kiện cho sự thay đổi. Hai phần đầu tiên</p>
-<p>được phát triển đầy đủ trong chương này trong khi hai phần cuối được trình bày trong Chương 16.</p>
-<p>Chương 16 tập trung vào các quá trình hợp tác và thay đổi. Trọng tâm được đặt vào công tác phục hồi, điều chỉnh phương pháp điều trị cho từng gia đình và các phương pháp đảm bảo tuân thủ điều trị và ngăn ngừa tái phát. Cuối cùng, mô hình tích hợp được trình bày trong Chương</p>
-<p>15 và <sup class="footnote-ref">[16]</sup> được áp dụng lần cuối cho dòng Quest. Phần Phụ lục là bản tóm tắt ngắn gọn, xem xét lại các lý thuyết và thực tiễn được trình bày trong cuốn sách này; Phần Phụ lục bao gồm một tập hợp các bảng so sánh liên quan đến những điểm chính được trình bày trong mỗi mô hình. Ở cuối cuốn sách, tôi đã cung cấp một bảng chú giải các thuật ngữ toàn diện trên các lĩnh vực bao gồm hành nghề gia đình.</p>
-<p>Với cấu trúc này, giờ đây chúng ta đã sẵn sàng bắt đầu một cuộc hành trình cùng nhau. Đó là hy vọng của tôi</p>
-<p>rằng bạn sẽ tham gia vào lĩnh vực trị liệu gia đình và tìm thấy một nơi thú vị cho chính mình như</p>
-<p>một bác sĩ gia đình. Thực hành gia đình là một lĩnh vực đang phát triển và tăng trưởng. Chỉ cách đây 60 năm, lĩnh vực này vẫn còn ở giai đoạn sơ khai. Tôi hy vọng bạn sẽ cảm thấy mình trưởng thành hơn trong việc thực hành gia đình khi xem xét các mô hình khác nhau được trình bày trong cuốn sách này.</p>
-<p>Lời cảm ơn</p>
-<p>0 người ta viết một cuốn sách giáo khoa như thế này mà không cần nhiều sự trợ giúp, và tôi đã nhận được sự hỗ trợ tuyệt vời ngay từ đầu. Bắt đầu với Julie Martinez và Marquita Flemming, những biên tập viên đầu tiên của tôi, sau đó là Christina D. Ganim và Tangelique Williams, những người liên quan đến Brooks/Cole và Cengage Learning đã cung cấp cho tôi một đội ngũ cố vấn và chuyên gia để biến mọi phần của cuốn sách này thành hiện thực. Đầu tiên và quan trọng nhất trong số đó</p>
-<p>là Sherry Cormier, người từng là biên tập viên phát triển, người bạn và người bạn tâm giao. Sự khôn ngoan của cô ấy</p>
-<p>có ở mỗi chương. Amy Lam và Ashley Cronin đã giúp đỡ rất nhiều trong vai trò của họ</p>
-<p>trợ lý biên tập. Seth Miller và nhóm của ông tại Matrix Productions đã xử lý việc chỉnh sửa bản sao, nâng cao cả tính chính xác và rõ ràng của cuốn sách. Karin Sandberg và nhóm của cô đã phát triển và thực hiện một kế hoạch tiếp thị hỗ trợ việc phân phối sách đến bạn. Và tất nhiên, cuốn sách này sẽ không bao giờ được bắt đầu nếu không có lòng tốt, sự hỗ trợ và động viên thường xuyên của Jerry Corey.</p>
-<p>Xin gửi lời cảm ơn đặc biệt tới những người đánh giá chương, những người đã đưa ra lời khuyên và phê bình chi tiết. Khuyến nghị của họ đã được đưa vào văn bản này:</p>
-<p>¢ Chương 1 và 2: Gerald và Marianne Corey</p>
-<p>¢ Chương 3: David Kleist và tôi đồng viết chương này, nhưng anh ấy là chuyên gia trong lĩnh vực này.</p>
-<p>¢ Chương 4: Betty Carter</p>
-<p>¢ Chương 5: Jon Carlson, Đại học Governors State; William G. Nicoll, Florida</p>
-<p>Đại học Atlantic; và Richard E. Watts, Đại học Bang Sam Houston</p>
-<p>¢ Chương 6: Jean McLendon, Viện đào tạo Satir Đông Nam Bộ; John Banmen,</p>
-<p>Học viện đào tạo Satir Tây Bắc</p>
-<p>¢ Chương 7: J. Graham Disque, Đại học bang East Tennessee</p>
-<p>¢ Chương 8: Harry Aponte</p>
-<p>° Chương 9: Madeleine Richeport-Haley</p>
-<p>¢ Chương 10: Jane Peller</p>
-<p>¢ Chương 11: Don Bubenzer và John West, cả hai đều đến từ Đại học Bang Kent; J. Graham</p>
-<p>Disque, Đại học bang Đông Tennessee</p>
-<p>e Chương 12: Roberta Nutt, Đại học Phụ nữ Texas; Patricia E. Robertson, Đông</p>
-<p>Đại học bang Tennessee</p>
-<p>¢ Chương 13: Frank Dattilio, Trường Y Harvard và Đại học Pennsylvania</p>
-<p>Trường Y.</p>
-<p>¢ Chương 14: Michael Popkin, Nuôi dạy con tích cực, Atlanta, Georgia; Sherry Cormier và</p>
-<p>Cheryl McNeil, Đại học Tây Virginia</p>
-<p>¢ Chương 15 và 16: Gerald và Marianne Corey</p>
-<p>Tôi cũng muốn cảm ơn các sinh viên tập trung vào Trị liệu Hôn nhân và Gia đình của Chương trình Tư vấn tại Đại học bang East Tennessee, những người đã đưa ra văn bản này một khởi đầu.</p>
-<p>chạy thử và đưa ra nhiều bổ sung và chỉnh sửa hữu ích. Candace Park là trợ lý điều hành của tôi trong quá trình phát triển và ghi hình các phân đoạn video liên quan</p>
-<p>với từng lý thuyết trong sách, đồng thời cô cũng giới thiệu lý thuyết đó trong từng đoạn video. Các sinh viên, bạn bè, gia đình và đồng nghiệp sau đây đã tham gia vào liệu pháp thực tế hoặc nhập vai của gia đình và nhà trị liệu trong các phân đoạn video: Jessica Adesuyi, Lea Brown, Trish Clybern, Steve Cockerham, Graham Disque, Ed Dwyer, Stacy Foster, Aaron</p>
-<h2>XV</h2>
-<p>xvi LỜI CẢM ƠN</p>
-<p>Gilly, Linda Good, Doug Fox, John Lawson, Beverly Leigh, Jeanie Livingston, Emily Long,</p>
-<p>Jean McLendon, Meghan Noble, Betty Ann Proffitt, Cassandra Pusateri, Patricia Robertson, Joel Tramel cùng các con Seth và Abby. Tôi đặc biệt muốn cảm ơn gia đình tôi—Lynn, Alison và Nora Williams—vì họ đã tham gia vào nhiều phân đoạn video khác nhau. Xin gửi lời cảm ơn đặc biệt tới Daniel Santiago và đội ngũ tuyệt vời của anh ấy tại xưởng quay video ở bang East Tennessee</p>
-<p>Trường đại học.</p>
-<p>Cảm ơn tất cả những người đã xem bản thảo: Jack Presbury, James Madison</p>
-<p>Trường đại học; John Barlow, Đại học Trung tâm Arkansas; John Barletta, Đại học Công giáo Australia; Carolynn Kohn, Đại học Thái Bình Dương; Catherine B. Roland, Đại học Bang Montclair</p>
-<p>đa dạng; Taranum Chaudry, Cao đẳng Lewis và Clark; Bill McHenry, Đại học Shippensburg của Pennsylvania; Phillip W. Henry, Đại học Shippensburg PA; Ray Wooten, Đại học St. Mary, San Antonio; Gerald T. Moote, Jr., Đại học bang New York tại Buffalo; Charlotte Daughhetee, Đại học Montavallo; Jill M. Thorngren, Đại học bang Montana; Brian Wlazelek, Đại học Kutztown của Pennsylvania; Jay H. Fast, Đại học Tây Virginia; Debra L. Stout, Đại học Bang California, Fullerton; Dan Wulff, Đại học Louisville; John K. Mooradian, Đại học bang Michigan; Marla J. Muxen, Đại học bang Nam Dakota</p>
-<p>đa dạng; Lisa Langfuss Aasheim, Đại học bang Portland; Kelly M. Burch-Ragan, Đại học Tây Kentucky; Stephen T. Fife, Đại học Nevada, Las Vegas; Brian Sullivan, Đại học Queensland; Eagle Desert Moon, Đại học bang California, Northridge Thomas Burdenski, Đại học bang Tarleton; Trude D. Hendrickson, Đại học Minnesota Willie</p>
-<p>V. Bryan, Đại học Oklahoma; Glen A. Eskedal, Đại học Suffolk; Edward P. Cannon, Đại học Marymount; Richard D. Recor, Đại học Webster; Michael Leftwich, Emporia</p>
-<p>Đại học bang; Donald Loffredo, Đại học Houston, Victoria; Carol Messmore, Đại học Florida Atlantic; Anita Moreno, Đại học Case Western Reserve; Todd Kates, Đại học Đông Bắc; Touwanna Edwards, Đại học Lewis; Nina Hamilton, Đại học bang Illinois; Olga L. Mejia, Đại học Bang California, Fullerton; Ruth Paris, Đại học Boston Paul Smokowski, Đại học Bắc Carolina, Đồi Chapel; Karen Kayser, Cao đẳng Boston Karen Greving, Đại học Bang Arizona; Dennis Frank, Đại học Roosevelt.</p>
-<p>Tôi chân thành cảm ơn tất cả những người đã góp phần hoàn thành cuốn sách này và video đi kèm.</p>
-<p>—James Robert Bitter</p>
-<p>Về tác giả</p>
-<p>James Robert (Jim) Bitter là Giáo sư Tư vấn tại Khoa Học tập và Phát triển Con người tại Đại học Bang East Tennessee ở Thành phố Johnson, Tennessee. Ông là cố vấn và nhà trị liệu gia đình được chứng nhận cấp quốc gia, đồng thời là cựu nhân viên của Hiệp hội Tâm lý học Adlerian Bắc Mỹ (NASAP). Ông cũng là cựu biên tập viên của Tạp chí Tâm lý Cá nhân và</p>
-<p>một nhà ngoại giao về tâm lý học Adlerian. Anh ấy ở trong ban biên tập của The Family</p>
-<p>Tạp chí, và trước đây đã phục vụ với vai trò tương tự trên Tạp chí Luật sư-</p>
-<p>ing và phát triển. Ông nhận bằng tiến sĩ về Cố vấn Giáo dục tại Đại học Bang Idaho ở Pocatello, Idaho.</p>
-<p>Jim đã nhận được giải thưởng Giảng dạy Xuất sắc tại Trường Cao đẳng Phát triển Con người và Dịch vụ Cộng đồng tại Đại học Bang California tại Fullerton và Học bổng Xuất sắc tại Trường Cao đẳng Sư phạm Clemmer tại Đại học Bang East Tennessee. Ông đã giảng dạy trong các chương trình Tư vấn sau đại học của ba trường đại học, là đồng tác giả của hai cuốn sách và đã xuất bản hơn 50 bài báo.</p>
-<p>Cùng với Oscar Christensen, Bill Nicoll và Clair Hawes, Jim là người đồng sáng lập và giảng viên cốt cán của Viện Đào tạo Adlerian (ATI) ở Boca Raton, Florida. Ông đã đóng góp vào sự phát triển Liệu pháp ngắn gọn của Adlerian với từng cá nhân.</p>
-<p>mọi người và gia đình. Ông là chuyên gia nổi bật về Trị liệu Gia đình Adlerian (Bitter, 1998) trong loạt phim Trị liệu Gia đình với các Chuyên gia của Allyn và Bacon, đồng thời ông đã tổ chức các buổi hội thảo ở Canada, Anh, Hy Lạp, Ireland, Hàn Quốc, New Zealand và Peru, cũng như trên khắp Hoa Kỳ. Anh được Manford giới thiệu về chương trình Tư vấn và Trị liệu Gia đình Adlerian</p>
-<p>A. Sonstegard, người mà Jim đã làm việc cùng hơn 30 năm.</p>
-<p>Jim đã học và làm việc 10 năm với một trong những người tiên phong trong lĩnh vực trị liệu gia đình, Virginia</p>
-<p>Châm biếm. Anh ấy là huấn luyện viên trong Cộng đồng Quy trình của cô ấy trong 3 năm và đã xuất bản một bài báo</p>
-<p>bài báo và một số chương về bà trước khi bà qua đời vào năm 1989. Ông từng là Chủ tịch của AVANTA, mạng lưới đào tạo của Satir.</p>
-<p>Jim hiện đang gặp các cặp vợ chồng và gia đình, cùng với các sinh viên tốt nghiệp tại Phòng khám Tư vấn Cộng đồng của Đại học Bang East Tennessee. Cùng với đồng nghiệp ATI của mình</p>
-<p>giải đấu, anh ấy tiếp tục phát triển Liệu pháp ngắn gọn Adlerian với các cá nhân, nhóm, cặp đôi và gia đình. Sự tập trung của ông vào mối quan hệ hiện diện trọn vẹn trong mọi hình thức trị liệu là một phần không thể thiếu.</p>
-<p>vấn đề tư vấn của Adlerian với công việc của Virginia Satir và Erv và Miriam Polster. Jim đã kết hôn với Lynn Williams được gần một phần tư thế kỷ; họ có hai</p>
-<p>con gái, Alison và Nora Williams. Trong thời gian rảnh rỗi, Jim thích đi du lịch, sưu tầm tem, chơi bóng rổ và đọc sách.</p>
-<p>XVil</p>
-<p>Lý thuyết và thực hành trị liệu và tham vấn gia đình</p>
-<p>Những vấn đề cơ bản trong thực hành trị liệu và tham vấn gia đình</p>
-<p>Chương 1_ Giới thiệu và Tổng quan</p>
-<p>Chương 2. Nhà thực hành gia đình với tư cách là</p>
-<p>3 | Con người và Chuyên nghiệp</p>
-<p>Chương 3_ Đức hạnh, đạo đức và pháp luật</p>
-<p>| trong Thực hành Gia đình</p>
-        </div>
-
+      <div class="toc-title">Danh Mục Chương</div>
+      <ul class="toc-list">
         
-      
-</section>
-<div class="chapter-divider"></div>
-<section class="book-chapter-section" id="01_gioi_thieu_tong_quan">
+        <li class="toc-item">
+          <a href="00_loi_tua_va_loi_mo_dau.html" class="toc-link">
+            <span class="toc-num">0</span>
+            <span class="toc-name">Lời tựa & Lời mở đầu: Lời Tựa của Gerald Corey & Lời Mở Đầu</span>
+          </a>
+        </li>
 
+        <li class="toc-item">
+          <a href="01_gioi_thieu_tong_quan.html" class="toc-link active">
+            <span class="toc-num">1</span>
+            <span class="toc-name">Chương 1: Giới Thiệu và Tổng Quan Về Trị Liệu Gia Đình</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="02_nha_thuc_hanh_gia_dinh.html" class="toc-link">
+            <span class="toc-num">2</span>
+            <span class="toc-name">Chương 2: Nhà Thực Hành Gia Đình: Phương Diện Cá Nhân và Nghề Nghiệp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="03_dao_duc_va_phap_ly.html" class="toc-link">
+            <span class="toc-num">3</span>
+            <span class="toc-name">Chương 3: Đạo Đức, Phẩm Hạnh và Pháp Lý Trong Thực Hành Gia Đình</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="04_tri_lieu_gia_dinh_da_the_he_bowen.html" class="toc-link">
+            <span class="toc-num">4</span>
+            <span class="toc-name">Chương 4: Trị Liệu Gia Đình Đa Thế Hệ (Murray Bowen)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="05_tri_lieu_gia_dinh_adler.html" class="toc-link">
+            <span class="toc-num">5</span>
+            <span class="toc-name">Chương 5: Trị Liệu Gia Đình Theo Thuyết Adler</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="06_mo_hinh_xac_thuc_con_nguoi_satir.html" class="toc-link">
+            <span class="toc-num">6</span>
+            <span class="toc-name">Chương 6: Mô Hình Tiến Trình Xác Thực Con Người (Virginia Satir)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="07_tri_lieu_bieu_tuong_trai_nghiem_whitaker.html" class="toc-link">
+            <span class="toc-num">7</span>
+            <span class="toc-name">Chương 7: Trị Liệu Gia Đình Biểu Tượng - Trải Nghiệm (Carl Whitaker)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="08_tri_lieu_gia_dinh_cau_truc_minuchin.html" class="toc-link">
+            <span class="toc-num">8</span>
+            <span class="toc-name">Chương 8: Trị Liệu Gia Đình Cấu Trúc (Salvador Minuchin)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="09_tri_lieu_gia_dinh_chien_luoc.html" class="toc-link">
+            <span class="toc-num">9</span>
+            <span class="toc-name">Chương 9: Trị Liệu Gia Đình Chiến Lược (MRI, Milan, Washington)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="10_tri_lieu_tap_trung_giai_phap_sfbt.html" class="toc-link">
+            <span class="toc-num">10</span>
+            <span class="toc-name">Chương 10: Trị Liệu Tập Trung Vào Giải Pháp và Định Hướng Giải Pháp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="11_hau_hien_dai_va_tri_lieu_tuong_thuat.html" class="toc-link">
+            <span class="toc-num">11</span>
+            <span class="toc-name">Chương 11: Hậu Hiện Đại, Kiến Tạo Xã Hội và Liệu Pháp Tường Thuật</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="12_tri_lieu_gia_dinh_nu_quyen.html" class="toc-link">
+            <span class="toc-num">12</span>
+            <span class="toc-name">Chương 12: Trị Liệu Gia Đình Nữ Quyền</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="13_tri_lieu_gia_dinh_nhan_thuc_hanh_vi.html" class="toc-link">
+            <span class="toc-num">13</span>
+            <span class="toc-name">Chương 13: Trị Liệu Gia Đình Nhận Thức - Hành Vi</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="14_nuoi_day_con_the_ky_21.html" class="toc-link">
+            <span class="toc-num">14</span>
+            <span class="toc-name">Chương 14: Nuôi Dạy Con Trong Thế Kỷ 21</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="15_tich_hop_1_tu_kham_pha_den_danh_gia.html" class="toc-link">
+            <span class="toc-num">15</span>
+            <span class="toc-name">Chương 15: Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="16_tich_hop_2_y_nghia_va_can_thiep.html" class="toc-link">
+            <span class="toc-num">16</span>
+            <span class="toc-name">Chương 16: Tích Hợp II: Kiến Tạo Ý Nghĩa Chung, Thúc Đẩy Thay Đổi & Tinh Chỉnh Can Thiệp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="17_phu_luc_tong_ket_cac_mo_hinh.html" class="toc-link">
+            <span class="toc-num">17</span>
+            <span class="toc-name">Phụ lục: Phụ Lục: Tổng Kết và Đối Chiếu Các Mô Hình Trị Liệu Gia Đình</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-wrapper">
+      <article class="content-article">
         <header class="book-header">
           <div class="chapter-number">Chương 1 (Trang 37 - 55)</div>
           <h1 class="chapter-title">Giới Thiệu và Tổng Quan Về Trị Liệu Gia Đình</h1>
@@ -609,14 +576,24 @@
 <p>được đề cập đến Sperry, Carlson và Peluso (2006).</p>
         </div>
 
-        
-      
-</section>
-<div class="chapter-divider"></div>
-    </div>
+        <nav class="chapter-nav">
+          
+        <a href="00_loi_tua_va_loi_mo_dau.html" class="chapter-nav-prev">
+          <span class="nav-label">&larr; Lời tựa & Lời mở đầu</span>
+          <span class="nav-title">Lời Tựa của Gerald Corey & Lời Mở Đầu</span>
+        </a>
+          
+        <a href="02_nha_thuc_hanh_gia_dinh.html" class="chapter-nav-next">
+          <span class="nav-label">Chương 2 &rarr;</span>
+          <span class="nav-title">Nhà Thực Hành Gia Đình: Phương Diện Cá Nhân và Nghề Nghiệp</span>
+        </a>
+        </nav>
+      </article>
+    </main>
   </div>
 
-  <button class="btn-back-to-top" id="btn-back-to-top">&uarr;</button>
-  <script src="reader.js"></script>
+  <button class="btn-back-to-top" id="btn-back-to-top" title="Lên đầu trang">&uarr;</button>
+
+  <script src="../reader.js"></script>
 </body>
 </html>

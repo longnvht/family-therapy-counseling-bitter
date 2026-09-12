@@ -208,11 +208,37 @@ CHAPTER_METADATA = [
         "end_page": 390,
         "filename": "14_nuoi_day_con_the_ky_21.html"
     },
+    {
+        "id": "15_tich_hop_1_tu_kham_pha_den_danh_gia",
+        "num": 15,
+        "label": "Chương 15",
+        "title_en": "INTEGRATION I: FROM SELF-DISCOVERY TO FAMILY PRACTICE",
+        "title_vi": "Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá",
+        "start_page": 391,
+        "end_page": 409,
+        "filename": "15_tich_hop_1_tu_kham_pha_den_danh_gia.html"
+    },
+    {
+        "id": "16_tich_hop_2_y_nghia_va_can_thiep",
+        "num": 16,
+        "label": "Chương 16",
+        "title_en": "INTEGRATION II: SHARED MEANING, FACILITATING CHANGE, AND TAILORING INTERVENTIONS",
+        "title_vi": "Tích Hợp II: Kiến Tạo Ý Nghĩa Chung, Thúc Đẩy Thay Đổi & Tinh Chỉnh Can Thiệp",
+        "start_page": 410,
+        "end_page": 422,
+        "filename": "16_tich_hop_2_y_nghia_va_can_thiep.html"
+    },
+    {
+        "id": "17_phu_luc_tong_ket_cac_mo_hinh",
+        "num": 17,
+        "label": "Phụ lục",
+        "title_en": "APPENDIX: SUMMARY AND REVIEW OF FAMILY MODELS",
+        "title_vi": "Phụ Lục: Tổng Kết và Đối Chiếu Các Mô Hình Trị Liệu Gia Đình",
+        "start_page": 423,
+        "end_page": 442,
+        "filename": "17_phu_luc_tong_ket_cac_mo_hinh.html"
+    }
 ]
-# Ghi chú: Chương 15 (Tích hợp I), 16 (Tích hợp II) và Phụ lục 17 chưa được
-# trích xuất/dịch trong đợt chuẩn hóa này - cố tình để ngoài phạm vi, sẽ bổ
-# sung ở một phiên làm việc khác. Không thêm 3 mục này vào CHAPTER_METADATA
-# để mục lục (sidebar/index/master html) không còn trỏ tới file không tồn tại.
 
 class TranslationCache:
     def __init__(self, cache_file):
@@ -325,6 +351,9 @@ def clean_paragraph_text(raw_text):
     t = re.sub(r"\s*\n\s*", " ", t)
     # Chuẩn hóa khoảng trắng
     t = re.sub(r"\s+", " ", t).strip()
+    # OCR hay đọc nhầm chữ "I" đứng riêng lẻ thành "|" hoặc "|!"
+    t = re.sub(r"(?<=\s)\|!?(?=\s|$)", "I", t)
+    t = re.sub(r"^\|!?(?=\s)", "I", t)
     return t
 
 
@@ -369,6 +398,28 @@ def _page_blocks_in_reading_order(page):
     return left + right
 
 
+def _looks_like_real_heading(text):
+    """Phân biệt tiêu đề mục thật với nhãn rời rạc trong sơ đồ phả hệ
+    (genogram) hay các mảnh vỡ khác vô tình bị OCR ra cỡ chữ lớn."""
+    text = text.strip()
+    if len(text) < 4:
+        return False
+    letters = sum(c.isalpha() for c in text)
+    if letters / len(text) < 0.6:
+        return False
+    words = [w for w in re.split(r'\s+', text) if w]
+    real_words = [w for w in words if sum(c.isalpha() for c in w) >= 2]
+    if not words or len(real_words) / len(words) < 0.6:
+        return False
+    # Tiêu đề thật trong sách này luôn ở dạng Title Case (có chữ thường xen
+    # kẽ) - chuỗi toàn chữ hoa ngắn thường là nhãn vô nghĩa trong sơ đồ.
+    if not any(c.islower() for c in text):
+        return False
+    if len(re.findall(r'[|+_—–]', text)) >= 2:
+        return False
+    return True
+
+
 def _is_running_header(text, bbox, page_height):
     if len(text) > 110:
         return False
@@ -392,7 +443,6 @@ def extract_chapter_content(doc, meta):
     title_en_key = _norm_key(meta["title_en"])
 
     elements = []
-    known_headings = {}          # normalized -> clean text (thu thập từ mini-TOC đầu chương)
     toc_collect_mode = False
     just_saw_chapter_label = False
 
@@ -447,15 +497,17 @@ def extract_chapter_content(doc, meta):
             if CHAPTER_LABEL_RE.match(text):
                 flush_paragraph()
                 just_saw_chapter_label = True
+                toc_collect_mode = True
                 continue
 
             # Tiêu đề lớn của chương (trùng tiêu đề tiếng Anh trong metadata) -> bỏ.
+            # Tiêu đề có thể trải trên NHIỀU khối (dòng dài bị ngắt) nên phải
+            # tiếp tục nuốt mọi khối cỡ chữ lớn cho đến khi gặp khối nhỏ hơn.
             if _norm_key(text) == title_en_key or (just_saw_chapter_label and size >= 18):
                 flush_paragraph()
-                just_saw_chapter_label = False
                 toc_collect_mode = True
-                known_headings = {}
                 continue
+            just_saw_chapter_label = False
 
             # Case study vignette đánh dấu bằng > ... << (một số chương có dùng).
             if stripped.startswith(">"):
@@ -489,48 +541,74 @@ def extract_chapter_content(doc, meta):
                 if size >= 13:
                     toc_collect_mode = False
                     # rơi xuống xử lý như heading bên dưới
+                elif len(text) < 90 and not ends_sentence(text):
+                    continue
                 else:
-                    for line in re.split(r'\s{2,}|(?<=[a-zA-Z])\s(?=[A-Z][a-z])', text):
-                        line = line.strip()
-                        if line and len(line) < 90:
-                            known_headings[_norm_key(line)] = line
-                    if len(text) < 90 and not ends_sentence(text):
-                        continue
                     toc_collect_mode = False
 
             # Tiêu đề mục thật trong thân chương (kích thước chữ lớn hơn văn bản
             # thường). OCR thường thêm 1-2 ký tự rác trước tiêu đề (icon bị đọc
-            # sai) -> đối chiếu với mini mục lục đã thu thập để lấy bản sạch,
-            # nếu không khớp thì tự loại bỏ tiền tố rác ngắn.
+            # sai) -> tự loại bỏ tiền tố rác ngắn bằng regex. Một số trang có
+            # sơ đồ phả hệ (genogram) với nhãn/tên rời rạc cũng bị OCR ra cỡ
+            # chữ lớn -> lọc bằng _looks_like_real_heading để không biến chúng
+            # thành tiêu đề giả.
             if size >= 13 and len(text) < 140:
-                flush_paragraph()
-                norm = _norm_key(text)
-                matched = None
-                for k, clean in known_headings.items():
-                    if k and (k in norm or norm in k) and len(k) > 4:
-                        matched = clean
-                        break
-                if matched:
-                    heading_text = matched
-                else:
-                    heading_text = re.sub(r'^[A-Za-z]{1,3}\s*=?\s*(?=[A-Z])', '', text).strip()
+                if _looks_like_real_heading(text):
+                    flush_paragraph()
+                    # Vài token rác cố định do OCR đọc sai icon đầu mục (thấy
+                    # trong nhiều chương: Be/HM/MS/Hi/Ma) - cắt bỏ trước.
+                    # Chỉ cắt các token rác CỐ ĐỊNH đã quan sát được (icon đầu
+                    # mục bị OCR sai) - không dùng regex chung chung vì dễ cắt
+                    # nhầm từ đầu tiên của tiêu đề thật (vd "Why I Became...",
+                    # "A Bowen Therapist...").
+                    heading_text = re.sub(r'^(?:Be|HM|MS|Hi|Ma|Ms|Mm|MH|MM|Me|DVD)\s*=?\s*(?=[A-Za-z])', '', text).strip()
+                    if heading_text and heading_text[0].islower():
+                        heading_text = heading_text[0].upper() + heading_text[1:]
                     if not heading_text:
                         heading_text = text
-                elements.append({"type": "heading_2", "text": heading_text})
-                continue
+                    elements.append({"type": "heading_2", "text": heading_text})
+                    continue
+                elif len(text) < 30:
+                    # Rất ngắn và không giống tiêu đề thật -> khả năng cao là
+                    # nhãn rời rạc trong sơ đồ phả hệ, bỏ qua hoàn toàn.
+                    continue
+                # Còn lại: coi như văn bản thường, rơi xuống xử lý đoạn văn bên dưới.
 
             # Danh sách có dấu đầu dòng (bullet OCR ra 1 ký tự Latin-1 lạ) hoặc
-            # đánh số "1. ...".
-            if not paragraph_buf:
-                if BULLET_RE.match(text):
+            # đánh số "1. ...". Mỗi bullet luôn mở một mục mới, kể cả khi đoạn
+            # văn trước đó chưa kết thúc bằng dấu câu (ví dụ sau dấu ":").
+            is_bullet = bool(BULLET_RE.match(text))
+            is_num = bool(NUM_LIST_RE.match(text))
+            # Nếu đoạn đang gộp dở kết thúc bằng ":" thì khối tiếp theo gần như
+            # chắc chắn là bullet đầu tiên của một danh sách (dù ký tự đầu dòng
+            # của nó không rơi vào dải Latin-1 đặc biệt - OCR không ổn định).
+            buf_ends_colon = bool(paragraph_buf) and paragraph_buf[-1].rstrip().endswith(':')
+            is_list_continuation = buf_ends_colon and len(text) < 200
+            if is_bullet or is_num or is_list_continuation:
+                flush_paragraph()
+                if is_bullet:
                     text = BULLET_RE.sub('', text)
                     if text:
                         text = text[0].upper() + text[1:]
-                    buf_type = "list_item"
-                elif NUM_LIST_RE.match(text):
-                    buf_type = "list_item"
-                else:
-                    buf_type = "paragraph"
+                elif is_list_continuation and len(text) > 1 and not text[0].isupper():
+                    # Bullet đầu tiên OCR ra một ký tự thường lẫn vào từ kế tiếp
+                    # (không theo dải Latin-1 đặc biệt) -> cắt bỏ ký tự rác đó.
+                    text = text[1:].lstrip()
+                    if text:
+                        text = text[0].upper() + text[1:]
+                buf_type = "list_item"
+            elif not paragraph_buf:
+                buf_type = "paragraph"
+
+            # Nếu đoạn văn đầu tiên của phần tử bắt đầu bằng chữ thường, nhiều
+            # khả năng chữ hoa đầu dòng (drop cap) không có trong lớp OCR của
+            # PDF quét -> không thể khôi phục ký tự đã mất, chỉ viết hoa lại
+            # chữ cái hiện có để câu không mở đầu bằng chữ thường.
+            if not paragraph_buf and text and text[0].islower():
+                text = text[0].upper() + text[1:]
+            # OCR hay đọc nhầm chữ "I" đứng đầu câu thành dấu ngoặc vuông "[".
+            if not paragraph_buf and len(text) > 1 and text[0] == "[" and text[1].islower():
+                text = "I" + text[1:]
 
             paragraph_buf.append(text)
             if ends_sentence(text):
@@ -732,6 +810,14 @@ def translate_chapter(meta_idx):
         f.write(html_content)
 
     print(f"-> HOÀN THÀNH: Đã ghi ra file {out_file.name} thành công!\n", flush=True)
+
+    # Tự động cập nhật lại index.html và toan_bo_sach.html
+    build_index_page()
+    try:
+        from build_master_html import build_master
+        build_master()
+    except Exception as e:
+        print(f"[Cảnh báo] Không thể cập nhật toan_bo_sach.html: {e}", flush=True)
 
 
 def build_index_page():

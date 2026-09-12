@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lý Thuyết Và Thực Hành Trị Liệu Gia Đình | James Robert Bitter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    .home-hero {
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 3rem;
+    }
+    .home-hero h1 {
+      font-size: 2.6rem;
+      color: var(--accent-color);
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+    }
+    .home-hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    .home-hero .authors {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .home-hero .edition-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.9rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .chapter-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .chapter-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      border-color: var(--accent-color);
+    }
+    .card-num {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+    .card-title a {
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    .card-title a:hover {
+      color: var(--accent-color);
+    }
+    .card-original {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+    .card-meta {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: auto;
+      padding-top: 1rem;
+    }
+    .chapter-card.is-ready {
+      border-color: #52c41a;
+      background: var(--card-bg);
+    }
+    .card-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+    .status-badge {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .status-badge.ready {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .status-badge.pending {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+    }
+    .card-btn {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    .card-btn:hover {
+      text-decoration: underline;
+    }
+    .card-btn.disabled {
+      color: var(--text-secondary);
+      cursor: not-allowed;
+      text-decoration: none;
+      opacity: 0.7;
+    }
+    .intro-box {
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+    .intro-box h2 {
+      margin-top: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+      font-size: 1.35rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="top-toolbar">
+    <div class="toolbar-left">
+      <span class="book-badge">Tác phẩm kinh điển</span>
+      <span class="book-title-mini">Lý Thuyết Và Thực Hành Trị Liệu Gia Đình (James Bitter)</span>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn-tool" id="btn-font-dec">A-</button>
+      <button class="btn-tool" id="btn-font-inc">A+</button>
+      <button class="btn-tool" id="btn-theme"><span>☀️ Sáng</span></button>
+      <a href="toan_bo_sach.html" class="btn-tool" title="Xem bản một file duy nhất">&#128218; Toàn bộ sách</a>
+    </div>
+  </header>
+
+  <div class="main-wrapper full-width">
+    <article class="content-article" style="max-width: 1100px;">
+      <div class="home-hero">
+        <h1>LÝ THUYẾT VÀ THỰC HÀNH TRỊ LIỆU GIA ĐÌNH</h1>
+        <div class="subtitle">Theory and Practice of Family Therapy and Counseling</div>
+        <div class="authors">Tác giả: GS. James Robert Bitter, Ed.D. &bull; Lời tựa: Gerald Corey, Ed.D.</div>
+        <div class="edition-badge">Giáo Trình Chuẩn Mực Về Trị Liệu Gia Đình &bull; 482 Trang</div>
+      </div>
+
+      <div class="intro-box">
+        <h2>Giới Thiệu Tác Phẩm & Dự Án Bản Dịch Tiếng Việt</h2>
+        <p>
+          <strong>"Theory and Practice of Family Therapy and Counseling"</strong> của GS. James Robert Bitter là cuốn cẩm nang kinh điển hàng đầu thế giới được sử dụng để đào tạo các nhà tâm lý trị liệu, bác sĩ tâm thần và nhân viên công tác xã hội trong suốt hơn 5 thập kỷ qua. Bản tái bản lần thứ 6 (2020) kết hợp cùng GS. Gerald Corey cập nhật toàn diện những nghiên cứu thực chứng dựa trên bằng chứng (evidence-based), kỹ thuật trị liệu trực tuyến (VTC), cũng như các định dạng nhóm chuyên biệt.
+        </p>
+        <p>
+          Tài liệu này được trích xuất trực tiếp từ nguyên bản PDF và chuyển ngữ sang tiếng Việt học thuật, chuẩn hóa các khái niệm then chốt như: <em>Truyền thụ hy vọng, Tính phổ quát, Trải nghiệm cảm xúc sửa chữa, Nhóm như một tiểu vũ trụ xã hội, Làm việc tại đây-và-ngay lúc này, Chuyển di và Tính minh bạch</em>.
+        </p>
+      </div>
+
+      <h2 style="margin-bottom: 1.5rem;">Mục Lục Toàn Bộ Tác Phẩm</h2>
+      <div class="chapters-grid">
+        
+        <div class="chapter-card is-ready">
+          <div class="card-top-row">
+            <span class="card-num">Lời tựa & Lời mở đầu</span>
+            <span class="status-badge ready">✓ Đã dịch &bull; Sẵn sàng đọc</span>
+          </div>
+          <h3 class="card-title"><a href="chapters/00_loi_tua_va_loi_mo_dau.html">Lời Tựa của Gerald Corey & Lời Mở Đầu</a></h3>
+          <div class="card-original">FOREWORD BY GERALD COREY & PREFACE</div>
+          <div class="card-meta">Trang PDF: 25 - 36</div>
+          <div class="card-action">
+            <a href="chapters/00_loi_tua_va_loi_mo_dau.html" class="card-btn">Đọc chương này &rarr;</a>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 1</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Giới Thiệu và Tổng Quan Về Trị Liệu Gia Đình</a></h3>
+          <div class="card-original">INTRODUCTION AND OVERVIEW</div>
+          <div class="card-meta">Trang PDF: 37 - 55</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 1">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 2</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Nhà Thực Hành Gia Đình: Phương Diện Cá Nhân và Nghề Nghiệp</a></h3>
+          <div class="card-original">THE FAMILY PRACTITIONER AS PERSON AND PROFESSIONAL</div>
+          <div class="card-meta">Trang PDF: 56 - 74</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 2">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 3</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Đạo Đức, Phẩm Hạnh và Pháp Lý Trong Thực Hành Gia Đình</a></h3>
+          <div class="card-original">VIRTUE, ETHICS, AND LEGALITY IN FAMILY PRACTICE</div>
+          <div class="card-meta">Trang PDF: 75 - 103</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 3">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 4</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Gia Đình Đa Thế Hệ (Murray Bowen)</a></h3>
+          <div class="card-original">MULTIGENERATIONAL FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 104 - 128</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 4">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 5</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Gia Đình Theo Thuyết Adler</a></h3>
+          <div class="card-original">ADLERIAN FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 129 - 152</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 5">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 6</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Mô Hình Tiến Trình Xác Thực Con Người (Virginia Satir)</a></h3>
+          <div class="card-original">HUMAN VALIDATION PROCESS MODEL</div>
+          <div class="card-meta">Trang PDF: 153 - 176</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 6">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 7</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Gia Đình Biểu Tượng - Trải Nghiệm (Carl Whitaker)</a></h3>
+          <div class="card-original">SYMBOLIC-EXPERIENTIAL FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 177 - 197</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 7">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 8</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Gia Đình Cấu Trúc (Salvador Minuchin)</a></h3>
+          <div class="card-original">STRUCTURAL FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 198 - 220</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 8">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 9</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Gia Đình Chiến Lược (MRI, Milan, Washington)</a></h3>
+          <div class="card-original">STRATEGIC FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 221 - 248</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 9">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 10</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Tập Trung Vào Giải Pháp và Định Hướng Giải Pháp</a></h3>
+          <div class="card-original">SOLUTION-FOCUSED AND SOLUTION-ORIENTED THERAPY</div>
+          <div class="card-meta">Trang PDF: 249 - 270</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 10">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 11</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Hậu Hiện Đại, Kiến Tạo Xã Hội và Liệu Pháp Tường Thuật</a></h3>
+          <div class="card-original">POSTMODERNISM, SOCIAL CONSTRUCTION, AND NARRATIVES IN FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 271 - 299</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 11">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 12</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Gia Đình Nữ Quyền</a></h3>
+          <div class="card-original">FEMINIST FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 300 - 331</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 12">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 13</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Trị Liệu Gia Đình Nhận Thức - Hành Vi</a></h3>
+          <div class="card-original">COGNITIVE-BEHAVIORAL FAMILY THERAPY</div>
+          <div class="card-meta">Trang PDF: 332 - 359</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 13">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 14</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Nuôi Dạy Con Trong Thế Kỷ 21</a></h3>
+          <div class="card-original">PARENTING FOR THE 21ST CENTURY</div>
+          <div class="card-meta">Trang PDF: 360 - 390</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 14">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 15</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá</a></h3>
+          <div class="card-original">INTEGRATION I: FROM SELF-DISCOVERY TO FAMILY PRACTICE</div>
+          <div class="card-meta">Trang PDF: 391 - 409</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 15">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 16</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Tích Hợp II: Kiến Tạo Ý Nghĩa Chung, Thúc Đẩy Thay Đổi & Tinh Chỉnh Can Thiệp</a></h3>
+          <div class="card-original">INTEGRATION II: SHARED MEANING, FACILITATING CHANGE, AND TAILORING INTERVENTIONS</div>
+          <div class="card-meta">Trang PDF: 410 - 422</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 16">Chưa tạo file</span>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <div class="card-top-row">
+            <span class="card-num">Chương 17</span>
+            <span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>
+          </div>
+          <h3 class="card-title"><a href="#">Phụ Lục: Tổng Kết và Đối Chiếu Các Mô Hình Trị Liệu Gia Đình</a></h3>
+          <div class="card-original">APPENDIX: SUMMARY AND REVIEW OF FAMILY MODELS</div>
+          <div class="card-meta">Trang PDF: 423 - 442</div>
+          <div class="card-action">
+            <span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter 17">Chưa tạo file</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <button class="btn-back-to-top" id="btn-back-to-top" title="Lên đầu trang">&uarr;</button>
+  <script src="reader.js"></script>
+</body>
+</html>

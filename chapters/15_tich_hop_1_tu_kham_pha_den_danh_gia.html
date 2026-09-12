@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 15: Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá | Theory and Practice of Family Therapy and Counseling</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="top-toolbar">
+    <div class="toolbar-left">
+      <button class="btn-tool" id="btn-toggle-sidebar" title="Đóng/Mở Mục lục">&#9776; Mục lục</button>
+      <a href="../index.html" class="btn-tool" title="Về trang chủ">&#127968; Trang chủ</a>
+      <span class="book-badge">Yalom & Leszcz (6th Ed.)</span>
+      <span class="book-title-mini">Chương 15: Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá</span>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn-tool" id="btn-font-dec" title="Giảm cỡ chữ">A-</button>
+      <button class="btn-tool" id="btn-font-inc" title="Tăng cỡ chữ">A+</button>
+      <button class="btn-tool" id="btn-theme" title="Đổi giao diện sáng/tối"><span>☀️ Sáng</span></button>
+      <button class="btn-tool" id="btn-print" title="In hoặc lưu PDF">&#128438; In</button>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-search">
+        <input type="text" id="toc-search-input" placeholder="Tìm kiếm chương...">
+      </div>
+      <div class="toc-title">Danh Mục Chương</div>
+      <ul class="toc-list">
+        
+        <li class="toc-item">
+          <a href="00_loi_tua_va_loi_mo_dau.html" class="toc-link">
+            <span class="toc-num">0</span>
+            <span class="toc-name">Lời tựa & Lời mở đầu: Lời Tựa của Gerald Corey & Lời Mở Đầu</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="01_gioi_thieu_tong_quan.html" class="toc-link">
+            <span class="toc-num">1</span>
+            <span class="toc-name">Chương 1: Giới Thiệu và Tổng Quan Về Trị Liệu Gia Đình</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="02_nha_thuc_hanh_gia_dinh.html" class="toc-link">
+            <span class="toc-num">2</span>
+            <span class="toc-name">Chương 2: Nhà Thực Hành Gia Đình: Phương Diện Cá Nhân và Nghề Nghiệp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="03_dao_duc_va_phap_ly.html" class="toc-link">
+            <span class="toc-num">3</span>
+            <span class="toc-name">Chương 3: Đạo Đức, Phẩm Hạnh và Pháp Lý Trong Thực Hành Gia Đình</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="04_tri_lieu_gia_dinh_da_the_he_bowen.html" class="toc-link">
+            <span class="toc-num">4</span>
+            <span class="toc-name">Chương 4: Trị Liệu Gia Đình Đa Thế Hệ (Murray Bowen)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="05_tri_lieu_gia_dinh_adler.html" class="toc-link">
+            <span class="toc-num">5</span>
+            <span class="toc-name">Chương 5: Trị Liệu Gia Đình Theo Thuyết Adler</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="06_mo_hinh_xac_thuc_con_nguoi_satir.html" class="toc-link">
+            <span class="toc-num">6</span>
+            <span class="toc-name">Chương 6: Mô Hình Tiến Trình Xác Thực Con Người (Virginia Satir)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="07_tri_lieu_bieu_tuong_trai_nghiem_whitaker.html" class="toc-link">
+            <span class="toc-num">7</span>
+            <span class="toc-name">Chương 7: Trị Liệu Gia Đình Biểu Tượng - Trải Nghiệm (Carl Whitaker)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="08_tri_lieu_gia_dinh_cau_truc_minuchin.html" class="toc-link">
+            <span class="toc-num">8</span>
+            <span class="toc-name">Chương 8: Trị Liệu Gia Đình Cấu Trúc (Salvador Minuchin)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="09_tri_lieu_gia_dinh_chien_luoc.html" class="toc-link">
+            <span class="toc-num">9</span>
+            <span class="toc-name">Chương 9: Trị Liệu Gia Đình Chiến Lược (MRI, Milan, Washington)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="10_tri_lieu_tap_trung_giai_phap_sfbt.html" class="toc-link">
+            <span class="toc-num">10</span>
+            <span class="toc-name">Chương 10: Trị Liệu Tập Trung Vào Giải Pháp và Định Hướng Giải Pháp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="11_hau_hien_dai_va_tri_lieu_tuong_thuat.html" class="toc-link">
+            <span class="toc-num">11</span>
+            <span class="toc-name">Chương 11: Hậu Hiện Đại, Kiến Tạo Xã Hội và Liệu Pháp Tường Thuật</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="12_tri_lieu_gia_dinh_nu_quyen.html" class="toc-link">
+            <span class="toc-num">12</span>
+            <span class="toc-name">Chương 12: Trị Liệu Gia Đình Nữ Quyền</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="13_tri_lieu_gia_dinh_nhan_thuc_hanh_vi.html" class="toc-link">
+            <span class="toc-num">13</span>
+            <span class="toc-name">Chương 13: Trị Liệu Gia Đình Nhận Thức - Hành Vi</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="14_nuoi_day_con_the_ky_21.html" class="toc-link">
+            <span class="toc-num">14</span>
+            <span class="toc-name">Chương 14: Nuôi Dạy Con Trong Thế Kỷ 21</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="15_tich_hop_1_tu_kham_pha_den_danh_gia.html" class="toc-link active">
+            <span class="toc-num">15</span>
+            <span class="toc-name">Chương 15: Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="16_tich_hop_2_y_nghia_va_can_thiep.html" class="toc-link">
+            <span class="toc-num">16</span>
+            <span class="toc-name">Chương 16: Tích Hợp II: Kiến Tạo Ý Nghĩa Chung, Thúc Đẩy Thay Đổi & Tinh Chỉnh Can Thiệp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="17_phu_luc_tong_ket_cac_mo_hinh.html" class="toc-link">
+            <span class="toc-num">17</span>
+            <span class="toc-name">Phụ lục: Phụ Lục: Tổng Kết và Đối Chiếu Các Mô Hình Trị Liệu Gia Đình</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-wrapper">
+      <article class="content-article">
+        <header class="book-header">
+          <div class="chapter-number">Chương 15 (Trang 391 - 409)</div>
+          <h1 class="chapter-title">Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá</h1>
+          <div class="chapter-authors">Nguyên tác: <em>INTEGRATION I: FROM SELF-DISCOVERY TO FAMILY PRACTICE</em> &bull; James Robert Bitter, Ed.D.</div>
+        </header>
+
+        <div class="chapter-body">
+          <h2>CHƯƠNG 15</h2>
+<p>Tích hợp |:</p>
+<p>Từ khám phá bản thân đến thực hành gia đình—Hình thành mối quan hệ và đánh giá gia đình</p>
+<p>Khám phá một mô hình hoặc tập hợp các mô hình để sử dụng chuyên nghiệp</p>
+<p>Quay video công việc của bạn và dành thời gian để suy ngẫm</p>
+<p>Một quy trình trị liệu gia đình qua các mô hình</p>
+<h2>Bản tóm tắt</h2>
+<p>Tài liệu tham khảo</p>
+<p>MMH Khám phá một mô hình hoặc một bộ mô hình để sử dụng chuyên nghiệp</p>
+<p>Chương này sẽ bắt đầu với một số ý tưởng và câu hỏi có thể hữu ích trong việc giúp bạn</p>
+<p>để khám phá những giá trị, niềm tin và quy trình vốn là một phần tự nhiên của bạn và điều đó có thể</p>
+<p>cũng cảm thấy cần thiết cho công việc của bạn. Tôi hy vọng mỗi bạn sẽ tìm được một hoặc một bộ mô hình có thể đóng vai trò là điểm khởi đầu, làm nền tảng cho việc thực hành và hội nhập. Tôi cũng sẽ bắt đầu đề xuất một quy trình tích hợp các hệ thống trị liệu trong cuốn sách này.</p>
+<p>Tôi nghĩ quá trình này diễn ra theo bốn giai đoạn hoặc bước: Hình thành mối quan hệ, đánh giá gia đình, đưa ra giả thuyết và chia sẻ ý nghĩa, và tạo điều kiện cho sự thay đổi. Trọng tâm của chương này sẽ là hình thành mối quan hệ và tiến hành đánh giá dựa trên nhiều</p>
+<p>quan điểm.</p>
+<p>Đã có một số mô hình hội nhập xuất sắc được phát triển trong</p>
+<p>lĩnh vực trị liệu gia đình (xem Breunlin, Schwartz, & MacKune-Karrer, 1992/1997; Carlson, Sperry, & Lewis, 2005; Gehart & Tuttle, 2003; Hanna, 2007; Miksell, Lusterman, & McDaniel, 1995; Olsen, 1999; Walsh, 1998; Worden, 2003, để lấy mẫu chỉ một vài). Tất nhiên, thật hấp dẫn khi muốn tích hợp những phần tốt nhất của tất cả các mô hình. Việc này khá dễ dàng</p>
+<p>là một số trường hợp, chẳng hạn như kết hợp trị liệu gia đình cấu trúc và trị liệu gia đình chiến lược. Trong những trường hợp khác, triết lý và quan điểm trị liệu của những mô hình này khác nhau đến mức thực sự không có cách nào để kết hợp cái này với cái kia. Chẳng hạn, điều đó là khó khăn,</p>
+<p>để xem lập trường trị liệu chỉ thị của Jay Haley với những thử thách và thách thức của nó có thể tìm thấy điểm chung như thế nào với cách tiếp cận “không biết” lệch lạc của các nhà xây dựng xã hội.</p>
+<p>Như tôi đã nhấn mạnh ở phần khác trong cuốn sách này, chìa khóa dẫn đến hạnh phúc nghề nghiệp là tìm ra cách tiếp cận nền tảng phù hợp với các giá trị cá nhân của bạn và cách bạn muốn gắn bó.</p>
+<p>Tích hợp và ứng dụng <sup class="footnote-ref">[360]</sup> PHẦN 3</p>
+<p>người khác. Nền tảng như vậy có thể được tìm thấy trong một mô hình hoặc một tập hợp nhỏ các mô hình, nhưng nó sẽ không đến từ việc lấy mẫu chiết trung tất cả các mô hình.</p>
+<p>Khi bạn xem lại 10 lý thuyết được trình bày trong cuốn sách này, cách tiếp cận nào dường như khiến bạn bất ngờ? Có lẽ các bộ phận của một số mô hình nổi bật đối với bạn. Có hình mẫu nào có vẻ phù hợp với những gì bạn luôn tin tưởng về bản thân, gia đình, bạn bè, văn hóa, cộng đồng và thậm chí cả cuộc sống nói chung không? Một số mô hình có nói lên niềm tin của bạn không? Có ở đó không</p>
+<p>bất kỳ định hướng lý thuyết nào dường như giải thích sự phát triển của chính bạn, có ý nghĩa từ các mô hình tương tác và quy tắc mà bạn đã biết trong gia đình gốc của mình hoặc gợi ý cách giải quyết các vấn đề hiện tại hoặc quá khứ trong các mối quan hệ gia đình của bạn? Thực sự có thể có điều gì đó trong mỗi chương mà bạn phản hồi theo hướng tích cực, nhưng bạn có thể thấy mình đang áp dụng điều gì với một gia đình khi bắt đầu thực hành thực tế? Câu trả lời cho những câu hỏi này có thể đóng vai trò là mũi tên, hướng bạn tới mô hình hoặc tập hợp mô hình mà bạn sẽ chọn gọi là của riêng mình.</p>
+<p>MM quay phim công việc của bạn và dành thời gian để suy ngẫm</p>
+<p>Khi bạn bắt đầu phát triển các phương pháp tiếp cận nền tảng cho công việc của mình, hãy sẵn sàng thử nghiệm. Hãy thử những điều khác nhau. Xem những gì phù hợp với bạn và những gì có thể không. Hãy quay video buổi họp mặt gia đình đầu tiên của bạn thường xuyên nhất có thể. Thật vậy, tôi kêu gọi tất cả những học viên mới—và thậm chí cả những người lớn tuổi dày dạn kinh nghiệm—quay video công việc của họ ít nhất một lần một tuần. Ngồi xuống để xem băng của bạn</p>
+<p>ít nhất hai lần. Rất khó – một số người có thể nói là không thể – vừa ở trong một trải nghiệm vừa quan sát nó cùng một lúc.</p>
+<p>Khi bạn xem chính mình trên băng, hãy cố gắng vượt qua vẻ ngoài và âm thanh của bạn càng nhanh càng tốt.</p>
+<p>nhất có thể: Tất cả chúng ta đều trông và nghe trên băng khác với những gì chúng ta nghĩ khi đang làm việc.</p>
+<p>trong phiên. Bắt đầu với các câu hỏi về quy trình ban đầu: Tập trung nhiều hơn vào loại mối quan hệ mà bạn hình thành với từng thành viên trong gia đình và với cả nhóm. Điều gì làm tăng sự hiện diện của bạn với mỗi người trong số họ? Có điều gì dường như khiến bạn mất tập trung khi hiện diện không? Khi bạn lắng nghe những gì gia đình nói, bạn chỉ đang nghe lời nói hay bạn cũng đang bắt đầu nhìn và trải nghiệm những quá trình đang diễn ra? Những mô hình hoặc trình tự nào xuất hiện trong quá trình gia đình? Cái gì</p>
+<p>các quy tắc dường như đang chi phối cách các thành viên cá nhân cư xử và tương tác? Những vai trò nào dường như là một phần của quá trình gia đình? Những vai trò này có giúp ích hay cản trở cuộc sống gia đình mà các thành viên mong muốn không? Những người đảm nhận những vai trò này có gây ra bất kỳ phản ứng hoặc sự xao lãng nào trong bạn không? Những vấn đề gì đang ảnh hưởng đến gia đình này? Mỗi người hoặc toàn bộ hệ thống đối phó như thế nào? Các thành viên trong gia đình đang hình thành những mối quan hệ nào khi vấn đề đó ập đến hoặc thậm chí chiếm lấy cuộc sống của họ? Đây không phải là danh sách đầy đủ các câu hỏi về quy trình và đánh giá. Đó chỉ là một cách để bắt đầu giải quyết những cách bạn suy nghĩ, hình thành khái niệm và đánh giá những gia đình mà bạn sẽ gặp trong quá trình thực hành của mình.</p>
+<p>Khi bạn quan sát chính mình trên băng, bạn sẽ có cơ hội suy ngẫm và kết nối. Suy ngẫm phần lớn là sự đánh giá nội tâm: Hãy tự hỏi bản thân những suy nghĩ, cảm xúc và phản ứng nào.</p>
+<p>những điều này đã được kích hoạt khi bạn làm việc với gia đình. Có điều gì bạn đã làm tốt và điều đó khiến bạn cảm thấy có năng lực và chuyên nghiệp không? Có điều gì bạn ước mình đã làm không</p>
+<p>khác nhau? Bạn có cảm thấy bị chia cắt vào bất kỳ phần nào của mối quan hệ gia đình không? Việc đặt những câu hỏi này cũng sẽ giúp bạn bắt đầu kết nối với các khuôn mẫu trong công việc của mình. Bạn sẽ bắt đầu khám phá ra rằng bạn có những khuôn mẫu thoải mái, những biện pháp can thiệp mà bạn dựa vào để hình thành các mối quan hệ, đánh giá, tạo ra ý nghĩa và/hoặc thúc đẩy sự thay đổi. Bạn cũng sẽ bắt đầu thấy rằng bạn có thể kết nối các mô hình cá nhân và nghề nghiệp của mình với một hoặc nhiều mô hình mà bạn có.</p>
+<p>đã học rồi. Bạn sẽ không áp dụng nhiều một mô hình như bạn sẽ đạt được nó. Khi nó phù hợp, nó sẽ có cảm giác phù hợp. |</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 361</p>
+<p>Đây sẽ là mô hình nền tảng hoặc tập hợp các mô hình của bạn. Họ sẽ tiếp đất cho bạn và thêm vào</p>
+<p>cảm giác nhất quán và cấu trúc đối với quá trình trị liệu và các biện pháp can thiệp của bạn. Biết nền tảng của bạn cũng sẽ cho phép bạn chọn lọc các khía cạnh từ các phương pháp tiếp cận khác</p>
+<p>cũng sẽ rất phù hợp và có thể được tích hợp một cách nhất quán (thậm chí dễ dàng) vào công việc của bạn.</p>
+<p>Cách tiếp cận hội nhập như vậy luôn là một phần của chúng tôi. Khi chúng ta còn nhỏ, chúng ta</p>
+<p>hãy để cha mẹ là nền tảng, là chỗ dựa, là sự ổn định của chúng ta. Chúng tôi sẽ mạo hiểm rời xa họ một thời gian, nhưng chúng tôi luôn quay trở lại những gì đã biết và an toàn. Không lâu sau, chúng ta bắt đầu nhận ra rằng một số bộ phận nhất định trong chúng ta là trung tâm đối với sự tồn tại, sự tồn tại và bản chất của chúng ta. Nền tảng chuyển từ những gì bên ngoài chúng ta đến những gì bên trong chúng ta. Đôi khi, thông qua trải nghiệm, học hỏi và thử nghiệm, chúng tôi sẽ mang những phần mới của cuộc sống trở lại nơi giống như ở nhà. Sau một thời gian, những phần mới đó trong cuộc sống của chúng ta (hoặc của chính chúng ta) trở nên tự nhiên, bình thường và có thể sử dụng được. Chúng tôi đã tích hợp chúng như thể chúng luôn là một phần nền tảng của chúng tôi. Tất nhiên, tất cả những điều này đều mất thời gian, nhưng không phải một số bộ phận trong chúng ta</p>
+<p>bây giờ rất khác so với khi chúng ta 5 tuổi? Và thật ngạc nhiên,</p>
+<p>Chẳng phải một số phần trong chúng ta vẫn như cũ sau ngần ấy năm sao?</p>
+<p>Sẽ mất thời gian để phát triển thành lập trường chuyên nghiệp của bạn. Đối với những người thiếu kiên nhẫn, đó là tin xấu. Tin tốt là bạn đang bước vào một nghề mà việc học tập và hội nhập suốt đời đều có thể thực hiện được và cần thiết. Một trong những giáo viên của tôi, Virginia Satir (1983) đã nhắc nhở chúng tôi: “Tất cả chúng ta nên tiếp tục là sinh viên. Lời khuyên của tôi là chúng ta nên</p>
+<p>giải phóng bản thân để tìm kiếm ở bất cứ đâu và sử dụng những gì có vẻ phù hợp. Điều này làm cho mỗi chúng ta trở thành một thực thể không ngừng phát triển” (trang ix).</p>
+<p>Mm Một quy trình trị liệu gia đình qua các mô hình</p>
+<p>Một số hình thức và cấu trúc đã được đề xuất làm mô hình tích hợp cho thực hành gia đình</p>
+<p>(ví dụ, Breunlin, Schwartz, & MacKune-Karrer, 1992/1997; Carlson và cộng sự, 2005; Hanna,</p>
+<p>2007; Nichols, 1995; Worden, 2003). Mỗi phương pháp tiếp cận này đều có bản thiết kế đặc biệt của riêng tác giả về tư vấn và trị liệu. | muốn nghĩ về trị liệu gia đình giống như cách mà</p>
+<p>Tôi trải nghiệm âm nhạc cổ điển: Đối với tôi, quá trình trị liệu gia đình dường như có các chuyển động, và mỗi chuyển động này có nhịp điệu, nhịp độ, nốt và chức năng riêng biệt, nhưng khi kết hợp lại với nhau, chúng tạo nên một tổng thể lớn hơn. Đối với tôi, có bốn chuyển động chung trong toàn bộ quá trình thực hành, tư vấn và trị liệu gia đình: (1) hình thành mối quan hệ, (2) tiến hành</p>
+<p>đánh giá, (3) đưa ra giả thuyết và chia sẻ ý nghĩa, và (4) tạo điều kiện cho sự thay đổi. Thỉnh thoảng, bốn chuyển động này thực sự có thể xảy ra trong một phiên duy nhất. Tuy nhiên, trong hầu hết các trường hợp, mỗi động tác mất nhiều thời gian và quy trình thực hành gia đình hiếm khi diễn ra suôn sẻ từ động tác này sang động tác tiếp theo. Thật vậy, việc hướng tới các khía cạnh quan hệ và đánh giá của trị liệu gia đình có thể phải diễn ra nhiều lần trong suốt quá trình.</p>
+<p>Hình thành mối quan hệ</p>
+<p>Bên cạnh các đặc điểm của thân chủ (chẳng hạn như sức mạnh bên trong, niềm tin và sự hướng đến mục tiêu) và các nguồn lực bên ngoài của thân chủ (chẳng hạn như giáo dục, hỗ trợ xã hội, sự ổn định tài chính và vận may), mối quan hệ giữa bác sĩ gia đình và thân chủ tạo nên sự thay đổi lớn nhất trong trị liệu. Cụ thể, thuộc tính và tài nguyên của thân chủ chiếm khoảng 40% sự thay đổi; mối quan hệ chiếm khoảng 30% sự thay đổi; mô hình trị liệu hoặc tài khoản tiếp cận</p>
+<p>khoảng 15% thay đổi; và 15% thay đổi khác xảy ra chỉ vì thân chủ đến trị liệu (Blow & Sprenkle, 2001; Carlson và cộng sự, 2005; Lambert & Ogles, 2004). Ngay cả hành động đến trị liệu cũng bị ảnh hưởng rất nhiều bởi các yếu tố quan hệ: Thân chủ có tin tưởng người tư vấn không?</p>
+<p>hoặc nhà trị liệu có thể giúp đỡ? Nhà thực hành gia đình có định hướng động lực không? Liệu người tư vấn hoặc</p>
+<p>nhà trị liệu thu hút thân chủ một cách hiệu quả vào quá trình tư vấn hoặc trị liệu gia đình?</p>
+<p><sup class="footnote-ref">[362]</sup> PHẦN <sup class="footnote-ref">[3]</sup> Tích hợp và ứng dụng</p>
+<p>Các mối quan hệ trị liệu bắt đầu từ lần tiếp xúc đầu tiên mà người hành nghề có với thân chủ. Mặc dù nó có thể không thực tế trong một số trường hợp, tôi khuyên các nhà trị liệu nên thực hiện</p>
+<p>các cuộc hẹn của riêng họ hoặc gọi điện trực tiếp cho thân chủ sau khi cuộc hẹn đã được thực hiện để trả lời các câu hỏi ban đầu và cho thân chủ biết những gì sẽ xảy ra khi họ đến. Ngay cả trên điện thoại, thân chủ sẽ giao tiếp rất nhiều thông qua giọng điệu, ngôn ngữ họ sử dụng để mô tả tình huống của mình và các loại mối quan tâm được bày tỏ. Ngoài việc ấn định thời gian và địa điểm cho cuộc gặp đầu tiên, nhà thực hành gia đình cũng nên cho thân chủ biết quan điểm của họ.</p>
+<p>quyết định ai nên tham gia trị liệu. Một số nhà trị liệu, như Whitaker, sẽ nhấn mạnh rằng mọi thành viên trong gia đình trực hệ và có lẽ cả đại gia đình đều phải có mặt; những người khác sẽ làm việc với bất cứ ai sẵn sàng đến.</p>
+<p>Tôi tin rằng các mối quan hệ trị liệu hiệu quả có liên quan mật thiết đến một phẩm chất mà tôi gọi là sự hiện diện. Đó là khả năng để mọi vấn đề khác trong cuộc sống và công việc của nhà trị liệu trôi qua - và</p>
+<p>đưa sự tập trung của một người vào đây và bây giờ. Nó mở ra năm giác quan của một người để tiếp nhận tất cả thông tin</p>
+<p>mà họ có thể tiếp thu và mang lại sự quan tâm tập trung đến từng người cũng như những gì họ nói cũng như cách họ nói. Satir gọi đây là chất lượng của việc tạo dựng mối quan hệ (Satir & Bitter, 2000). Những người khác sẽ gọi nó là sự gắn kết, sự gắn kết, sự thân thiện hoặc sự quan tâm và chăm sóc đơn giản. Chào đón các thành viên trong gia đình với sự cởi mở và ấm áp giúp giảm bớt lo lắng ban đầu</p>
+<p>mà các gia đình có thể cảm thấy và làm tăng khả năng mỗi người sẽ tham gia</p>
+<p>trong phiên.</p>
+<p>Quy trình và cấu trúc của các buổi trị liệu là trách nhiệm của bác sĩ gia đình.</p>
+<p>người chuẩn bị. Ngay từ đầu, điều quan trọng là phải tập trung vào sự tương tác. Ai ngồi ở đâu? Ai</p>
+<p>nói chuyện với ai và các bên khác có ảnh hưởng gì đến giao tiếp giữa hai bên? Nhà trị liệu muốn bắt đầu buổi trị liệu bằng cách lắng nghe ý kiến ​​của từng người, hay liệu quá trình gia đình sẽ dễ dàng được nhìn thấy hơn nếu các thành viên trong gia đình trò chuyện bình thường về các vấn đề đã đưa họ đến trị liệu? Trong cả hai trường hợp, sự hiểu biết về quá trình gia đình thường được thể hiện rõ hơn thông qua các câu hỏi như thế nào (“Cuộc thảo luận này diễn ra thế nào với tất cả các bạn?” hoặc “Làm thế nào để bạn được lắng nghe khi đang cãi nhau?”) hơn là những câu hỏi cái gì, tại sao, ở đâu hoặc khi nào có xu hướng nhấn mạnh nội dung (Gladding, 2007).</p>
+<p>Tiến hành đánh giá</p>
+<p>Việc tiến hành đánh giá từ góc độ tích hợp cho phép những người thực hành gia đình phát triển một khái niệm tổng thể dựa trên nhiều công cụ đánh giá khác nhau. Các lý thuyết hệ thống ban đầu mà chúng tôi nghiên cứu sử dụng nhiều biện pháp can thiệp đánh giá, bao gồm cả đánh giá mục đích luận; thứ tự sinh; biểu đồ gen; tam giác, phản ứng cảm xúc, lập trường giao tiếp; phát triển một cuộc khủng hoảng; đánh giá cơ cấu và ủng hộ tổ chức</p>
+<p>chấm dứt; dàn dựng tương tác (enactment); trình tự theo dõi; thử thách, hoặc đặt câu hỏi vòng tròn. Các nhà trị liệu gia đình nhận thức-hành vi đánh giá tư duy tự động, phản ứng cảm xúc và các kiểu hành vi bằng cách sử dụng các bản tự báo cáo cũng như các bài kiểm tra chính thức và thang đánh giá. Với sự ra đời của hậu hiện đại,</p>
+<p>chủ nghĩa kiến ​​tạo xã hội, các định hướng đánh giá mới đã được đề xuất, trong đó có</p>
+<p>sự khác biệt, ngoại lệ, sự kiện độc đáo và những khả năng hoặc giải pháp mới. Phong trào thoát khỏi những đánh giá về bệnh lý nội tại và rối loạn chức năng hệ thống này được chia sẻ bởi các nhà trị liệu gia đình nữ quyền, những người xem xét vai trò giới, sự phân bổ quyền lực và ảnh hưởng của chế độ phụ hệ đối với gia đình.</p>
+<p>Tám ống kính</p>
+<p>Một cách để tiến hành đánh giá các gia đình qua các mô hình là coi mỗi mô hình đóng góp một hoặc nhiều quan điểm để có thể hiểu được một gia đình. Những quan điểm nào có thể xuất hiện trong đầu bạn? Vào năm 1992/1997, Breunlin, Schwartz và MacKune-Karrer đã giới thiệu khái niệm siêu khung làm việc như một phương tiện để vượt qua các cách tiếp cận khác nhau đối với trị liệu gia đình. Cách tiếp cận tích hợp của họ bắt đầu bằng cách xác định “sáu siêu khung cốt lõi” (tr. 55):</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 363</p>
+<p>Hệ thống nội bộ gia đình (hoặc cá nhân là hệ thống); trình tự (hoặc mô hình tương tác); tổ chức (của hệ thống); phát triển; đa văn hóa (hoặc đa dạng); và giới tính. Gerald Corey và tôi đã bổ sung thêm hai góc nhìn khác để có thể hiểu được gia đình. Chúng tôi gọi những quan điểm này là siêu khung về mục đích luận (hoặc hướng đến mục tiêu) và xử lý.</p>
+<p>(Đắng & Corey, 2005).</p>
+<p>Chúng ta có thể coi mỗi phối cảnh siêu khung này như những thấu kính, chẳng hạn như một thấu kính có thể có trong một cặp kính. Tùy thuộc vào cặp kính chúng ta đeo và ống kính nào chúng ta nhìn qua, chúng ta sẽ nhìn, đánh giá và hiểu gia đình một cách khác nhau. Sử dụng nhiều lăng kính cho phép những người thực hành gia đình hiểu rõ hơn về gia đình.</p>
+<p>Đối với tôi, ban đầu nghe về vấn đề của một gia đình cũng giống như nhìn một chú chó con mới sinh</p>
+<p>một cửa sổ trong một cửa hàng vật nuôi. Tôi có thể tạo ra khá nhiều hứng thú khi chỉ nhìn, nhưng tôi cần biết nhiều hơn trước khi có thể mua nó. Tôi có thể làm phong phú thêm kiến ​​thức của mình về chú chó con bằng cách đi sâu vào</p>
+<p>lưu trữ và đến gần nó hơn: Tôi có thể quan sát cách nó di chuyển, cách nó xử lý mọi người và thay đổi cũng như cách nó tìm cách đáp ứng nhu cầu của mình; Tôi có thể bế nó lên, sờ bộ lông của nó và chơi với nó; và tôi có thể tìm hiểu về sức khỏe, giống, giới tính và khả năng phát triển của nó. Tóm lại, tôi càng có nhiều cách để đến</p>
+<p>để biết con chó con, trải nghiệm của tôi về con chó con đó sẽ càng lớn lao hơn. Nó cũng giúp tôi hình thành</p>
+<p>mối quan hệ tốt hơn với chú chó con và giúp tôi không làm những việc vô tình có thể gây hại cho nó.</p>
+<p>Giá trị của thấu kính là chúng cho phép những người hành nghề trong gia đình xem xét nhiều góc độ.</p>
+<p>các vấn đề thay vì bị bó buộc vào một quan điểm duy nhất. Khi tôi gặp một gia đình, có thể không phù hợp nếu sử dụng tất cả tám lăng kính mà tôi sắp mô tả, nhưng thường thì một số lăng kính sẽ không phù hợp.</p>
+<p>ống kính sẽ xứng đáng được chú trọng đặc biệt. Họ sẽ là những người gắn liền với những lĩnh vực của cuộc sống mà gia đình cảm thấy bó buộc nhất.</p>
+<p>Tám thấu kính có xu hướng đệ quy, mỗi thấu kính ảnh hưởng và chịu ảnh hưởng của thấu kính kia; bạn sẽ nhớ lại rằng tính đệ quy là đặc tính chung của các phương pháp tiếp cận hệ thống. Mặc dù mục đích sử dụng chính của thấu kính là trong đánh giá, nhưng chúng cũng có thể hướng dẫn các nhà tư vấn và nhà trị liệu điều chỉnh các biện pháp can thiệp trị liệu phù hợp với nhu cầu cụ thể của từng gia đình (xem Carlson và cộng sự, 2005; Goldenberg & Goldenberg, 2002). Phần mô tả của từng thấu kính trong số tám thấu kính sẽ được trình bày tiếp theo. Tôi nên cảnh báo bạn rằng một số tài liệu này rất phức tạp và cần phải đọc kỹ và thậm chí đọc lại một số lần. | sẽ cung cấp những ví dụ mà tôi có thể làm để làm cho những ý tưởng này trở nên rõ ràng nhất có thể.</p>
+<p>Hệ thống gia đình nội bộ. Richard Schwartz (1995) đã phát triển và đặt tên cho mô hình hệ thống này để làm việc với các cá nhân. Tuy nhiên, ông không phải là người thực hành gia đình duy nhất coi các cá nhân là một gia đình gồm các bộ phận hoặc một tập hợp các bản thân. Virginia Satir tiếp cận nhiều bộ phận khác nhau của các cá nhân thông qua cách tiếp cận hiện tượng học của cô ấy đối với việc lập bản đồ gia đình, bánh xe ảnh hưởng, một mandala tự thân và trực tiếp nhất là thông qua một bữa tiệc các bộ phận</p>
+<p>(Satir, Banmen, Gerber, & Gomori, 1991). Bữa tiệc các bộ phận của cô ấy là một quá trình tâm kịch nhằm tích hợp các bộ phận cực đoan trong các cá nhân và nó đặc biệt hiệu quả khi làm việc với các cặp đôi khi các bộ phận của họ xung đột với nhau (Bitter, 1993b). Có lẽ lời giải thích đầy đủ nhất</p>
+<p>của cá nhân như một tập hợp của bản thân được đưa ra bởi nhà trị liệu bậc thầy Gestalt,</p>
+<p>Erv Polster (1995).</p>
+<p>Mỗi người là một tổng thể hoặc hệ thống sinh vật, hoàn chỉnh với cấu trúc, tổ chức và các hệ thống con. Nhiều phần tạo nên cái mà tôi gọi là tôi có thể tự nâng cao hoặc tự hủy hoại. Một số là bộ phận vật chất; một số là nhận thức, cảm xúc, xã hội hoặc tinh thần. Mỗi chúng ta đều đã phát triển cấu hình các bộ phận cụ thể của riêng mình thông qua các tương tác xã hội và kinh nghiệm phát triển. Chúng ta có xu hướng sử dụng một số bộ phận nhiều hơn những bộ phận khác và những bộ phận chúng ta sử dụng nhiều nhất có xu hướng là những đánh giá do cá nhân lựa chọn nhằm nói lên điều gì đó về con người chúng ta và điều gì có ý nghĩa đối với chúng ta. Breunlin và cộng sự. (1992/1997) lưu ý rằng “tất cả các phần, trong</p>
+<p>trạng thái tự nhiên, không cực đoan của họ muốn điều gì đó tích cực cho con người và mong muốn được chơi</p>
+<p>một vai trò có giá trị trong hệ thống nội bộ” (tr. 66). Các cá nhân gặp phải xung đột khi các bộ phận bên trong trở nên phân cực hoặc cực đoan—hoặc khi các bộ phận cần thiết dường như không thể tiếp cận được.</p>
+<p><sup class="footnote-ref">[364]</sup> PHẦN <sup class="footnote-ref">[3]</sup> Tích hợp và ứng dụng</p>
+<p>Mọi nhà lý thuyết/nhà thực hành làm việc với các bộ phận bên trong đều thừa nhận một siêu thực thể tích hợp, chi phối, tổ chức và lựa chọn các bộ phận thiết yếu. Đôi khi thực thể đó được gọi là</p>
+<p>bản thân; đôi khi nó được gọi là người. Dù tên là gì thì nó cũng là toàn bộ hệ thống, cái lớn hơn tổng của các bộ phận. Chính con người này được giao cho sự lãnh đạo đúng đắn đối với các bộ phận của chúng ta: “Cái tôi nói chung dẫn đầu và các bộ phận ở đó để tư vấn, cho vay.</p>
+<p>cảm xúc hoặc tài năng, hoặc hỗ trợ bằng cách khác” (Breunlin và cộng sự, 1992/1997, trang 68).</p>
+<p>Những xung đột và tương tác bên ngoài thường kích thích những phần phân cực hoặc cực đoan trong mỗi cá nhân – đồng thời cũng có tác dụng giảm thiểu khả năng những phần hữu ích hơn có thể được kích hoạt. Bowen (1978) lưu ý rằng bản thân khác biệt là dấu hiệu đặc trưng của chức năng. Trong mô hình của Bowen, sự khác biệt hóa có chức năng bên trong và bên ngoài. Nói chung, sự khác biệt nội tại</p>
+<p>đạt được khi lý tính được đặt lên hàng đầu so với phản ứng cảm xúc: con người</p>
+<p>chọn một phản ứng bình tĩnh hơn, cân nhắc hơn là một phản ứng tự động. Sự khác biệt bên ngoài cho phép một người thoát khỏi những tương tác và thói quen theo khuôn mẫu và chọn những phản ứng mới phù hợp với người chịu trách nhiệm về cuộc sống của chính mình. Cả hai quá trình biệt hóa</p>
+<p>nâng cao một số bộ phận bên trong nhất định so với những bộ phận khác và gợi ý rằng cần phải kết nối lại với những bộ phận này để trưởng thành và phát triển với tư cách một con người — và với tư cách là một nhà trị liệu.</p>
+<p>Một số câu hỏi liên quan đến ống kính này bao gồm:</p>
+<p>e Mỗi bạn dựa vào phần nào để mô tả bạn thực sự là ai?</p>
+<p>¢ Đôi khi chúng ta nhận thấy những phần tốt đẹp nhất của bản thân gần như đang xung đột (hoặc bị phân cực) với những người khác.</p>
+<p>bộ phận bên trong: Bộ phận nào gây ra xung đột nội bộ trong bạn?</p>
+<p>e Có phần nào trong bạn hiếm khi được sử dụng hoặc bạn cảm thấy mình đã từng có nhưng</p>
+<p>bây giờ đã mất hoặc bỏ qua?</p>
+<p>¢ Trong những tương tác khó khăn, phần nào của bạn mà người khác dường như có thể làm một cách nhất quán.</p>
+<p>kêu gọi?</p>
+<p>Ống kính điện ảnh. 'Mục đích học là nghiên cứu về nguyên nhân, điểm kết thúc, mục tiêu và mục đích cuối cùng. Đánh giá mục đích luận là hướng tới tương lai. Điều quan trọng hơn là phải biết ở đâu</p>
+<p>một người hoặc một hệ thống đang hướng tới mục đích gì, hơn là biết nó đã ở đâu. Một chiếc tele-</p>
+<p>lăng kính logic giúp chúng ta hiểu điều gì thúc đẩy các cá nhân, mục đích mang tính hệ thống của các triệu chứng, mục tiêu của phép đo tam giác và cách sử dụng các tương tác và thói quen theo khuôn mẫu hoặc trình tự.</p>
+<p>Bowen, Satir, Minuchin và các nhà trị liệu chiến lược đều sử dụng lăng kính mục đích luận theo thời gian.</p>
+<p>theo thời gian. Tuy nhiên, không có cách tiếp cận nào sử dụng lăng kính này nhiều hơn Adlerians.</p>
+<p>Hành động có mục đích và mục tiêu cuộc sống là cơ sở để hiểu sự chuyển động của cá nhân trong suốt cuộc đời mà người Adler gọi là lối sống (xem Powers & Griffith, 1987). Người Adler cũng</p>
+<p>sử dụng các ưu tiên về tính cách (Kfir, 1981, 1989) có ý nghĩa, làm hài lòng, kiểm soát và giao tiếp.</p>
+<p>có thể hiểu được những bế tắc và mục tiêu trong việc tư vấn cho các cặp đôi. Những ưu tiên về tính cách cũng tương tự như vậy</p>
+<p>đối với quan điểm giao tiếp của Satir là đổ lỗi, xoa dịu, siêu hợp lý và không liên quan,</p>
+<p>tương ứng. Thật vậy, một cách để khái niệm hóa các ưu tiên về tính cách là coi chúng là mục tiêu của giao tiếp không hiệu quả (Bitter, 1987).</p>
+<p>Trong trị liệu gia đình Adlerian, việc định hướng và nhận biết mục tiêu cho phép nhà trị liệu hiểu được mục tiêu nào thúc đẩy những tương tác sai lầm giữa cha mẹ và con cái.</p>
+<p>(Đắng, Roberts, & Sonstegard, 2002; Christensen, 2004). Người Adler tin rằng mục tiêu của</p>
+<p>trẻ em và người lớn tương tác theo những cách sai lầm thường trở thành khuôn mẫu, trình tự hoặc quy trình.</p>
+<p>những điều tưởng chừng như tự động và không thể tránh khỏi. Việc mở khóa những mục tiêu sai lầm này thường liên quan đến việc làm chậm các trình tự và đưa ra các lựa chọn khác nhau dựa trên các mục tiêu ưa thích. Có thể dễ dàng nhận thấy lăng kính mục đích luận này cũng là một phần của cách tiếp cận tập trung vào giải pháp/hướng đến giải pháp đối với trị liệu gia đình.</p>
+<p>Quan điểm mục đích luận cũng liên quan đến những can thiệp như tái cơ cấu. Khi những nhà thực hành gia đình điều chỉnh lại các hành vi hoặc tương tác khó khăn bằng cách ghi nhận những ý định hoặc động cơ tốt thường đằng sau hành động của cá nhân, họ đang sử dụng lăng kính mục đích luận.</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 365</p>
+<p>Một số câu hỏi đạt được mục tiêu và mục đích, đồng thời làm nền tảng cho việc tái đóng khung (reframing), bao gồm:</p>
+<p>¢ Triệu chứng, tương tác hoặc quá trình này phục vụ mục đích gì?</p>
+<p>¢ Hành vi của cá nhân bảo vệ bản thân hoặc hệ thống như thế nào?</p>
+<p>¢ Hậu quả xã hội của hành động hoặc tương tác là gì?</p>
+<p>¢ Mục tiêu của các thành viên trong gia đình có mục đích khác nhau như thế nào?</p>
+<p>Trình tự: Theo dõi các mô hình tương tác. Trọng tâm của các phương pháp tiếp cận mang tính hệ thống ban đầu</p>
+<p>đối với trị liệu gia đình là niềm tin rằng cuộc sống gia đình có trật tự và các thành viên trong gia đình tương tác với nhau</p>
+<p>theo trình tự có xu hướng lặp lại dưới nhiều hình thức theo thời gian. Breunlin và cộng sự. (1992/1997)</p>
+<p>đề cập đến các mẫu như trình tự nhúng và gợi ý rằng chúng xảy ra ở bốn cấp độ.</p>
+<p>Trình tự cấp một là trình tự trực diện xảy ra giữa hai hoặc nhiều thành viên trong gia đình. Phép tam giác thường là một trình tự cấp độ một: Có lẽ một người mẹ đang khó chịu với con gái mình; con gái quay sang cha; người cha thay mặt con can thiệp với mẹ, dẫn đến cãi vã giữa cha mẹ.</p>
+<p>Hãy xem xét một ví dụ cụ thể hơn. Paul đang xem một trận bóng đá trên tivi. Jane vào phòng và nói: “Có một con chuột chết trong gara.” Paul cảm thấy bị gián đoạn và càu nhàu một chút, tiếp tục xem trận đấu của mình. Jane cảm thấy bị phớt lờ và cô ấy hét lên</p>
+<p>với con gái họ Ann: “Con làm ơn đưa con chuột đó ra khỏi gara được không.... (mỉa mai) Có vẻ như bố con quá bận hoặc chỉ là không quan tâm thôi!!”</p>
+<p>Ann đi tới gara. Paul bây giờ đang rất buồn. Anh ấy đứng dậy và trả lời: "Mọi thứ luôn phải được thực hiện theo lịch trình của bạn. Bạn không bao giờ có thể đợi một vài phút được". Và anh dậm chân ra ngoài</p>
+<p>tới gara, chỉ đường cho Ann khi cửa đóng lại.</p>
+<p>Đây là một trình tự mặt đối mặt được đặc trưng bởi những nhu cầu khác nhau, những yêu cầu có đi có lại, đổ lỗi, tổn thương và vâng, tam giác. Nó kết thúc với việc Paul nhượng bộ về mặt hành vi, nhưng có</p>
+<p>lời cuối cùng. Trình tự này có thể là một cuộc đấu tranh mang phong cách riêng, được kích hoạt bởi những nhu cầu xung đột nhau, nhưng chất lượng của các cuộc tấn công tương hỗ cho thấy rằng đây có thể là một kiểu đấu tranh tái diễn.</p>
+<p>trong đó chỉ có nội dung của cuộc chiến là thay đổi.</p>
+<p>Những hành động bị thiếu trong tương tác [cấp độ 1] thường cũng quan trọng như những hành động đang có: nếu một cặp đôi tranh cãi và không bên nào lắng nghe bên kia, thì việc thiếu lắng nghe là một khía cạnh quan trọng của trình tự. (Breunlin và cộng sự,</p>
+<p>1992/1997,.p: 105)</p>
+<p>Trình tự cấp độ hai là những thói quen mà các thành viên trong gia đình sử dụng để hỗ trợ các hoạt động hàng ngày.</p>
+<p>quan hệ và hoạt động chung của gia đình. Đánh giá của Adlerian về một ngày điển hình cung cấp cho những người thực hành gia đình một bức tranh về cách các chuỗi cấp độ hai hỗ trợ các cá nhân.</p>
+<p>như một quá trình trơn tru cho toàn bộ hệ thống. Các thói quen cho phép mọi người và hệ thống hoàn thành nhiều việc cùng một lúc. Nếu các thói quen dừng lại hoặc bắt đầu bị hỏng thì toàn bộ hệ thống phải điều chỉnh lại. Tuy nhiên, hầu hết thời gian, các thói quen diễn ra liền mạch và không được chú ý.</p>
+<p>Nếu “phần thể thao” của Paul không hoàn toàn tham gia thì có thể trình tự trong ví dụ trên đã có một kết thúc khác. Giả sử rằng Paul không tham gia vào việc gì</p>
+<p>đặc biệt - hoặc chắc chắn không có gì quan trọng. Jane bước vào phòng và nói, “Có</p>
+<p>một con chuột chết trong gara.” Paul đứng dậy để giải quyết vấn đề bởi vì sau nhiều năm thất bại</p>
+<p>giận dữ, anh ấy biết rằng Jane ghét chuột, muốn loại bỏ nó mà không phiền phức, và mong rằng Paul sẽ</p>
+<p>sẽ giải quyết những vấn đề như vậy. Đó là một trình tự hỗ trợ hoạt động của gia đình. Đó là</p>
+<p>thói quen của họ. Không có câu hỏi nào về nó.</p>
+<p>Trình tự cấp độ ba đề cập đến những quá trình xảy ra trong quá trình thăng trầm của</p>
+<p>mạng sống. Đây là những chuỗi dài hơn xảy ra khi gia đình phải điều chỉnh theo cái mà Satir và Baldwin (1983) gọi là yếu tố bên ngoài (hoặc lực lượng bên ngoài) hoặc khi cần có những thay đổi trong quá trình phát triển. Haley (1980) mô tả những trình tự phát triển như vậy khi ông nói về những quá trình liên quan đến việc một người trẻ rời nhà.</p>
+<p><sup class="footnote-ref">[366]</sup> PHẦN <sup class="footnote-ref">[3]</sup> Tích hợp và ứng dụng</p>
+<p>Khi Amy, đứa con út, chuẩn bị học xong trung học và rời đến một thành phố xa xôi để học đại học, sự thay đổi trong hệ thống gia đình sắp xảy ra. Phần lớn năng lượng trong hệ thống phụ của cha mẹ đã được hướng tới người phụ nữ trẻ này và chị gái của cô ấy trong nhiều năm, với những sự điều chỉnh đã khiến Paul và Jane xa cách. Viễn cảnh Amy ra đi khiến Paul ngày càng thu mình lại. Jane cũng cảm thấy lạc lõng và không biết họ sẽ làm gì với tư cách một cặp đôi khi ở một mình. Cuộc chiến của họ là một thông điệp gửi đến Amy: "Đừng rời đi. Chúng tôi chưa sẵn sàng để bạn rời đi." Trên thực tế, Amy có thể rời đi, nhưng nếu bố mẹ cô ấy bắt đầu tan vỡ, cô ấy cũng có thể phải “ốm” và trở về nhà.</p>
+<p>Một chuỗi thăng trầm như vậy không xảy ra một cách bất ngờ. Nó đã phát triển theo thời gian thông qua nhiều cảnh đối mặt cũng như việc hình thành và điều chỉnh các thói quen trong gia đình. Việc giải quyết hiệu quả trình tự cấp một và hai tạo điều kiện thuận lợi rất nhiều</p>
+<p>ta có độ phân giải tương tự của trình tự cấp ba.</p>
+<p>Trình tự cấp bốn là chuyển thế hệ. Cách tiếp cận liên thế hệ của Bowen (1978) được thiết kế để đánh giá và giải quyết các trình tự cấp độ bốn—cũng như công việc gắn kết giữa các thế hệ của Boszormenyi-Nagy và Spark (1973). Những trình tự lớn hơn này nhằm mục đích mang lại cảm giác liên tục cho cuộc sống và chúng có thể truyền lại các giá trị cũng như quy tắc về văn hóa và giới tính nhằm xác định hệ thống từ thế hệ này sang thế hệ tiếp theo. Sử dụng trình tự thời gian thực tế cuộc sống của Satir là một cách hữu ích để khám phá các trình tự xuyên thế hệ.</p>
+<p>Trong các xã hội truyền thống, trình tự [chuyển thế hệ] có thể truyền từ một thế hệ</p>
+<p>sang phần tiếp theo với ít thay đổi. Tuy nhiên, trong các xã hội đang phát triển nhanh chóng như xã hội của chúng ta, các trình tự thích ứng trong một thế hệ có thể tạo ra căng thẳng nếu chúng được nhân rộng.</p>
+<p>ở thế hệ tiếp theo. (Breunlin và cộng sự, 1992/1997, trang 113)</p>
+<p>Trình tự thích ứng đòi hỏi sự lãnh đạo cân bằng, công bằng và hợp tác. Satir (1983) tin rằng cha mẹ có thể hình thành bộ ba nuôi dưỡng, cơ bản với mỗi đứa con của mình: Khi cần, hai người sẽ làm việc vì lợi ích phát triển của người thứ ba. Nền tảng của lòng tự trọng sẽ cho phép sự linh hoạt và chào đón sự thay đổi như một phần tất yếu của cuộc sống. Trình tự không thích ứng xảy ra khi các quy tắc cứng nhắc và không linh hoạt, khi các bộ phận bị phân cực và khi sự thay đổi bị phản đối: Các thành viên trong gia đình cảm thấy bị ràng buộc.</p>
+<p>Trị liệu gia đình thường là phát triển các chuỗi hữu ích hơn ở bất kỳ hoặc tất cả bốn yếu tố trên.</p>
+<p>cấp độ. Một số câu hỏi trình tự hữu ích là:</p>
+<p>¢ Ai làm gì với ai khi đưa ra quyết định, xảy ra xung đột hoặc có vấn đề</p>
+<p>cần xử lý? Hãy cho tôi một ví dụ: Lần cuối cùng một chuỗi như vậy xảy ra là khi nào?</p>
+<p>¢ Những thói quen nào hỗ trợ cuộc sống hàng ngày của bạn? Một ngày điển hình diễn ra như thế nào?</p>
+<p>° Lần gần đây nhất bạn gặp khủng hoảng ở nhà, nó diễn ra như thế nào? Ai đã làm gì với ai?</p>
+<p>¢ Có quy trình, mô hình hoặc trình tự nào đặc trưng cho quá trình chuyển đổi hiện tại hoặc quá khứ không?</p>
+<p>cho gia đình này?</p>
+<p>Lăng kính tổ chức. Có lẽ không có mô hình nào đề cập đến tổ chức trong gia đình một cách triệt để hơn các mô hình cơ cấu-chiến lược. Các thuật ngữ như hệ thống vĩ mô, hệ thống con, sự ràng buộc, sự tách rời, quyền lực và hệ thống phân cấp đều được khái niệm hóa hệ thống sớm.</p>
+<p>hoạt động của tổ chức. Trong những mô hình này, cấu trúc cuộc sống của gia đình được bộc lộ trong</p>
+<p>các quy tắc, thói quen, nghi lễ và các vai trò được mong đợi để gắn kết hệ thống lại với nhau. Các biện pháp can thiệp được thiết kế để thiết lập một hệ thống phân cấp chức năng hơn và để phân phối lại quyền lực trong hệ thống hướng tới các mục tiêu và mục đích hiệu quả hơn—các mục đích nói chung được xác định bởi nhà trị liệu hoặc một nhóm các nhà trị liệu.</p>
+<p>Ngoại trừ Adlerians và Satir, rất ít sự chú ý đến những gì tạo nên một gia đình chức năng. Ngày nay, chúng ta có sẵn một lượng lớn nghiên cứu để mô tả các quá trình bình thường của gia đình (Walsh, 2003), cũng như những mô tả phong phú về cuộc sống gia đình ở nhiều khía cạnh khác nhau.</p>
+<p>văn hóa (xem McGoldrick, Giordano, & Garcia-Preto, 2005). Với sự ra đời của phong trào nữ quyền và</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 367</p>
+<p>Các cách tiếp cận theo chủ nghĩa xây dựng xã hội, hậu hiện đại trong trị liệu gia đình, khái niệm về thứ bậc dần dần nhường chỗ cho yêu cầu về khả năng lãnh đạo hiệu quả (Breunlin và cộng sự, 1992/1997). Lãnh đạo gia đình hiệu quả liên quan đến kiểu hợp tác có thể có trong các mối quan hệ bình đẳng. Quan điểm của Satir coi cha mẹ như hai mặt của bộ ba nuôi dưỡng đã phát huy tác dụng và vai trò của những người lãnh đạo gia đình là tổ chức hệ thống theo những cách rõ ràng và hữu ích. Sự lãnh đạo hợp tác tạo cơ hội cho mỗi thành viên phát triển và phát triển cá nhân trong khi</p>
+<p>vẫn đóng góp cho cả gia đình; các thành viên trong gia đình có quyền lợi trong bất kỳ kết quả nào cũng được tham gia vào việc đưa ra quyết định dẫn đến kết quả đó; mọi bộ phận của hệ thống đều có quyền truy cập hợp lý vào các nguồn lực của gia đình; và các thành viên trong gia đình có thể chịu trách nhiệm phù hợp cho bản thân cũng như cho toàn bộ hệ thống.</p>
+<p>Chìa khóa để tổ chức hiệu quả là sự cân bằng. Nhìn chung, khả năng lãnh đạo gia đình phát huy tác dụng tốt nhất khi người lớn có đủ trưởng thành và kinh nghiệm sống để thành lập gia đình ngoài sự lựa chọn và mong muốn nuôi dạy thế hệ tiếp theo. Sự lãnh đạo cân bằng của người lớn là kiên quyết nhưng thân thiện; hiểu các quá trình và nhu cầu phát triển; và đặt ra các giới hạn trong khi vẫn duy trì sự công bằng, linh hoạt</p>
+<p>ible, và đáng khích lệ. Cả cá tính và sự kết nối đều có một vị trí quan trọng trong cuộc sống gia đình cân bằng và cả hai đều phải phù hợp với nhu cầu thế hệ, văn hóa và phát triển. Khi trẻ lớn hơn, chúng được mời tham gia với tư cách là đối tác trong các quyết định của gia đình; sự lãnh đạo trở nên hợp tác, bình đẳng và dân chủ hơn; và các quy trình gia đình tập trung vào sự hợp tác</p>
+<p>tính nhất quán, và quan tâm. Trẻ em và thanh thiếu niên được hưởng lợi từ việc huấn luyện cảm xúc: Các em có cảm giác an toàn cũng như niềm tin rằng mình được đánh giá cao. Họ có chỗ để phát triển, khám phá và thử nghiệm mà không mất đi hệ thống hỗ trợ mà một gia đình có thể hỗ trợ.</p>
+<p>video. Trẻ em trải nghiệm sự tự do trong trật tự (Dreikurs & Soltz, 1964). Một số câu hỏi tổ chức hữu ích là:</p>
+<p>¢ Cha mẹ có phải là người lãnh đạo gia đình hiệu quả không? Trẻ phản ứng thế nào với lời nói của cha mẹ?</p>
+<p>tài lãnh đạo?</p>
+<p>¢ Có thành viên nào trong gia đình can thiệp vào nhiệm vụ và hoạt động của hệ thống con mà</p>
+<p>họ không thuộc về?</p>
+<p>° Quá trình lãnh đạo cân bằng hay không cân bằng? Liệu nó có dẫn đến sự hài hòa hay</p>
+<p>xung đột? Có bất kỳ bộ phận nội bộ nào của cá nhân cản trở khả năng lãnh đạo hiệu quả hay cha mẹ chỉ cần được giáo dục thêm về lĩnh vực này?</p>
+<p>Lăng kính phát triển. Vào những năm 1940, khái niệm phát triển đã chiếm lĩnh tâm lý học và ảnh hưởng đến mọi thứ chúng ta biết về sự phát triển nhận thức, cảm xúc và hành vi của cá nhân. Bên ngoài công tác xã hội, các khuôn khổ phát triển có xu hướng bị tránh né trong thực tiễn gia đình cho đến cuối những năm 1970. Trong 35 năm qua, các nhà trị liệu gia đình đã phát triển</p>
+<p>một mô hình phát triển có hệ thống được gọi là vòng đời gia đình (Carter & McGoldrick, 2005). Khác với các mô hình phát triển cá nhân có xu hướng lập bản đồ các giai đoạn của cuộc đời từ khi sinh ra cho đến khi chết, vòng đời gia đình tập trung vào sự phát triển của cuộc sống gia đình qua sáu giai đoạn chuyển tiếp.</p>
+<p>thời kỳ.</p>
+<p>Một thanh niên độc thân rời nhà để bắt đầu cuộc sống tự lập; Các cá nhân kết hôn hoặc cặp đôi và bắt đầu cùng nhau xây dựng cuộc sống; Hai vợ chồng có con và lập gia đình; Những đứa trẻ đến tuổi thiếu niên; đó là lúc những người trẻ thử nghiệm cả quyền tự chủ và cảm giác kết nối tự do hơn, nhưng đó cũng là lúc mà cha mẹ</p>
+<p>nỗi sợ hãi, lo lắng và nỗ lực kiểm soát thường tăng lên. Đây cũng có thể là lúc cha mẹ đang phải giải quyết các vấn đề về hôn nhân và sự nghiệp ở tuổi trung niên: nếu việc ly hôn xảy ra, nó có thể</p>
+<p>tạo thành “một sự chuyển đổi gia đình đột xuất.” (Ahrons, 2005, trang 381);</p>
+<p>5. Cha mẹ đưa con vào thế giới và chuẩn bị cho cuộc sống không có con;</p>
+<p>giai đoạn này có thể bao gồm nhiều lần thoát ra và tái nhập, nhưng nó hầu như luôn đòi hỏi sự thương lượng lại trong mối quan hệ vợ chồng; Và</p>
+<p>tốt quá</p>
+<p><sup class="footnote-ref">[368]</sup> PHẦN <sup class="footnote-ref">[3]</sup> Tích hợp và ứng dụng</p>
+<p>6. Gia đình bước vào những năm tháng tuổi già khi cha mẹ chuẩn bị cho giai đoạn cuối đời, thường cần đến sự chăm sóc của con cái và đồng thời cũng chăm sóc cho con cái của mình.</p>
+<p>Bởi vì nó mang tính chất hệ thống nên vòng đời gia đình cung cấp một khuôn khổ để hiểu và dự đoán nhiều thăng trầm cũng như các chuỗi chuyển giao thế hệ thường gặp trong cuộc sống gia đình. Nó cũng loại bỏ bệnh lý của nhiều trải nghiệm cuộc sống gia đình đã đưa các cặp vợ chồng và gia đình vào trị liệu. Vòng đời gia đình ban đầu hầu như tập trung hoàn toàn vào gia đình hạt nhân có hai cha mẹ, người da trắng: Ngày nay, có các mô hình phát triển cho:</p>
+<p>¢ gia đình đơn thân;</p>
+<p>¢ tái hôn, chung sống hoặc gia đình riêng;</p>
+<p>* nhiều thế hệ, gia đình mở rộng;</p>
+<p>* các gia đình đồng tính nữ, đồng tính nam và lưỡng tính (bao gồm các mô hình phát triển để công khai</p>
+<p>giải quyết cả nhu cầu của cá nhân và gia đình họ); Và</p>
+<p>¢ các gia đình đến từ nhiều nền văn hóa khác nhau.</p>
+<p>Công trình toàn diện của Carter và McGoldrick (2005) cũng đề cập đến tác động của quan điểm</p>
+<p>về gia đình và mô tả các vấn đề và vai trò giới trong đánh giá chi tiết về vòng đời gia đình.</p>
+<p>Breunlin và các đồng nghiệp (1992/1997) đề xuất sự tích hợp các mô hình phát triển cá nhân và hệ thống, đề xuất năm cấp độ đánh giá: “sinh học, cá nhân, hệ thống phụ (quan hệ), gia đình và xã hội” (trang 159). Một lần nữa, các cấp độ này là đệ quy mà không ngụ ý thứ tự phát triển cụ thể nào. Thay vì xem các cấp độ này là các giai đoạn phát triển, những người thực hành gia đình có thể đánh giá các cá nhân và gia đình để xem liệu họ có đạt được các cấp độ năng lực cần thiết trong từng lĩnh vực để tạo điều kiện cho sự tăng trưởng và phát triển hay không.</p>
+<p>Ở các cấp độ phát triển sinh học, cá nhân và gia đình, quá trình chuyển đổi giúp có thể đánh giá những cách thức mà con người và gia đình kém năng lực hoặc kém hơn.</p>
+<p>vượt quá năng lực (Breunlin và cộng sự, 1992/1997). Giống như cơ thể có thể có các chức năng phát triển phù hợp, kém phát triển hoặc phát triển quá mức, các cá nhân cũng có thể có các bộ phận có năng lực, kém năng lực hoặc thậm chí có năng lực quá mức. Một lần nữa, sự cân bằng và hài hòa là thuộc tính của năng lực và chức năng. Trong các gia đình, quá trình chuyển đổi bị ảnh hưởng rất nhiều bởi năng lực của các hệ thống con (các mối quan hệ trong gia đình) và bởi các yêu cầu do các hệ thống lớn hơn mà các gia đình tham gia đặt ra.</p>
+<p>Thay đổi là không thể tránh khỏi; thay đổi là cuộc sống (Satir và cộng sự, 1991). Trong thực tiễn gia đình, sự tăng trưởng và phát triển vừa là lý tưởng vừa là quá trình mong muốn. Niềm tin vào sự phát triển và tiến hóa là niềm tin lạc quan và đầy hy vọng. Những nhà thực hành gia đình học cách di chuyển giữa và giữa các cấp độ trong lăng kính phát triển có thể mang lại quan điểm toàn diện hơn và phi bệnh lý hơn</p>
+<p>để đánh giá và điều trị. Thấu kính phát triển có tính đa chiều và đòi hỏi sự linh hoạt.</p>
+<p>khả năng và tính linh hoạt trong ứng dụng điều trị. Khi đánh giá các cấp độ khác nhau, chúng tôi tìm kiếm sự đồng thuận</p>
+<p>căng thẳng và tìm cách loại bỏ chúng để có thể thực hiện được sự tăng trưởng và chuyển đổi tự nhiên một lần nữa. Một số câu hỏi phát triển hữu ích là:</p>
+<p>¢ Mỗi người trong gia đình ở đâu trong mối quan hệ sinh học, nhận thức, tình cảm cá nhân?</p>
+<p>sự phát triển của xã hội và xã hội?</p>
+<p>¢ Gia đình ở đâu trong vòng đời gia đình và họ xử lý những chuyển đổi như thế nào?</p>
+<p>¢ Những quy trình quan hệ nào đã phát triển theo thời gian và chúng đã thay đổi hoặc</p>
+<p>phát triển qua các thời kỳ chuyển tiếp?.</p>
+<p>¢ Những sự phát triển nào trong hệ thống lớn hơn (đặc biệt là xã hội hoặc thế giới) đang ảnh hưởng đến</p>
+<p>gia đình?</p>
+<p>Lăng kính đa văn hóa. Thật không may, sự phân biệt đối xử và áp bức đã là một phần trải nghiệm của con người trong một thời gian dài. Các hình thức phân biệt đối xử lâu đời nhất và phổ biến nhất có liên quan đến giới tính, chủng tộc, tầng lớp xã hội và sắc tộc, tạo nên sự đa văn hóa và</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 369</p>
+<p>lăng kính giới tính trong trị liệu gia đình là điều cần thiết. Nếu tất cả các nền văn hóa và cả hai giới đều có quyền tiếp cận như nhau</p>
+<p>đối với các nguồn lực, ảnh hưởng bình đẳng trong tất cả các cấp độ của hệ thống, trách nhiệm như nhau đối với sự tăng trưởng, phát triển và ra quyết định của xã hội trong đó các hệ thống cá nhân được gắn kết và</p>
+<p>một cảm giác bình đẳng về sự thuộc về và giá trị, thì sự đa dạng sẽ là điều đương nhiên và sự đánh giá cao</p>
+<p>sự khác biệt là điều đương nhiên. Trên thực tế, các nền văn hóa thống trị (Foucault, 1970, 1980) phát sinh trong mọi xã hội. Họ tổ chức xung quanh hai mục tiêu trước mắt: (a) củng cố bản thân và</p>
+<p>(b) giảm thiểu quyền lực và ảnh hưởng của các vị trí thay thế. Chính từ nền tảng quyền lực của các nền văn hóa thống trị mà mọi sự phân biệt đối xử và áp bức đều xuất hiện.</p>
+<p>Ở Hoa Kỳ, nền văn hóa thống trị là nam giới, dị tính, người da trắng, người nói tiếng Anh, người châu Âu, người theo đạo Thiên chúa, 35-50 tuổi, giàu có, khỏe mạnh, có năng lực và có học thức. Những người phù hợp hơn với mô tả này có khả năng tiếp cận tốt hơn với tiền bạc, quyền lực, luật pháp và</p>
+<p>chính trị. Tri thức và sự sáng tạo ra nó cũng được kiểm soát bởi những người có quyền lực (Foucault, 1970). Những câu chuyện lịch sử chứa đầy những cụm từ như “quyền thiêng liêng của các vị vua”, “biểu hiện</p>
+<p>số phận” hay “nhân danh sự tiến bộ” nhưng tất cả đều liên quan đến đặc quyền. Nếu bạn không thuộc nền văn hóa thống trị, rất có thể bạn sẽ bị phân biệt đối xử và bị gạt ra ngoài lề xã hội, bị áp bức hoặc bị bỏ rơi.</p>
+<p>Một lăng kính đa văn hóa thách thức ý tưởng về một nền văn hóa thống trị và giới thiệu sự đa dạng</p>
+<p>tính chất và sự phức tạp vào sự hiểu biết của chúng ta về thân phận con người. Từ góc độ này-</p>
+<p>Vì vậy, một nền văn hóa thống trị chỉ đơn giản là một trong nhiều nền văn hóa. Từ góc độ này, các học viên gia đình</p>
+<p>được mời gọi coi rằng cách tồn tại tự nhiên của họ chỉ là một trong nhiều cách tồn tại. Như các nhà hoạt động vì nữ quyền đã lưu ý, bản thân trị liệu gia đình bao gồm sự mất cân bằng trong mối quan hệ quyền lực giữa người tư vấn và thân chủ: Người tư vấn luôn là người đề nghị giúp đỡ và thân chủ luôn là người cần giúp đỡ. Sự mất cân bằng quyền lực này càng trở nên trầm trọng hơn khi nhà trị liệu nắm giữ hầu hết hoặc nhiều vị trí quyền lực và đặc quyền, và</p>
+<p>thân chủ thì không—đặc biệt nếu thân chủ là đồng tính nữ hoặc đồng tính nam, người Caribe gốc Phi hoặc người Mỹ gốc Phi, người mới nhập cư, người vô thần, người khuyết tật, trên 40 tuổi, nghèo và/hoặc không được giáo dục tốt.</p>
+<p>McGoldrick và cộng sự. (2005) đã phát triển cuốn sách toàn diện nhất về văn hóa và trị liệu gia đình. Một trong nhiều lợi ích của cuốn sách của họ là việc mô tả các nền văn hóa đa dạng.</p>
+<p>các nền văn hóa bao gồm Châu Âu và đã “hòa tan” vào nền văn hóa thống trị mà chúng ta gọi là Châu Mỹ. Sự đa dạng này thách thức quan điểm cho rằng có một chuẩn mực duy nhất của phương Tây mà tất cả mọi người đều khao khát. Có lẽ thật mỉa mai khi những người trở thành thành viên của một nền văn hóa thống trị lại thường biết ít nhất về những nền văn hóa cụ thể nơi gia đình họ xuất hiện. Cũng như không có một nền văn hóa Mỹ hay phương Tây duy nhất, cũng không có một nền văn hóa châu Phi, châu Á, Caribe, Tây Ban Nha, La tinh, người Mỹ bản địa hoặc đảo Thái Bình Dương/vành đai Thái Bình Dương.</p>
+<p>các nền văn hóa. Các chương trình đào tạo trị liệu hiện nay yêu cầu các khóa học trong đó các nhà trị liệu có thể lấy lại nhận thức về di sản của họ và sử dụng kiến ​​thức này để đánh giá “sự tốt lành của phương pháp trị liệu”.</p>
+<p>phù hợp” (Breunlin và cộng sự, 1992/1997, trang 230).</p>
+<p>Khi đánh giá mức độ phù hợp, Breunlin và các cộng sự bắt đầu với ba cấp độ trải nghiệm văn hóa của con người: (a) những trải nghiệm nội văn hóa xảy ra trong một hệ thống văn hóa và đưa ra định nghĩa cũng như cảm giác về tính liên tục cho đời sống cộng đồng; (b) những trải nghiệm liên văn hóa xảy ra giữa (hoặc thậm chí giữa) các hệ thống văn hóa và giúp gắn kết mọi người lại với nhau trong một mối liên kết chung (ví dụ như là người Canada), và (c) những trải nghiệm phổ quát của con người “... mang lại cảm giác chung giữa tất cả các quốc gia trên thế giới”</p>
+<p>(trang 194).</p>
+<p>Quan điểm đa văn hóa xem xét 12 lĩnh vực đánh giá:</p>
+<p>¢ Tư cách thành viên với tư cách là người nhập cư hoặc thành viên của xã hội sở tại;</p>
+<p>° Mức độ đặc quyền kinh tế hoặc nghèo đói;</p>
+<p>¢ Trình độ học vấn và quá trình học tập;</p>
+<p>¢ Dân tộc;</p>
+<p>° Tôn giáo;</p>
+<p><sup class="footnote-ref">[370]</sup> PHẦN <sup class="footnote-ref">[3]</sup> Tích hợp và ứng dụng</p>
+<p>¢ Giới tính;</p>
+<p>e Xu hướng tình dục/tình cảm;</p>
+<p>° Tuổi;</p>
+<p>¢ Sức khỏe và khả năng;</p>
+<p>¢ Chủng tộc, phân biệt đối xử và áp bức;</p>
+<p>e Tình trạng thiểu số so với đa số; Và</p>
+<p>¢ Bối cảnh khu vực.</p>
+<p>Mỗi lĩnh vực đánh giá phải tạo ra một ý nghĩa hiện tượng học có thể khác nhau.</p>
+<p>cho mỗi thành viên trong gia đình cũng như cho nhà trị liệu. Thừa nhận các lĩnh vực phù hợp và</p>
+<p>lĩnh vực khác biệt là trọng tâm của lăng kính đa văn hóa.</p>
+<p>Các gia đình trải qua sự thay đổi về văn hóa theo ít nhất hai hình thức: một là những thay đổi dần dần xảy ra trong một nền văn hóa theo thời gian và được kết nối với “các chuỗi lịch sử/thế hệ” (trang 203). Thứ hai là sự thay đổi đột ngột hơn do nhập cư và tiếp biến văn hóa trong xã hội sở tại. Mặc dù điều trước thường cho phép các gia đình tiếp nhận sự thay đổi mà không gặp phải mức độ căng thẳng cao, nhưng điều sau thực sự có thể làm xáo trộn cuộc sống gia đình. Nhiều gia đình không chỉ nhập cư mà còn di cư, đòi hỏi phải có nhiều nơi ở và tiếp xúc văn hóa. Hơn nữa, ông bà, cha mẹ và con cái có thể ở những mức độ tiếp biến văn hóa khác nhau, mỗi người đều có những mục tiêu và hy vọng chính đáng cho cuộc sống mới của mình.</p>
+<p>sống cùng nhau. Sự tiếp biến văn hóa tổng hợp—trong đó cả văn hóa nguồn gốc và văn hóa chủ nhà đều được phép có tác động đệ quy lẫn nhau—dường như tạo ra sự cân bằng chức năng nhất cho các cá nhân và gia đình (Atkinson, Morten, & Sue, 2004; Miranda, Estrada, & Firpo-Jimenez, 2000). Tuy nhiên, tiếp biến văn hóa là một quá trình thay đổi và việc tôn trọng nhu cầu của các cá nhân ở các cấp độ tiếp biến văn hóa khác nhau là điều cần thiết để</p>
+<p>một lăng kính đa văn hóa.</p>
+<p>Một số câu hỏi đa văn hóa hữu ích là:</p>
+<p>¢ Nền văn hóa của mỗi thành viên trong gia đình có những nền văn hóa nào?</p>
+<p>¢ Gia đình hiện đang sống ở nền văn hóa hoặc khu vực nào?</p>
+<p>¢ Việc nhập cư hoặc di cư có phải là trải nghiệm gần đây của gia đình không?</p>
+<p>¢ Kinh tế, giáo dục, dân tộc, tôn giáo, chủng tộc, khu vực, giới tính,</p>
+<p>và tuổi tác có ảnh hưởng đến quá trình gia đình?</p>
+<p>¢ Sự phù hợp giữa nhà trị liệu và gia đình về mặt kinh tế, giáo dục như thế nào?</p>
+<p>địa vị, dân tộc, tôn giáo, giới tính, tuổi tác, chủng tộc, tình trạng đa số/thiểu số và nguồn gốc khu vực?</p>
+<p>Lăng kính giới tính. Với một vài trường hợp ngoại lệ, chế độ phụ hệ đã ảnh hưởng đến tất cả mọi người trong suốt cuộc đời của con người. Các nhà hoạt động vì nữ quyền đã thách thức không chỉ những nguyên tắc cơ bản của trị liệu gia đình (Luepnitz, 1988; Silverstein & Goodrich, 2003), mà còn cả ý tưởng cho rằng bản thân gia đình dị tính là tốt cho phụ nữ (Hare-Mustin, 1978). Phụ nữ làm việc bên ngoài gia đình đã có sự nghiệp kép: Ngay cả trong những gia đình có cả cha và mẹ, những người dị tính, phụ nữ vẫn phải chịu trách nhiệm lớn nhất và hầu hết các công việc liên quan đến nuôi dạy con cái, chăm sóc họ hàng, nội trợ và chăm sóc cộng đồng. Về mặt tài chính, đàn ông vẫn kiếm được nhiều hơn gấp đôi phụ nữ ở những vị trí tương đương. Khi phụ nữ kiếm được mức lương đáng kể, họ thường có tiếng nói ít hơn nhiều so với những người bình đẳng trong cách chi tiêu tài chính của gia đình khác giới. Ngay cả trong những gia đình được gọi là bình thường, đàn ông đã kết hôn vẫn hạnh phúc hơn phụ nữ đã kết hôn, phụ nữ đã kết hôn cho biết họ không hài lòng nhiều hơn và có nhiều triệu chứng hơn các thành viên khác trong gia đình.</p>
+<p>(Lewis, Beaver, Gossett, & Phillips, 1976). Giữa một người đàn ông và một người phụ nữ, hầu như không có vấn đề gì về việc ai sẽ hy sinh vì lợi ích chung.</p>
+<p>Các liệu pháp trị liệu gia đình truyền thống và các nghiên cứu ủng hộ chúng đều cho rằng chuẩn mực văn hóa thống trị là đúng—mặc dù chuẩn mực này mang tính gia trưởng [nam-</p>
+<p>tập trung, khái quát hóa quá mức, thiếu nhạy cảm về giới và chứa đầy những tiêu chuẩn kép (xem Eichler,</p>
+<p>1988) ]. Các nhà hoạt động nữ quyền thách thức quan điểm cho rằng gia đình quan trọng hơn và có thể</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 371</p>
+<p>được phép đứng lên phản đối phúc lợi của các thành viên nữ. Các nhà nữ quyền bị thách thức</p>
+<p>quan điểm cho rằng các mối quan hệ nam-nữ phụ thuộc lẫn nhau có nghĩa là cả hai bên đều có ảnh hưởng và lựa chọn như nhau trong một mối quan hệ. Sự phụ thuộc lẫn nhau chắc chắn không có sức mạnh tương đương để thực hiện thay đổi (Taggart, 1985).</p>
+<p>Tác động của nữ quyền đối với trị liệu gia đình đã dẫn tới việc xem xét lại nhiều quan điểm trọng tâm.</p>
+<p>nguyên lý. Trị liệu gia đình ngày càng được chấp nhận như một quá trình chính trị trong đó các nhà trị liệu không còn có thể bỏ qua ảnh hưởng cá nhân và trách nhiệm của họ trong việc thách thức tình trạng và cách đối xử bất bình đẳng đối với phụ nữ. Các vị trí quyền lực, như thứ bậc, sự ràng buộc và mất cân bằng,</p>
+<p>đang dần được thay thế bằng những ý tưởng về lãnh đạo, kết nối và hợp tác.</p>
+<p>Gottman (2006) đang hoàn thành một nghiên cứu kéo dài 12 năm về các cặp đồng tính nam và đồng tính nữ. Khi nhìn vào</p>
+<p>trong quá trình quan hệ của họ, ông lưu ý rằng các cặp đồng tính nam và đồng tính nữ sử dụng tính hài hước và tình cảm nhiều hơn.</p>
+<p>Những bất đồng, bất đồng quan điểm của họ nhìn chung được đón nhận một cách tích cực hơn so với các cặp đôi khác giới. Hơn nữa, các cặp đôi đồng tính nam và đồng tính nữ có nhiều khả năng giữ thái độ tích cực hơn các cặp đôi khác giới sau khi bất đồng kết thúc. Theo Gottman, “Khi</p>
+<p>liên quan đến cảm xúc, chúng tôi nghĩ các cặp đôi [đồng tính nam và đồng tính nữ] có thể có quan điểm rất khác nhau-</p>
+<p>nguyên tắc ent hơn các cặp thẳng. Các cặp đôi dị tính có thể phải học hỏi nhiều điều từ các mối quan hệ đồng tính nam và đồng tính nữ” (trang web). Khi chúng ta so sánh các cặp đồng tính nam và đồng tính nữ với tư cách là cha mẹ với các cặp vợ chồng dị tính với tư cách là cha mẹ, không có sự khác biệt đáng kể nào về cách con cái cư xử như thế nào.</p>
+<p>được nuôi dưỡng hoặc chúng diễn ra như thế nào, nhưng bầu không khí cảm xúc tích cực được ghi nhận (Flaks, Ficher, Masterpasqua, & Joseph, 1995).</p>
+<p>Breunlin và cộng sự. (1992/1997) lưu ý rằng các gia đình dị tính tham gia trị liệu ở các cấp độ khác nhau</p>
+<p>trong “sự tiến hóa về giới” từ các tổ chức và trải nghiệm truyền thống đến nhận thức về giới, phân cực, chuyển tiếp và cuối cùng là cân bằng. Mỗi cấp độ có một tổ chức đặc trưng và kết quả là những trải nghiệm nội bộ. Các tổ chức truyền thống duy trì vai trò bổ sung, trong đó phụ nữ thường bị áp bức và có thể cảm thấy tức giận. Các gia đình nhận thức được giới tính có thể đã bắt đầu suy nghĩ lại về giá trị của các vai trò bổ sung; sự tức giận của phụ nữ có thể được thừa nhận, nhưng đàn ông thường sợ “mất khả năng nuôi dưỡng” (trang 250). Trong những gia đình phân cực, những kỳ vọng gắn liền với vai trò giới bị phá vỡ và thường xảy ra xung đột công khai giữa vợ chồng nam-nữ; tức giận, lo lắng và sợ hãi đan xen với cảm giác tội lỗi không liên tục. Gia đình chuyển tiếp là những gia đình “hướng tới sự tương hỗ và hỗ trợ gia đình linh hoạt”.</p>
+<p>vai trò và kỳ vọng" (trang 250-251). Sự tức giận và sợ hãi ít cực đoan hơn, và khi sự khác biệt về giới xảy ra xung đột, chúng được coi là những trở ngại tạm thời. Các gia đình cân bằng trở thành các tổ chức dân chủ, hợp tác dựa trên nhu cầu chung và sự tham gia bình đẳng.</p>
+<p>quan trọng trong quá trình ra quyết định của gia đình.</p>
+<p>Mặc dù các cấp độ này được mô tả có vẻ tuyến tính, nhưng các gia đình thường di chuyển giữa và thậm chí giữa các cấp độ, tùy thuộc vào những thách thức họ gặp phải và nỗi đau khổ mà họ trải qua. Tuy nhiên, việc phát triển hướng tới một tổ chức và sự tham gia cân bằng về giới là vì lợi ích tốt nhất của mỗi gia đình và mọi thành viên.</p>
+<p>Một số câu hỏi hữu ích về giới tính là:</p>
+<p>¢ Mỗi thành viên trong gia đình đảm nhận vai trò giới nào?</p>
+<p>¢ Chế độ phụ hệ có ảnh hưởng gì đến gia đình này và các thành viên của nó?</p>
+<p>¢ Các thành viên trong gia đình ở đâu về mặt phát triển giới tính?</p>
+<p>¢ Những ý tưởng nào liên quan đến giới cần được khẳng định hoặc phản đối?</p>
+<p>¢ Sự đảo ngược vai trò sẽ có tác động gì đến các bộ phận cá nhân và các quá trình quan hệ</p>
+<p>của các thành viên trong gia đình?</p>
+<p>¢ Giới tính của tôi sẽ có tác động gì đến gia đình và quá trình thay đổi?</p>
+<p>Ống kính quá trình. Kể từ khi liệu pháp tâm lý nhân văn ra đời, các tư vấn viên đang được đào tạo đã được thông báo rằng quá trình quan trọng hơn nội dung (Gladding, 2007): Trên thực tế,</p>
+<p>thực hành, chúng được liên kết với nhau và cả hai đều có ý nghĩa. Ý tưởng này có ý nghĩa quan trọng trong truyền thông và các mô hình trải nghiệm về trị liệu gia đình. Ý nghĩa của bất kỳ giao tiếp nào luôn luôn là</p>
+<p><sup class="footnote-ref">[372]</sup> PHẦN <sup class="footnote-ref">[3]</sup> Tích hợp và ứng dụng</p>
+<p>chứa đựng trong siêu giao tiếp: cách chúng ta giao tiếp sẽ bối cảnh hóa những gì chúng ta phải nói. Satir và cộng sự. (1991) đối lập sức mạnh của sự giao tiếp phù hợp, trung thực về mặt cảm xúc trong gia đình với bốn quan điểm giao tiếp rối loạn chức năng: đổ lỗi, xoa dịu, siêu lý trí và không liên quan. Mặc dù giao tiếp đồng nhất giúp nội dung có thể được nghe thấy, nhưng trong giao tiếp không hiệu quả, chỉ có sự căng thẳng được ghi nhận—cả ở người gửi và người nhận (Bitter, 1993a). Quá trình giao tiếp theo khuôn mẫu từ lâu đã gắn liền với rối loạn chức năng gia đình. Ví dụ: một kẻ bạo hành nam có thể trải qua một khoảng thời gian dài liên lạc (kiểm soát) siêu hợp lý được thiết kế để hạn chế nạn nhân. Đổ lỗi là đặc điểm của bạo lực bùng nổ theo sau, và sau đó gần như ngay lập tức chu kỳ đó tự giải quyết bằng một sự hối hận xoa dịu.</p>
+<p>Tuy nhiên, cuộc sống còn nhiều điều hơn là những chuỗi rối loạn chức năng lặp đi lặp lại: Tôi đã ghi nhận các quá trình phát triển trong mỗi gia đình liên quan đến sinh học, cá nhân, mối quan hệ.</p>
+<p>sự phát triển về mặt quốc gia, gia đình, văn hóa và xã hội; như chúng ta đã thấy, cũng có những hoạt động ủng hộ nhận thức</p>
+<p>những hạn chế liên quan đến sự nhạy cảm về giới, đa văn hóa và hòa nhập xu hướng tình cảm/tình dục. Quá trình là sự chuyển động của chúng ta trong cuộc sống cũng như thông qua các sự kiện quan trọng</p>
+<p>trong cuộc sống. Sự rõ ràng của quy trình cho chúng ta biết chúng ta đang ở đâu và vạch ra nơi chúng ta có thể đi tới. Nó cho phép nhà trị liệu và gia đình xem xét họ đang ở đâu trong dòng chảy cuộc sống, quá trình thay đổi và trải nghiệm trị liệu.</p>
+<p>Các chu kỳ phát triển sinh học, cá nhân và gia đình đều là những điều đã có. Quy trình yêu cầu chúng ta xem xét cách mọi người và gia đình đối mặt với những quá trình phát triển này và đương đầu với những yêu cầu của cuộc sống:</p>
+<p>Nhìn chung, con người và hệ thống hoạt động tốt hơn khi chúng phản ánh mối quan tâm của xã hội đối với phúc lợi của con người.</p>
+<p>người khác, sự hợp tác, bình đẳng xã hội và lòng dũng cảm (Adler, 1931, 1938). Gia đình cần những vai trò linh hoạt và thích ứng để mô tả những gì mọi người làm hơn là con người họ. Và mặc dù, nói chung, chúng ta coi trọng các hệ thống mở, nhưng các gia đình cũng phải được tự do đóng cửa định kỳ để phục vụ các nhu cầu cá nhân và gia đình. Có một nhịp điệu trong dòng chảy của cuộc sống, và những người di chuyển có mục đích, nhận thức và tiếp xúc con người để tiến tới một trải nghiệm liên tục có xu hướng</p>
+<p>có kỹ năng ứng phó tốt hơn và cuộc sống phong phú hơn. Một lăng kính quá trình tìm cách làm nổi bật những thành phần của cuộc sống phong phú này trong bối cảnh gia đình.</p>
+<p>Một trong những quá trình cơ bản nhất của cuộc sống là quá trình thay đổi. Satir và Bitter (2000) đã mô tả quá trình chuyển động trải nghiệm từ hiện trạng sang khả năng mới.</p>
+<p>các mối quan hệ (xem chương về quá trình xác nhận của con người). Trong hầu hết mọi trường hợp, quá trình thay đổi diễn ra liên tục và phần lớn nó có thể được đồng hóa mà không bị xáo trộn hoặc căng thẳng. Tuy nhiên, khi gia đình có những xáo trộn nghiêm trọng, chẳng hạn như ngoại tình, ly hôn hoặc</p>
+<p>cái chết, nhà trị liệu thường chào đón người nhà trong cảnh hỗn loạn. Họ ngay lập tức trở thành một trong những</p>
+<p>nguồn lực bên ngoài của gia đình với trách nhiệm chính là giúp các cá nhân kết nối lại với những phần bên trong có thể bị bỏ qua nhưng rất cần thiết. Phong trào trị liệu thông qua sự hỗn loạn là</p>
+<p>thường tế nhị, gắn liền với những trải nghiệm trước mắt của gia đình. Điều nghịch lý là sự thay đổi thường được tạo điều kiện thuận lợi bằng cách luôn hiện diện và không cố gắng thay đổi bất cứ điều gì.</p>
+<p>Quá trình trị liệu có mối liên hệ mật thiết với quá trình thay đổi. Carl Whitaker (1976, 1989) từng sử dụng cả quy trình gia đình và quy trình trị liệu. Anh ấy đã làm như vậy với</p>
+<p>một nhà đồng trị liệu có mặt và nhiều năm kinh nghiệm trị liệu. Giống như hầu hết các nhà trị liệu gia đình, ông nhận ra rằng các hệ thống có sức mạnh hơn các cá nhân và rằng việc thực hành gia đình</p>
+<p>tiêu đề có thể dễ dàng trở thành tam giác hoặc được tích hợp vào các quy trình hệ thống của</p>
+<p>gia đình. Ở một khía cạnh nào đó, Whitaker thường chọn trở thành một trong nhiều nhân tố nước ngoài có thể thúc đẩy gia đình vào một quá trình thay đổi mới. Trong một lần, anh ấy gợi ý rằng nếu người phụ nữ bị trầm cảm thì phải có ai đó ở bên cạnh. gia đình muốn cô chết (Whitaker & Bumberry, 1988). Sự can thiệp của hệ thống này vượt xa những gì gia đình ban đầu sẵn lòng</p>
+<p>xem xét và mời gọi họ chia sẻ trách nhiệm vì lợi ích của người phụ nữ. Trọng tâm trong liệu pháp của Whitaker là một số câu hỏi về quy trình rất quan trọng.</p>
+<p>¢ Gia đình đang làm gì trong thời gian trị liệu?</p>
+<p>¢ Họ đang trải qua điều gì và tôi đang trải qua điều gì với họ?</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 373</p>
+<p>¢ Trực giác được thông tin và giáo dục của tôi có vai trò gì trong quá trình trị liệu này?</p>
+<p>¢ Việc sử dụng bản thân tốt nhất của tôi với gia đình này là gì?</p>
+<p>¢ Tất cả chúng ta đang cùng nhau hướng tới đâu?</p>
+<p>¢ Hiện tại chuyện gì đang xảy ra vậy?</p>
+<p>Theo nghĩa tổng quát hơn, một số câu hỏi quy trình hữu ích là:</p>
+<p>¢ Gia đình đang ở đâu trong quá trình thay đổi?</p>
+<p>¢ Có thành viên nào trong gia đình thiếu ý thức rõ ràng về mục đích, hoạt động ngoài nhận thức không?</p>
+<p>kém, tiếp xúc kém với người khác hoặc thiếu kinh nghiệm để hỗ trợ hoạt động hiệu quả</p>
+<p>mạng sống?</p>
+<p>¢ Những nguồn lực nào (nội bộ và bên ngoài) cần được truy cập?</p>
+<p>¢ Các thành viên trong gia đình sử dụng cách giao tiếp nào khi bị căng thẳng?</p>
+<p>Tám lăng kính đánh giá này mang tính đa chiều. Chúng được phát triển ban đầu</p>
+<p>qua một số mô hình trị liệu gia đình và chúng đóng vai trò như một cấu trúc cơ bản để hiểu rõ hơn về gia đình. Gia đình là các hệ thống nhiều lớp vừa ảnh hưởng vừa bị ảnh hưởng bởi các hệ thống lớn hơn mà chúng được nhúng vào. Mỗi thấu kính trong số tám thấu kính đều góp phần</p>
+<p>mang lại sự hiểu biết toàn diện về hệ thống gia đình: Từ các bộ phận bên trong của cá nhân đến các hệ thống và tiểu hệ thống của gia đình đến các quá trình quan hệ của gia đình với các hệ thống lớn hơn tạo nên cuộc sống của họ, việc đánh giá đa chiều trở thành nền tảng cho việc khái niệm hóa trường hợp hiệu quả.</p>
+<p>Đánh giá chính thức</p>
+<p>Mặc dù hầu hết các phương pháp tư vấn và trị liệu gia đình đều thực hiện một số hình thức đánh giá, hầu hết đều dựa vào việc tự báo cáo, quan sát trực tiếp và đánh giá lâm sàng hơn là chính thức.</p>
+<p>điều tra (xem Thomlison, 2007). Các nhà hoạt động vì nữ quyền và xây dựng xã hội có thể chọn cách tránh đánh giá chính thức hoàn toàn - với việc trước đây lo ngại về việc chẩn đoán lạm dụng phụ nữ và gia đình và sau này khẳng định rằng các cuộc điều tra như vậy không phù hợp với</p>
+<p>một thế giới quan hậu hiện đại (Sperry, 2004a). Và để chắc chắn, một số thử nghiệm và thử nghiệm được sử dụng nhiều nhất</p>
+<p>các thang đo, chẳng hạn như Thang đo tương tác Beavers (BIS) và Bản kiểm kê gia đình tự báo cáo</p>
+<p>(SFI), chủ yếu gắn liền với các lý thuyết hệ thống hiện đại như các trị liệu gia đình mang tính cấu trúc và chiến lược.</p>
+<p>Bray (2004) báo cáo rằng hai hình thức đánh giá gia đình phổ biến nhất là tự báo cáo và quan sát trực tiếp: Dữ liệu từ hai phương pháp này không phải lúc nào cũng trùng khớp. Bản tự báo cáo của nhiều thành viên trong gia đình cũng như nhiều quan sát trực tiếp sẽ làm tăng khả năng đánh giá chính xác. Ngay cả khi các đánh giá khác nhau thiếu sự thống nhất, chúng vẫn có thể được sử dụng để xác định các điểm chồng chéo và kiểm tra chéo thông tin với các thành viên gia đình có liên quan.</p>
+<p>Hầu hết các bảng câu hỏi và thang đo tự báo cáo đã được phát triển để sử dụng cho các cặp đôi. Tuy nhiên, với một số điều chỉnh theo lẽ thường tình, một số thang đo này cũng có thể hữu ích trong việc đánh giá mối quan hệ giữa người lớn và trẻ lớn hơn. Thang đo tự đánh giá hiện tại bao gồm: Thang điều chỉnh hôn nhân Locke-Wallace (LWMAS), Thang điều chỉnh Dyadic</p>
+<p>Thang đo (DAS), Bản kiểm kê sự hài lòng trong hôn nhân đã được sửa đổi (MSI-R), CHUẨN BỊ, LÀM PHIẾU,</p>
+<p>Bảng câu hỏi về các lĩnh vực thay đổi (ACQ), Khảo sát nhu cầu thân mật (INS), Khảo sát hôn nhân</p>
+<p>Thang đo mức độ bất mãn (MDS), SIDCARB, Thang đo chiến thuật xung đột (CTS2) và Thang đo tình dục</p>
+<p>Khoảng không quảng cáo mong muốn (SDI) (Bagarozzi & Sperry, 2004).</p>
+<p>Thang đánh giá quan sát gia đình phổ biến nhất là: Năng lực và phong cách tương tác của hải ly (BICS), Bản kiểm kê gia đình tự báo cáo (SFI), McMaster</p>
+<p>Thang đánh giá lâm sàng (MCRS), Thang đánh giá lâm sàng vòng tròn (CCRS) và Đánh giá toàn cầu về chức năng quan hệ (GARF) được tìm thấy trong DSM-IV-TR. Để xem lại các thang đo quan sát này, hãy xem Hampson và Beavers (2004).</p>
+<p><sup class="footnote-ref">[374]</sup> PHẦN <sup class="footnote-ref">[3]</sup> Tích hợp và ứng dụng</p>
+<p>Việc bác sĩ gia đình có chọn sử dụng các bài kiểm tra và đánh giá chính thức hay không phụ thuộc phần lớn vào hai tiêu chí: sự phù hợp với mô hình đã chọn của bác sĩ và nhu cầu về dữ liệu định lượng cho nghiên cứu. Sperry (2004c) cung cấp một quy trình hữu ích cho những ai chọn kết hợp các đánh giá chính thức vào thực hành lâm sàng. Sáu bước của anh ấy là: (1) ban đầu phỏng vấn gia đình; (2) lựa chọn và quản lý hàng tồn kho cụ thể; (3) thu thập dữ liệu bổ sung từ hồ sơ, nguồn bên ngoài hoặc các cuộc phỏng vấn khác; (4) xem xét dữ liệu đánh giá và lập kế hoạch xử lý; (5) theo dõi kết quả lâm sàng đang diễn ra và điều chỉnh phương pháp điều trị cho phù hợp; và (6) đánh giá kết quả (tr. 125). Những bước tương tự này đều được hỗ trợ và cần thiết để tích hợp các khái niệm hóa trường hợp hiệu quả.</p>
+<p>Khái niệm trường hợp</p>
+<p>Sperry (2004b) đã đề xuất một quy trình khái niệm hóa trường hợp như một phương tiện liên kết lý thuyết với thực hành trong tư vấn cặp vợ chồng và gia đình. Ba thành phần tạo nên quy trình mà ông đề xuất: công thức chẩn đoán, công thức lâm sàng và công thức điều trị.</p>
+<p>Công thức chẩn đoán trả lời câu hỏi: “Chuyện gì đã xảy ra?” Nó bao gồm những đánh giá về (a) điều gì đã đưa gia đình đến trị liệu vào thời điểm này; (b) những khó khăn nghiêm trọng như thế nào</p>
+<p>đều ở trong hệ thống gia đình và đối mặt với nó; (c) các cá nhân trong gia đình như thế nào</p>
+<p>đang đối phó, bao gồm bất kỳ bài trình bày nào có thể dẫn đến chẩn đoán tâm thần (tiếng Mỹ</p>
+<p>Hiệp hội Tâm thần, 2000); và (d) những mối lo ngại về cơ thể và y tế nào có thể được đặt ra</p>
+<p>ent. Hai hệ thống chẩn đoán quan hệ thống nhất hiện đang được sử dụng: Phân loại</p>
+<p>về Rối loạn quan hệ (CORD) và Đánh giá toàn cầu về chức năng quan hệ (GARF) của DSM-IV-TR.</p>
+<p>Một công thức lâm sàng cố gắng trả lời câu hỏi: “Tại sao điều đó lại xảy ra?” Công thức này cố gắng đưa ra lời giải thích cho những khó khăn xuất hiện trong công thức chẩn đoán: Nó tìm kiếm một góc nhìn rộng hơn và đa dạng hơn trong việc hiểu biết về khí hậu.</p>
+<p>ent. Chính trong giai đoạn hình thành khái niệm trường hợp này, việc đánh giá dựa trên tám lăng kính được mô tả trước đó sẽ phát huy tác dụng. Cũng chính trong phần này của quá trình</p>
+<p>rằng những người thực hành gia đình tìm cách liên kết các lý thuyết của họ với khái niệm về động lực cá nhân, giữa các cá nhân và hệ thống của gia đình, cũng như đề xuất những gì có thể gây ra các vấn đề gia đình. Một công thức lâm sàng như vậy là cầu nối giữa chẩn đoán và điều trị.</p>
+<p>Công thức điều trị trả lời câu hỏi: “Bây giờ chúng ta đã hiểu được điều gì đang xảy ra và tại sao, chúng ta có thể làm gì để giải quyết vấn đề đó và điều gì là quan trọng nhất.”</p>
+<p>cách hiệu quả để làm điều đó?” Một công thức điều trị nhằm vào các mục tiêu cho việc tư vấn và điều trị</p>
+<p>apy, cả của gia đình và những người cùng xây dựng với gia đình. Khi có thể, kế hoạch điều trị nên bao gồm việc xem xét các biện pháp can thiệp được thiết kế để đạt được mục tiêu mong muốn, dự đoán về thời gian và quá trình điều trị cũng như cách đánh giá kết quả.</p>
+<p>Các khái niệm hóa trường hợp hữu ích nhất tập trung vào bối cảnh, nhu cầu và nguồn lực riêng biệt của từng thành viên trong gia đình và toàn bộ hệ thống. Đánh giá và chẩn đoán</p>
+<p>nosis có xu hướng yêu cầu một quá trình suy luận suy diễn xem xét dữ liệu liên quan đến việc thiết lập</p>
+<p>tiêu chí đã nêu: Gia đình và các thành viên riêng lẻ của nó có đáp ứng các tiêu chí chỉ ra các quá trình chức năng hoặc rối loạn chức năng hay không; sức khỏe y tế hoặc bệnh tật; sức khỏe tâm thần hoặc rối loạn;</p>
+<p>hoặc hỗ trợ xã hội/quan hệ hoặc sự cô lập và/hoặc áp bức? Mặt khác, các công thức lâm sàng có xu hướng dựa vào lý luận quy nạp: Làm thế nào để tất cả thông tin được thu thập</p>
+<p>phù hợp với một tổng thể thống nhất? Với nhiều lăng kính có thể là một phần của đánh giá gia đình,</p>
+<p>có một khái niệm hoặc chủ đề, có lẽ được thông báo bởi quan điểm lý thuyết của một người, có thể hoạt động</p>
+<p>như một lời giải thích có ý nghĩa cho những gì đang xảy ra? Trong chương tiếp theo, chúng ta sẽ xem làm thế nào tám lăng kính mà chúng ta vừa xem xét có thể được kết hợp vào một kế hoạch chi tiết cho việc trị liệu và làm thế nào</p>
+<p>việc tập trung vào các nguồn lực trong mỗi cá nhân và gia đình có thể thúc đẩy khả năng phục hồi của gia đình, đảm bảo hiệu quả điều trị và ngăn ngừa vấn đề tái phát.</p>
+<p>Chương 15. Tích hợp | 375</p>
+<h2>Bản tóm tắt</h2>
+<p>Chúng ta đã đề cập đến rất nhiều vấn đề nhưng vẫn chưa giải quyết được nhiều cách để tạo điều kiện thuận lợi cho sự thay đổi trong gia đình. Mọi thứ cho đến thời điểm này đều hướng đến việc hình thành mối quan hệ và xem xét quy trình đa lăng kính trong đánh giá gia đình.</p>
+<p>Dành nhiều sự quan tâm đến các mối quan hệ và đánh giá tương tự như những gì tôi tin rằng sẽ xảy ra trong thực tế gia đình. Nếu | chỉ có một giờ để gặp gia đình, tôi muốn dành ít nhất 40-45 phút để chăm sóc các khía cạnh quan hệ và tìm hiểu</p>
+<p>để biết gia đình. Điều đó sẽ chỉ để lại 15-20 phút để đề xuất và tạo điều kiện cho sự thay đổi, và tôi nghĩ đó có thể là sự cân bằng phù hợp với tôi. Tất nhiên, trên thực tế, trị liệu gia đình không diễn ra theo từng đơn vị riêng biệt và hiếm khi hoàn thành trong 1 giờ. các</p>
+<p>việc tạo điều kiện thuận lợi cho sự thay đổi thường đi đôi với việc hình thành các mối quan hệ và đánh giá, và mỗi bước trong quy trình tích hợp này có thể kéo dài nhiều phiên.</p>
+<p>Trong chương tiếp theo, chúng ta sẽ xem xét các cách kết hợp thông tin từ các đánh giá khác nhau cũng như cách đưa ra giả thuyết và chia sẻ những ý nghĩa mà chúng ta khám phá được khi làm việc với các gia đình. Chúng tôi cũng sẽ xem xét các cách điều chỉnh các biện pháp can thiệp trị liệu để tạo điều kiện thuận lợi cho</p>
+<p>thay đổi và đảm bảo điều trị hiệu quả. Và cuối cùng, tôi sẽ áp dụng mô hình tích hợp này cho dòng Quest—lần cuối cùng.</p>
+<p>Tài liệu tham khảo</p>
+<p>Adler, A. (1931). Cuộc sống có ý nghĩa gì với bạn. Boston:</p>
+<p>Nhỏ, Nâu.</p>
+<p>Adler, A. (1938). Lợi ích xã hội: Một thách thức đối với nhân loại.</p>
+<p>Luân Đôn: Faber & Faber. Ahrons, C. R. (2005). Ly hôn: Gia đình không có kế hoạch</p>
+<p>chuyển tiếp. Trong B. Carter & M. McGoldrick (Eds.),</p>
+<p>Vòng đời gia đình mở rộng: Quan điểm cá nhân, gia đình và xã hội (tái bản lần thứ 3) (trang 381-398). Needham Heights, MA: Allyn & Bacon. Hiệp hội Tâm thần Hoa Kỳ (2000). Chẩn đoán</p>
+<p>và sổ tay thống kê các rối loạn tâm thần (tái bản lần thứ 4). Washington DC: Tác giả. Atkinson, D. R., Morten, G., & Sue, D. W. (2004).</p>
+<p>Tư vấn cho người thiểu số ở Mỹ. (tái bản lần thứ 6). New York: McGraw-Hill. Bagarozzi, D. A., & Sperry, L. (2004). Các cặp đôi đánh giá-</p>
+<p>ment: Chiến lược và hàng tồn kho. Trong L. Sperry (Ed.), Đánh giá các cặp vợ chồng và gia đình: Các chiến lược đương đại và tiên tiến (trang 135-158). New York: Brunner-Routledge.</p>
+<p>Đắng, JR (1987). Giao tiếp và ý nghĩa: Châm biếm</p>
+<p>trong bối cảnh Adlerian. Trong R. Sherman & D. Dinkmeyer</p>
+<p>(Eds.), Hệ thống trị liệu gia đình: Sự tích hợp Adlerian (trang 109-142). New York: Brunner/Mazel.</p>
+<p>Đắng, J. (1993a). Phong cách giao tiếp, cá tính</p>
+<p>ưu tiên và lợi ích xã hội: Các chiến lược giúp các cặp vợ chồng xây dựng cuộc sống cùng nhau. Tâm lý cá nhân,</p>
+<p>49(3-4), 330-350.</p>
+<p>Đắng, J. R. (1993b). Bữa tiệc của Satir với các cặp đôi. Ở T. S.</p>
+<p>Nelson & TS Trepper (Eds.), 101 can thiệp trong trị liệu gia đình (trang 132-136). New York: Nhà xuất bản Haworth.</p>
+<p>Đắng, JR, & Corey, G. (2005). Trị liệu hệ thống gia đình.</p>
+<p>Trong G. Corey, Lý thuyết và thực hành tư vấn và trị liệu tâm lý (tái bản lần thứ 7, trang 420-459). Belmont, CA:</p>
+<p>Brooks/Cole.</p>
+<p>Đắng, J. R., Roberts, A., & Sonstegard, M. A. (2002).</p>
+<p>Trị liệu gia đình Adlerian. Trong J. Carlson & D. Kjos</p>
+<p>(Eds.), Lý thuyết và chiến lược trị liệu gia đình</p>
+<p>(trang 41-79). Boston: Allyn & Bacon.</p>
+<p>Blow, A. J., & Sprenkle D. H. (2001). Yếu tố chung</p>
+<p>qua các lý thuyết về trị liệu hôn nhân và gia đình: Một nghiên cứu Delphi đã được sửa đổi. Tạp chí Trị liệu Hôn nhân và Gia đình, 27(3), 385-401. Boszormenyi-Nagy, I., & Spark, G. (1973). Loy vô hình-</p>
+<p>Các vấn đề khác: Sự có đi có lại trong trị liệu gia đình giữa các thế hệ. New York: HarperCollins. Bowen, M. (1978). Trị liệu gia đình trong thực hành lâm sàng.</p>
+<p>Northvale, NJ: Aronson. Bray, J. H. (2004). Những mô hình và vấn đề trong hôn nhân và gia đình</p>
+<p>đánh giá. Trong L. Sperry (Ed.), Đánh giá các cặp vợ chồng và gia đình: Chiến lược đương đại và tiên tiến-</p>
+<p>gies (trang 13-29). New York: Brunner-Routledge.</p>
+<p>Breunlin, D. C., Schwartz, R. C., & MacKune-Karrer, B.</p>
+<p>(1997). Metaframeworks: Vượt qua các mô hình trị liệu gia đình. San Francisco: Jossey-Bass. (Nguyên bản</p>
+<p>tác phẩm xuất bản năm 1992)</p>
+<p><sup class="footnote-ref">[376]</sup> PHẦN 3. Tích hợp và ứng dụng</p>
+<p>Carlson, J., Sperry, L., & Lewis, J. A. (2005). Gia đình ở đó-</p>
+<p>Kỹ thuật apy: Điều trị tích hợp và điều chỉnh. New York: Routledge.</p>
+<p>Carter, B., & McGoldrick, M. (Eds.). (2005). Vòng đời gia đình mở rộng: Cá nhân, gia đình và</p>
+<p>quan điểm xã hội (tái bản lần thứ 3). Needham Heights, MA: Allyn & Bacon. Christensen, O. C. (Ed.). (2004). Quốc gia gia đình Adlerian</p>
+<p>seling (tái bản lần thứ 3). Minneapolis, MN: Tập đoàn Truyền thông Giáo dục Dreikurs, R., & Soltz, V. (1964). Trẻ em: Thử thách.</p>
+<p>New York: Táo gai.</p>
+<p>Eichler, M. (1988). Phương pháp nghiên cứu phi giới tính. Luân Đôn:</p>
+<p>Allen và Unwin.</p>
+<p>Flaks, D. K., Ficher, I., Masterpasqua, F., & Joseph, G. (1995).</p>
+<p>Những người đồng tính nữ chọn làm mẹ: Một nghiên cứu so sánh giữa cha mẹ đồng tính nữ và dị tính và con cái của họ. Tâm lý học phát triển, 31, 105-114. Foucault, M. (1970). Trật tự của sự vật: Khảo cổ học</p>
+<p>của khoa học nhân văn. New York: Ngôi nhà ngẫu nhiên.</p>
+<p>Foucault, M. (1980). Năng lực/kiến thức: Phỏng vấn chọn lọc</p>
+<p>và các văn bản khác. New York: Sách Pantheon.</p>
+<p>Gehart, D. R., & Tuttle, A. R. (2003). Điều trị dựa trên lý thuyết-</p>
+<p>lập kế hoạch tư vấn cho các nhà trị liệu hôn nhân và gia đình.</p>
+<p>Pacific Grove, CA: Brooks/Cole. Vui mừng, S. T. (2007). Trị liệu gia đình: Lịch sử, lý thuyết,</p>
+<p>và thực hành (tái bản lần thứ 4). Thượng Saddle River, NJ: Hội trường Merrill/Prentice. Goldenberg, H., & Goldenberg, I. (2002). Tư vấn-</p>
+<p>gia đình của ngày (tái bản lần thứ 4). Pacific Grove, CA: Brooks/Cole. Gottman, J. (2006). 12 năm nghiên cứu về người đồng tính nam và đồng tính nữ</p>
+<p>các cặp đôi: Nghiên cứu các cặp đồng tính nam và đồng tính nữ: Một trường hợp</p>
+<p>điểm tương đồng của các cặp đồng giới và khác giới, sự khác biệt giữa các cặp đồng tính nam và đồng tính nữ. Truy cập ngày 12 tháng 1 năm 2006, từ http://www.gottman.com/research/projects/gaylesbian. Haley, J. (1980). Rời khỏi nhà. New York: McGraw-Hill. Hampson, R. B., & Beavers, R. (2004). quan sát</p>
+<p>đánh giá của các cặp vợ chồng và gia đình. Trong L. Sperry (Ed.), Đánh giá các cặp vợ chồng và gia đình: Đương đại</p>
+<p>và các chiến lược tiên tiến (trang 91-115). New York: Brunner-Routledge. Hanna, S. M. (2007). Thực hành trị liệu gia đình:</p>
+<p>Các yếu tố chính trên các mô hình (tái bản lần thứ 4). Belmont, CA: Brooks/Cole. Hare-Mustin, R. T. (1978). Một cách tiếp cận nữ quyền đối với</p>
+<p>trị liệu gia đình. Quy trình Gia đình, 17(2), 181-194.</p>
+<p>Kfir, N. (1981). Liệu pháp bế tắc/ưu tiên. Trong R. J. Corsini</p>
+<p>(Ed.), Sổ tay về các liệu pháp tâm lý đổi mới (trang 401-415). New York: Wiley.</p>
+<p>Kfir, N. (1989). Can thiệp khủng hoảng nguyên văn. New York:</p>
+<p>Nhà xuất bản Hemisphere</p>
+<p>Lambert M. J., & Ogles, B. M. (2004). Hiệu quả và</p>
+<p>hiệu quả của liệu pháp tâm lý. Trong M. J. Lambert</p>
+<p>(Ed.), Cẩm nang trị liệu tâm lý và thay đổi hành vi của Bergin và Garfield (tái bản lần thứ 5, trang 139-193). New York: Wiley.</p>
+<p>Lewis, J. M., Beaver, W. R., Gossett, J. T., & Phillips, V. A.</p>
+<p>(1976). Không có chủ đề duy nhất: Sức khỏe tâm lý trong gia đình</p>
+<p>hệ thống. New York: Brunner/Mazel. Luepnitz, D. A. (1988). Gia đình diễn giải: Nữ quyền</p>
+<p>lý thuyết trong thực hành lâm sàng. New York: Sách cơ bản. McGoldrick, M., Giordano, J., & Garcia-Preto, N. (Eds.).</p>
+<p>(2005). Trị liệu dân tộc và gia đình. New York: Guilford.</p>
+<p>Miksell, R. H., Lusterman, D., & McDaniel, S. H. (Eds.).</p>
+<p>(1995). Tích hợp trị liệu gia đình: Sổ tay bệnh lý gia đình và lý thuyết hệ thống. Washington,</p>
+<p>DC: Hiệp hội Tâm lý Hoa Kỳ. Miranda, A. O., Estrada, D., & Firpo-Jimenez, M. (2000).</p>
+<p>Sự khác biệt về sự gắn kết, khả năng thích ứng và môi trường gia đình giữa các gia đình Latinh ở các giai đoạn khác nhau</p>
+<p>của sự tiếp biến văn hóa. Tạp chí Gia đình, 8, 341-350. Nichols, W. C. (1995). Đối xử với mọi người trong gia đình: An</p>
+<p>khuôn khổ tích hợp. New York: Guilford. Olsen, D.C. (1999). Trị liệu gia đình tích hợp: Quá trình sáng tạo</p>
+<p>chăm sóc và tư vấn bệnh lý. Minneapolis: Nhà xuất bản Pháo đài.</p>
+<p>Polster, E. (1995). Một quần thể của bản thân: Một khám phá trị liệu</p>
+<p>sự hợp lý của sự đa dạng cá nhân. San Francisco: Jossey-Bass. Powers, R. L., & Griffith, J. (1987). Thấu hiểu cuộc sống-</p>
+<p>phong cách: Quá trình tâm lý rõ ràng. Chicago: AIAS.</p>
+<p>Satir, V. M. (1983). Trị liệu gia đình kết hợp (tái bản lần thứ 3).</p>
+<p>Palo Alto, CA: Sách Khoa học và Hành vi.</p>
+<p>Satir, V. M., & Baldwin, M. (1983). Châm biếm: Từng bước một.</p>
+<p>Palo Alto, CA: Sách Khoa học và Hành vi.</p>
+<p>Satir, V.M., Banman, J., Gerber, J., & Gomori, M. (1991).</p>
+<p>Mô hình Satir: Trị liệu gia đình và hơn thế nữa. Palo Alto, CA: Sách Khoa học và Hành vi. Satir, V. M., & Bitter, J. R. (2000). Nhà trị liệu và trị liệu gia đình: Mô hình quy trình xác nhận con người của Satir. Trong A. M. Horne (Ed.), Tư vấn và trị liệu gia đình</p>
+<p>(Tái bản lần thứ 3) (trang 62-101). Itasca, IL: E. E. Peacock. Schwartz, R. (1995). Liệu pháp hệ thống nội bộ gia đình.</p>
+<p>New York: Guilford.</p>
+<p>Silverstein, L. B., & Goodrich, T. J. (Biên tập). (2003). nữ quyền</p>
+<p>Trị liệu gia đình: Trao quyền trong bối cảnh xã hội. Rửa-</p>
+<p>ington, DC: Hiệp hội Tâm lý Hoa Kỳ. Sperry, L. (2004a). Đánh giá của cặp đôi và gia đình:</p>
+<p>Giới thiệu và tổng quan. Trong L. Sperry (Ed.), Đánh giá các cặp vợ chồng và gia đình: Đương đại</p>
+<p>và các chiến lược tiên tiến (trang 3-12). New York: Brunner-Routledge.</p>
+<p>Sperry, L. (2004b). Khái niệm trường hợp: Cô-</p>
+<p>mối liên hệ giữa lý thuyết và thực hành. gia đình</p>
+<p>Tạp chí: Tư vấn và trị liệu cho các cặp vợ chồng và</p>
+<p>Gia đình, 20(10), 1-6. Sperry, L. (2004c). Đánh giá kết quả lâm sàng của các cặp vợ chồng và gia đình. Trong L. Sperry (Ed.), Đánh giá các cặp vợ chồng và gia đình: Đương đại</p>
+<p>và các chiến lược tiên tiến (trang 117-132). New York: Brunner-Routledge. Taggart, M. (1985). Sự phê phán nữ quyền trong nhận thức luận</p>
+<p>Quan điểm logic: Các câu hỏi về bối cảnh trong trị liệu gia đình. Tạp chí trị liệu hôn nhân và gia đình,</p>
+<p>11(2), 113-126. Thomlison, B. (2007). Sổ tay đánh giá gia đình:</p>
+<p>Hướng dẫn thực hành cơ bản về đánh giá gia đình</p>
+<p>(tái bản lần thứ 2). Belmont, CA: Brooks/Cole.</p>
+<p>Chương <sup class="footnote-ref">[15]</sup> Tích hợp | 377</p>
+<p>Walsh, F. (1998). Tăng cường sức đề kháng cho gia đình. Mới</p>
+<p>York: Guilford. Walsh, F. (2003). Quy trình gia đình bình thường (tái bản lần thứ 3). Mới</p>
+<p>York: Guilford. Whitaker, C. A. (1976). Trở ngại của lý thuyết trong lâm sàng</p>
+<p>công việc ical. Trong P. J. Guerin, Jr. (Ed.), Trị liệu gia đình:</p>
+<p>Lý thuyết và thực hành. New York: Nhà xuất bản Gardner. Whitaker, C. A. (1989). Tâm sự lúc nửa đêm của một gia đình</p>
+<p>nhà trị liệu (M. O. Ryan, Ed.). New York: Norton. Whitaker, C. A., & Bumberry, W. M. (1988). Khiêu vũ</p>
+<p>với gia đình: Một cách tiếp cận mang tính biểu tượng-kinh nghiệm. New York: Brunner/Mazel. Worden, M. (2003). Khái niệm cơ bản về trị liệu gia đình (tái bản lần thứ 3).</p>
+<p>Pacific Grove, CA: Brooks/Cole.</p>
+        </div>
+
+        <nav class="chapter-nav">
+          
+        <a href="14_nuoi_day_con_the_ky_21.html" class="chapter-nav-prev">
+          <span class="nav-label">&larr; Chương 14</span>
+          <span class="nav-title">Nuôi Dạy Con Trong Thế Kỷ 21</span>
+        </a>
+          
+        <a href="16_tich_hop_2_y_nghia_va_can_thiep.html" class="chapter-nav-next">
+          <span class="nav-label">Chương 16 &rarr;</span>
+          <span class="nav-title">Tích Hợp II: Kiến Tạo Ý Nghĩa Chung, Thúc Đẩy Thay Đổi & Tinh Chỉnh Can Thiệp</span>
+        </a>
+        </nav>
+      </article>
+    </main>
+  </div>
+
+  <button class="btn-back-to-top" id="btn-back-to-top" title="Lên đầu trang">&uarr;</button>
+
+  <script src="../reader.js"></script>
+</body>
+</html>

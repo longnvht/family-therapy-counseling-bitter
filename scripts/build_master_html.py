@@ -92,7 +92,7 @@ def build_master():
           Theory and Practice of Family Therapy and Counseling (2009)
         </div>
         <div class="author-line">
-          <strong>Irvin D. Yalom, MD</strong> &bull; <strong>Molyn Leszcz, MD</strong>
+          <strong>James Robert Bitter, Ed.D.</strong>
         </div>
         <div style="color: var(--text-secondary); font-size: 0.95rem;">
           Bản Dịch Tiếng Việt Học Thuật &bull; Định Dạng HTML E-Book Chuyên Biệt

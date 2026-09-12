@@ -27,6 +27,8 @@ CACHE_FILE = BASE_DIR / "cache_dich.json"
 CHAPTERS_DIR = BASE_DIR / "chapters"
 CHAPTERS_DIR.mkdir(parents=True, exist_ok=True)
 
+BOOK_BADGE = "Bitter (2009)"
+
 GLOSSARY_REPLACEMENTS = [
     (r"\bkhách hàng\b", "thân chủ"),
     (r"\bKhách hàng\b", "Thân chủ"),
@@ -63,7 +65,7 @@ CHAPTER_METADATA = [
         "title_en": "FOREWORD BY GERALD COREY & PREFACE",
         "title_vi": "Lời Tựa của Gerald Corey & Lời Mở Đầu",
         "start_page": 25,
-        "end_page": 36,
+        "end_page": 31,
         "filename": "00_loi_tua_va_loi_mo_dau.html"
     },
     {
@@ -206,37 +208,11 @@ CHAPTER_METADATA = [
         "end_page": 390,
         "filename": "14_nuoi_day_con_the_ky_21.html"
     },
-    {
-        "id": "15_tich_hop_1_tu_kham_pha_den_danh_gia",
-        "num": 15,
-        "label": "Chương 15",
-        "title_en": "INTEGRATION I: FROM SELF-DISCOVERY TO FAMILY PRACTICE",
-        "title_vi": "Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá",
-        "start_page": 391,
-        "end_page": 409,
-        "filename": "15_tich_hop_1_tu_kham_pha_den_danh_gia.html"
-    },
-    {
-        "id": "16_tich_hop_2_y_nghia_va_can_thiep",
-        "num": 16,
-        "label": "Chương 16",
-        "title_en": "INTEGRATION II: SHARED MEANING, FACILITATING CHANGE, AND TAILORING INTERVENTIONS",
-        "title_vi": "Tích Hợp II: Kiến Tạo Ý Nghĩa Chung, Thúc Đẩy Thay Đổi & Tinh Chỉnh Can Thiệp",
-        "start_page": 410,
-        "end_page": 422,
-        "filename": "16_tich_hop_2_y_nghia_va_can_thiep.html"
-    },
-    {
-        "id": "17_phu_luc_tong_ket_cac_mo_hinh",
-        "num": 17,
-        "label": "Phụ lục",
-        "title_en": "APPENDIX: SUMMARY AND REVIEW OF FAMILY MODELS",
-        "title_vi": "Phụ Lục: Tổng Kết và Đối Chiếu Các Mô Hình Trị Liệu Gia Đình",
-        "start_page": 423,
-        "end_page": 442,
-        "filename": "17_phu_luc_tong_ket_cac_mo_hinh.html"
-    }
 ]
+# Ghi chú: Chương 15 (Tích hợp I), 16 (Tích hợp II) và Phụ lục 17 chưa được
+# trích xuất/dịch trong đợt chuẩn hóa này - cố tình để ngoài phạm vi, sẽ bổ
+# sung ở một phiên làm việc khác. Không thêm 3 mục này vào CHAPTER_METADATA
+# để mục lục (sidebar/index/master html) không còn trỏ tới file không tồn tại.
 
 class TranslationCache:
     def __init__(self, cache_file):
@@ -307,7 +283,6 @@ def translate_chunk_google(text, retries=4, delay=2.0):
                 headers={"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15"}
             )
             with urllib.request.urlopen(req_m, timeout=12) as resp:
-                from bs4 import BeautifulSoup
                 soup = BeautifulSoup(resp.read().decode("utf-8"), "html.parser")
                 res = soup.find("div", class_="result-container")
                 if res and res.text:
@@ -353,111 +328,217 @@ def clean_paragraph_text(raw_text):
     return t
 
 
-def extract_chapter_content(doc, start_page, end_page):
+# ---------------------------------------------------------------------------
+# Trích xuất PDF: dùng get_text("dict") để lấy cỡ chữ (size) của từng khối,
+# nhờ đó phân biệt được tiêu đề thật (size lớn) với đoạn văn thường, đồng
+# thời lọc được header/số trang lặp lại theo VỊ TRÍ trên trang (đầu/cuối
+# trang, dòng ngắn) thay vì danh sách chuỗi cố định của một cuốn sách khác.
+# ---------------------------------------------------------------------------
+
+HEADER_FOOTER_RE = re.compile(
+    r'^(?:[ivxlc]{1,6}\b|\d{1,4}\b|part\s+\d+|chapter\s+\d+)',
+    re.IGNORECASE
+)
+CHAPTER_LABEL_RE = re.compile(r'^chapter\s+\d+$', re.IGNORECASE)
+BULLET_RE = re.compile(r'^[ -ÿ]\s+(?=[A-Za-z])')
+NUM_LIST_RE = re.compile(r'^\d+\.\s+(?=[A-Z])')
+SENTENCE_END_RE = re.compile(r'[.!?][\"”’\)\]]*\s*$')
+
+
+def _norm_key(s):
+    return re.sub(r'[^a-z0-9]+', '', s.lower())
+
+
+def _page_blocks_in_reading_order(page):
+    d = page.get_text("dict")
+    blocks = []
+    for b in d["blocks"]:
+        if b.get("type") != 0:
+            continue
+        spans = [sp for ln in b.get("lines", []) for sp in ln["spans"]]
+        if not spans:
+            continue
+        raw = "".join(sp["text"] for sp in spans)
+        size = max((sp["size"] for sp in spans), default=0)
+        blocks.append({"raw": raw, "size": size, "bbox": b["bbox"]})
+
+    page_width = page.rect.width
+    mid = page_width / 2
+    left = sorted([b for b in blocks if b["bbox"][0] < mid], key=lambda b: b["bbox"][1])
+    right = sorted([b for b in blocks if b["bbox"][0] >= mid], key=lambda b: b["bbox"][1])
+    return left + right
+
+
+def _is_running_header(text, bbox, page_height):
+    if len(text) > 110:
+        return False
+    height = bbox[3] - bbox[1]
+    if height > 24:
+        return False
+    near_top = bbox[1] < 36
+    near_bottom = bbox[3] > page_height - 36
+    if not (near_top or near_bottom):
+        return False
+    return bool(HEADER_FOOTER_RE.match(text.strip()))
+
+
+def extract_chapter_content(doc, meta):
     """
-    Trích xuất các khối văn bản từ trang start_page đến end_page.
-    Phân loại: heading_2, heading_3, paragraph, case_study, list_item.
+    Trích xuất nội dung chương từ start_page đến end_page.
+    Trả về danh sách phần tử {"type": ..., "text"/"vi_text": ...}
+    type có thể là: heading_2, paragraph, list_item (ordered=True/False qua text riêng), case_study.
     """
+    start_page, end_page = meta["start_page"], meta["end_page"]
+    title_en_key = _norm_key(meta["title_en"])
+
     elements = []
+    known_headings = {}          # normalized -> clean text (thu thập từ mini-TOC đầu chương)
+    toc_collect_mode = False
+    just_saw_chapter_label = False
+
+    paragraph_buf = []
+    buf_type = "paragraph"
+
     in_case_study = False
-    current_case_blocks = []
+    case_study_buf = []
+
+    def ends_sentence(t):
+        return bool(SENTENCE_END_RE.search(t.strip()))
+
+    def flush_paragraph():
+        nonlocal paragraph_buf, buf_type
+        if paragraph_buf:
+            joined = paragraph_buf[0]
+            for extra in paragraph_buf[1:]:
+                if joined.endswith('-') and len(joined) > 1 and joined[-2].isalpha():
+                    joined = joined[:-1] + extra
+                else:
+                    joined = joined + ' ' + extra
+            joined = joined.strip()
+            if joined:
+                elements.append({"type": buf_type, "text": joined})
+        paragraph_buf = []
+        buf_type = "paragraph"
 
     for page_num in range(start_page - 1, end_page):
         page = doc[page_num]
-        raw_blocks = page.get_text("blocks")
+        page_height = page.rect.height
+        blocks = _page_blocks_in_reading_order(page)
 
-        for b in raw_blocks:
-            t = b[4].strip()
-            if not t:
+        for blk in blocks:
+            raw = blk["raw"]
+            size = blk["size"]
+            bbox = blk["bbox"]
+            stripped = raw.strip()
+            if not stripped:
                 continue
 
-            # Bỏ qua số trang đứng riêng
-            if re.match(r"^\d+$", t):
-                continue
-            
-            # Bỏ qua running header
-            if ("THE THEORY AND PRACTICE OF GROUP PSYCHOTHERAPY" in t or 
-                "THE THERAPEUTIC FACTORS" in t or
-                "INTERPERSONAL LEARNING" in t or
-                "GROUP COHESIVENESS" in t) and len(t) < 80:
+            # Bỏ số trang / running header lặp lại (lọc theo VỊ TRÍ, không theo
+            # danh sách chuỗi cố định của sách khác).
+            if _is_running_header(stripped, bbox, page_height):
                 continue
 
-            # Bỏ qua tên chương ở đầu nếu trùng tiêu đề
-            if re.match(r"^-\s*\d+\s*-$", t):
+            text = clean_paragraph_text(raw)
+            if not text:
                 continue
 
-            # Xử lý case study vignette bắt đầu bằng > và kết thúc bằng <<
-            if t.startswith(">"):
+            # Nhãn "CHAPTER N" (trùng với H1 sinh từ metadata) -> bỏ, đồng thời
+            # bật chế độ thu thập mini mục lục đầu chương (nếu có).
+            if CHAPTER_LABEL_RE.match(text):
+                flush_paragraph()
+                just_saw_chapter_label = True
+                continue
+
+            # Tiêu đề lớn của chương (trùng tiêu đề tiếng Anh trong metadata) -> bỏ.
+            if _norm_key(text) == title_en_key or (just_saw_chapter_label and size >= 18):
+                flush_paragraph()
+                just_saw_chapter_label = False
+                toc_collect_mode = True
+                known_headings = {}
+                continue
+
+            # Case study vignette đánh dấu bằng > ... << (một số chương có dùng).
+            if stripped.startswith(">"):
+                flush_paragraph()
                 in_case_study = True
-                cleaned = clean_paragraph_text(t.lstrip(">").strip())
+                cleaned = clean_paragraph_text(stripped.lstrip(">").strip())
                 if "<<" in cleaned:
                     cleaned = cleaned.replace("<<", "").strip()
-                    elements.append({"type": "case_study", "text": [cleaned], "page": page_num + 1})
+                    elements.append({"type": "case_study", "text": [cleaned]})
                     in_case_study = False
                 else:
-                    current_case_blocks = [cleaned]
+                    case_study_buf = [cleaned]
                 continue
 
             if in_case_study:
-                cleaned = clean_paragraph_text(t)
+                cleaned = clean_paragraph_text(stripped)
                 if "<<" in cleaned:
                     cleaned = cleaned.replace("<<", "").strip()
-                    current_case_blocks.append(cleaned)
-                    elements.append({"type": "case_study", "text": current_case_blocks, "page": page_num + 1})
-                    current_case_blocks = []
+                    case_study_buf.append(cleaned)
+                    elements.append({"type": "case_study", "text": case_study_buf})
+                    case_study_buf = []
                     in_case_study = False
                 else:
-                    current_case_blocks.append(cleaned)
+                    case_study_buf.append(cleaned)
                 continue
 
-            cleaned = clean_paragraph_text(t)
-            if not cleaned:
+            # Chế độ thu thập mini mục lục ở đầu chương: các dòng ngắn, không
+            # kết thúc bằng dấu câu, nằm giữa tiêu đề chương và tiêu đề mục thật
+            # đầu tiên. Không đưa vào nội dung (tránh trùng lặp với sidebar TOC).
+            if toc_collect_mode:
+                if size >= 13:
+                    toc_collect_mode = False
+                    # rơi xuống xử lý như heading bên dưới
+                else:
+                    for line in re.split(r'\s{2,}|(?<=[a-zA-Z])\s(?=[A-Z][a-z])', text):
+                        line = line.strip()
+                        if line and len(line) < 90:
+                            known_headings[_norm_key(line)] = line
+                    if len(text) < 90 and not ends_sentence(text):
+                        continue
+                    toc_collect_mode = False
+
+            # Tiêu đề mục thật trong thân chương (kích thước chữ lớn hơn văn bản
+            # thường). OCR thường thêm 1-2 ký tự rác trước tiêu đề (icon bị đọc
+            # sai) -> đối chiếu với mini mục lục đã thu thập để lấy bản sạch,
+            # nếu không khớp thì tự loại bỏ tiền tố rác ngắn.
+            if size >= 13 and len(text) < 140:
+                flush_paragraph()
+                norm = _norm_key(text)
+                matched = None
+                for k, clean in known_headings.items():
+                    if k and (k in norm or norm in k) and len(k) > 4:
+                        matched = clean
+                        break
+                if matched:
+                    heading_text = matched
+                else:
+                    heading_text = re.sub(r'^[A-Za-z]{1,3}\s*=?\s*(?=[A-Z])', '', text).strip()
+                    if not heading_text:
+                        heading_text = text
+                elements.append({"type": "heading_2", "text": heading_text})
                 continue
 
-            # Bỏ qua lặp tiêu đề chương
-            if cleaned.upper() in ["PREFACE TO THE SIXTH EDITION", "THE THERAPEUTIC FACTORS", "INTERPERSONAL LEARNING"]:
-                continue
+            # Danh sách có dấu đầu dòng (bullet OCR ra 1 ký tự Latin-1 lạ) hoặc
+            # đánh số "1. ...".
+            if not paragraph_buf:
+                if BULLET_RE.match(text):
+                    text = BULLET_RE.sub('', text)
+                    if text:
+                        text = text[0].upper() + text[1:]
+                    buf_type = "list_item"
+                elif NUM_LIST_RE.match(text):
+                    buf_type = "list_item"
+                else:
+                    buf_type = "paragraph"
 
-            # Nhận diện tiêu đề mục viết hoa toàn bộ (All Caps) hoặc danh sách subheadings
-            is_all_caps = cleaned.isupper() and len(cleaned) < 100
-            is_subheading = False
-            subheadings_known = [
-                "INSTILLATION OF HOPE", "UNIVERSALITY", "IMPARTING INFORMATION",
-                "DIDACTIC INSTRUCTION", "DIRECT ADVICE", "ALTRUISM",
-                "THE CORRECTIVE RECAPITULATION OF THE PRIMARY FAMILY GROUP",
-                "DEVELOPMENT OF SOCIALIZING TECHNIQUES", "IMITATIVE BEHAVIOR",
-                "THE IMPORTANCE OF INTERPERSONAL RELATIONSHIPS",
-                "THE CORRECTIVE EMOTIONAL EXPERIENCE",
-                "THE GROUP AS SOCIAL MICROCOSM",
-                "DYNAMIC INTERACTION WITHIN THE SOCIAL MICROCOSM",
-                "RECOGNITION OF BEHAVIORAL PATTERNS IN THE SOCIAL MICROCOSM",
-                "THE SOCIAL MICROCOSM: IS IT REAL?",
-                "TRANSFERENCE AND INSIGHT", "OVERVIEW",
-                "MECHANISM OF ACTION", "SUMMARY",
-                "COMPARATIVE VALUE OF THE THERAPEUTIC FACTORS",
-                "CREATION AND MAINTENANCE OF THE GROUP",
-                "BUILDING A GROUP CULTURE",
-                "HOW DOES THE LEADER SHAPE NORMS?",
-                "DEFINITION OF PROCESS", "TECHNIQUES OF PROCESS ILLUMINATION"
-            ]
+            paragraph_buf.append(text)
+            if ends_sentence(text):
+                flush_paragraph()
 
-            for sh in subheadings_known:
-                if cleaned.upper() == sh or cleaned.upper().startswith(sh):
-                    is_subheading = True
-                    break
-
-            if is_all_caps and len(cleaned.split()) <= 12:
-                elements.append({"type": "heading_2", "text": cleaned, "page": page_num + 1})
-            elif is_subheading:
-                elements.append({"type": "heading_2", "text": cleaned, "page": page_num + 1})
-            elif re.match(r"^\d+\.\s+[A-Z]", cleaned) and len(cleaned) < 80:
-                elements.append({"type": "list_item", "text": cleaned, "page": page_num + 1})
-            else:
-                elements.append({"type": "paragraph", "text": cleaned, "page": page_num + 1})
-
-    # Nếu case study chưa đóng mà hết trang
-    if in_case_study and current_case_blocks:
-        elements.append({"type": "case_study", "text": current_case_blocks, "page": end_page})
+    flush_paragraph()
+    if in_case_study and case_study_buf:
+        elements.append({"type": "case_study", "text": case_study_buf})
 
     return elements
 
@@ -471,12 +552,20 @@ def generate_chapter_html(meta, prev_meta, next_meta, translated_elements):
     title_en = meta["title_en"]
 
     content_html = []
+    open_list = None  # 'ul' | 'ol' | None
+    def close_list():
+        nonlocal open_list
+        if open_list:
+            content_html.append(f'</{open_list}>')
+            open_list = None
+
     for el in translated_elements:
         el_type = el["type"]
+        if el_type != "list_item":
+            close_list()
+
         if el_type == "heading_2":
             content_html.append(f'<h2>{el["vi"]}</h2>')
-        elif el_type == "heading_3":
-            content_html.append(f'<h3>{el["vi"]}</h3>')
         elif el_type == "case_study":
             paras = "".join([f'<p>{p}</p>' for p in el["vi"]])
             content_html.append(f'''
@@ -488,13 +577,14 @@ def generate_chapter_html(meta, prev_meta, next_meta, translated_elements):
   {paras}
 </div>''')
         elif el_type == "list_item":
-            content_html.append(f'<p><strong>{el["vi"]}</strong></p>')
+            if not open_list:
+                open_list = "ul"
+                content_html.append('<ul class="chapter-list">')
+            content_html.append(f'<li>{el["vi"]}</li>')
         else:
-            # Paragraph
-            # Xử lý số chú thích sup
-            text_vi = re.sub(r'(\d+)\b(?=\s+[A-ZÀ-Ỹ])', r'<sup class="footnote-ref">[\1]</sup>', el["vi"])
-            content_html.append(f'<p>{text_vi}</p>')
+            content_html.append(f'<p>{el["vi"]}</p>')
 
+    close_list()
     content_str = "\n".join(content_html)
 
     # Nút điều hướng trước / sau
@@ -532,7 +622,7 @@ def generate_chapter_html(meta, prev_meta, next_meta, translated_elements):
     <div class="toolbar-left">
       <button class="btn-tool" id="btn-toggle-sidebar" title="Đóng/Mở Mục lục">&#9776; Mục lục</button>
       <a href="../index.html" class="btn-tool" title="Về trang chủ">&#127968; Trang chủ</a>
-      <span class="book-badge">Yalom & Leszcz (6th Ed.)</span>
+      <span class="book-badge">{BOOK_BADGE}</span>
       <span class="book-title-mini">{ch_num_label}: {title_vi}</span>
     </div>
     <div class="toolbar-right">
@@ -610,7 +700,7 @@ def translate_chapter(meta_idx):
     print(f"==================================================", flush=True)
 
     doc = pymupdf.open(str(PDF_PATH))
-    elements = extract_chapter_content(doc, meta["start_page"], meta["end_page"])
+    elements = extract_chapter_content(doc, meta)
     print(f"-> Đã bóc tách được {len(elements)} phân đoạn.", flush=True)
 
     translated_elements = []
@@ -623,13 +713,14 @@ def translate_chapter(meta_idx):
             for p in el["text"]:
                 t_vi = translate_chunk_google(p)
                 vi_paras.append(t_vi)
-            translated_elements.append({"type": el_type, "vi": vi_paras, "page": el["page"]})
+            translated_elements.append({"type": el_type, "vi": vi_paras})
         else:
             t_vi = translate_chunk_google(el["text"])
-            translated_elements.append({"type": el_type, "vi": t_vi, "page": el["page"]})
+            translated_elements.append({"type": el_type, "vi": t_vi})
 
         # Lưu cache thường xuyên
-        translation_cache.save()
+        if (idx + 1) % 20 == 0 or (idx + 1) == total:
+            translation_cache.save()
 
         if (idx + 1) % 10 == 0 or (idx + 1) == total:
             print(f"  [Tiến độ: {idx + 1}/{total} ({((idx + 1)/total)*100:.1f}%)]", flush=True)
@@ -641,14 +732,6 @@ def translate_chapter(meta_idx):
         f.write(html_content)
 
     print(f"-> HOÀN THÀNH: Đã ghi ra file {out_file.name} thành công!\n", flush=True)
-
-    # Tự động cập nhật lại index.html và toan_bo_sach.html
-    build_index_page()
-    try:
-        from build_master_html import build_master
-        build_master()
-    except Exception as e:
-        print(f"[Cảnh báo] Không thể cập nhật toan_bo_sach.html: {e}", flush=True)
 
 
 def build_index_page():
@@ -662,11 +745,11 @@ def build_index_page():
         ch_file = f"chapters/{item['filename']}"
         file_path = CHAPTERS_DIR / item['filename']
         is_ready = file_path.exists()
-        
+
         status_badge = '<span class="status-badge ready">✓ Đã dịch &bull; Sẵn sàng đọc</span>' if is_ready else '<span class="status-badge pending">⏳ Sẵn sàng chạy dịch</span>'
         item_num = item["num"]
         btn_str = f'<a href="{ch_file}" class="card-btn">Đọc chương này &rarr;</a>' if is_ready else f'<span class="card-btn disabled" title="Dùng lệnh: python dich_tu_dong.py --chapter {item_num}">Chưa tạo file</span>'
-        
+
         ch_cards.append(f'''
         <div class="chapter-card{' is-ready' if is_ready else ''}">
           <div class="card-top-row">
@@ -872,10 +955,10 @@ def build_index_page():
       <div class="intro-box">
         <h2>Giới Thiệu Tác Phẩm & Dự Án Bản Dịch Tiếng Việt</h2>
         <p>
-          <strong>"Theory and Practice of Family Therapy and Counseling"</strong> của GS. James Robert Bitter là cuốn cẩm nang kinh điển hàng đầu thế giới được sử dụng để đào tạo các nhà tâm lý trị liệu, bác sĩ tâm thần và nhân viên công tác xã hội trong suốt hơn 5 thập kỷ qua. Bản tái bản lần thứ 6 (2020) kết hợp cùng GS. Gerald Corey cập nhật toàn diện những nghiên cứu thực chứng dựa trên bằng chứng (evidence-based), kỹ thuật trị liệu trực tuyến (VTC), cũng như các định dạng nhóm chuyên biệt.
+          <strong>"Theory and Practice of Family Therapy and Counseling"</strong> (2009) của GS. James Robert Bitter là cẩm nang được sử dụng rộng rãi để đào tạo các nhà tham vấn, trị liệu gia đình và nhân viên công tác xã hội. Sách trình bày 10 mô hình lý thuyết trị liệu gia đình theo một cấu trúc thống nhất, minh họa xuyên suốt qua ca lâm sàng của gia đình Quest (Quest Family).
         </p>
         <p>
-          Tài liệu này được trích xuất trực tiếp từ nguyên bản PDF và chuyển ngữ sang tiếng Việt học thuật, chuẩn hóa các khái niệm then chốt như: <em>Truyền thụ hy vọng, Tính phổ quát, Trải nghiệm cảm xúc sửa chữa, Nhóm như một tiểu vũ trụ xã hội, Làm việc tại đây-và-ngay lúc này, Chuyển di và Tính minh bạch</em>.
+          Tài liệu này được trích xuất trực tiếp từ nguyên bản PDF và chuyển ngữ sang tiếng Việt học thuật, chuẩn hóa các khái niệm then chốt như: <em>biệt hóa bản thân, tam giác hóa, ranh giới, sơ đồ phả hệ (genogram), dàn dựng tương tác, tái đóng khung, câu hỏi phép màu</em>.
         </p>
       </div>
 
@@ -898,9 +981,9 @@ def build_index_page():
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Chuyển ngữ sách Yalom Group Psychotherapy sang HTML")
+    parser = argparse.ArgumentParser(description="Chuyển ngữ sách Theory and Practice of Family Therapy and Counseling (Bitter, 2009) sang HTML")
     parser.add_argument("--preface", action="store_true", help="Dịch Lời nói đầu")
-    parser.add_argument("--chapter", type=int, help="Dịch số chương chỉ định (1 - 16)")
+    parser.add_argument("--chapter", type=int, help="Dịch số chương chỉ định")
     parser.add_argument("--range", nargs=2, type=int, metavar=('START', 'END'), help="Dịch khoảng các chương, ví dụ: --range 2 3")
     parser.add_argument("--next", type=int, default=1, help="Dịch N chương tiếp theo chưa dịch")
     parser.add_argument("--all", action="store_true", help="Dịch toàn bộ các chương")
@@ -927,6 +1010,8 @@ if __name__ == "__main__":
     elif args.all:
         for i in range(len(CHAPTER_METADATA)):
             translate_chapter(i)
+    elif args.build_index:
+        pass
     else:
         # Mặc định tìm các chương chưa dịch và dịch tiếp
         untranslated = [i for i, c in enumerate(CHAPTER_METADATA) if not (CHAPTERS_DIR / c["filename"]).exists()]
@@ -937,4 +1022,3 @@ if __name__ == "__main__":
                 translate_chapter(i)
         else:
             print("Tất cả các chương đều đã được dịch hoàn tất!", flush=True)
-

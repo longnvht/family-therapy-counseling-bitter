@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 8: Trị Liệu Gia Đình Cấu Trúc (Salvador Minuchin) | Theory and Practice of Family Therapy and Counseling</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="top-toolbar">
+    <div class="toolbar-left">
+      <button class="btn-tool" id="btn-toggle-sidebar" title="Đóng/Mở Mục lục">&#9776; Mục lục</button>
+      <a href="../index.html" class="btn-tool" title="Về trang chủ">&#127968; Trang chủ</a>
+      <span class="book-badge">Yalom & Leszcz (6th Ed.)</span>
+      <span class="book-title-mini">Chương 8: Trị Liệu Gia Đình Cấu Trúc (Salvador Minuchin)</span>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn-tool" id="btn-font-dec" title="Giảm cỡ chữ">A-</button>
+      <button class="btn-tool" id="btn-font-inc" title="Tăng cỡ chữ">A+</button>
+      <button class="btn-tool" id="btn-theme" title="Đổi giao diện sáng/tối"><span>☀️ Sáng</span></button>
+      <button class="btn-tool" id="btn-print" title="In hoặc lưu PDF">&#128438; In</button>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-search">
+        <input type="text" id="toc-search-input" placeholder="Tìm kiếm chương...">
+      </div>
+      <div class="toc-title">Danh Mục Chương</div>
+      <ul class="toc-list">
+        
+        <li class="toc-item">
+          <a href="00_loi_tua_va_loi_mo_dau.html" class="toc-link">
+            <span class="toc-num">0</span>
+            <span class="toc-name">Lời tựa & Lời mở đầu: Lời Tựa của Gerald Corey & Lời Mở Đầu</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="01_gioi_thieu_tong_quan.html" class="toc-link">
+            <span class="toc-num">1</span>
+            <span class="toc-name">Chương 1: Giới Thiệu và Tổng Quan Về Trị Liệu Gia Đình</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="02_nha_thuc_hanh_gia_dinh.html" class="toc-link">
+            <span class="toc-num">2</span>
+            <span class="toc-name">Chương 2: Nhà Thực Hành Gia Đình: Phương Diện Cá Nhân và Nghề Nghiệp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="03_dao_duc_va_phap_ly.html" class="toc-link">
+            <span class="toc-num">3</span>
+            <span class="toc-name">Chương 3: Đạo Đức, Phẩm Hạnh và Pháp Lý Trong Thực Hành Gia Đình</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="04_tri_lieu_gia_dinh_da_the_he_bowen.html" class="toc-link">
+            <span class="toc-num">4</span>
+            <span class="toc-name">Chương 4: Trị Liệu Gia Đình Đa Thế Hệ (Murray Bowen)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="05_tri_lieu_gia_dinh_adler.html" class="toc-link">
+            <span class="toc-num">5</span>
+            <span class="toc-name">Chương 5: Trị Liệu Gia Đình Theo Thuyết Adler</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="06_mo_hinh_xac_thuc_con_nguoi_satir.html" class="toc-link">
+            <span class="toc-num">6</span>
+            <span class="toc-name">Chương 6: Mô Hình Tiến Trình Xác Thực Con Người (Virginia Satir)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="07_tri_lieu_bieu_tuong_trai_nghiem_whitaker.html" class="toc-link">
+            <span class="toc-num">7</span>
+            <span class="toc-name">Chương 7: Trị Liệu Gia Đình Biểu Tượng - Trải Nghiệm (Carl Whitaker)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="08_tri_lieu_gia_dinh_cau_truc_minuchin.html" class="toc-link active">
+            <span class="toc-num">8</span>
+            <span class="toc-name">Chương 8: Trị Liệu Gia Đình Cấu Trúc (Salvador Minuchin)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="09_tri_lieu_gia_dinh_chien_luoc.html" class="toc-link">
+            <span class="toc-num">9</span>
+            <span class="toc-name">Chương 9: Trị Liệu Gia Đình Chiến Lược (MRI, Milan, Washington)</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="10_tri_lieu_tap_trung_giai_phap_sfbt.html" class="toc-link">
+            <span class="toc-num">10</span>
+            <span class="toc-name">Chương 10: Trị Liệu Tập Trung Vào Giải Pháp và Định Hướng Giải Pháp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="11_hau_hien_dai_va_tri_lieu_tuong_thuat.html" class="toc-link">
+            <span class="toc-num">11</span>
+            <span class="toc-name">Chương 11: Hậu Hiện Đại, Kiến Tạo Xã Hội và Liệu Pháp Tường Thuật</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="12_tri_lieu_gia_dinh_nu_quyen.html" class="toc-link">
+            <span class="toc-num">12</span>
+            <span class="toc-name">Chương 12: Trị Liệu Gia Đình Nữ Quyền</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="13_tri_lieu_gia_dinh_nhan_thuc_hanh_vi.html" class="toc-link">
+            <span class="toc-num">13</span>
+            <span class="toc-name">Chương 13: Trị Liệu Gia Đình Nhận Thức - Hành Vi</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="14_nuoi_day_con_the_ky_21.html" class="toc-link">
+            <span class="toc-num">14</span>
+            <span class="toc-name">Chương 14: Nuôi Dạy Con Trong Thế Kỷ 21</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="15_tich_hop_1_tu_kham_pha_den_danh_gia.html" class="toc-link">
+            <span class="toc-num">15</span>
+            <span class="toc-name">Chương 15: Tích Hợp I: Từ Khám Phá Bản Thân Đến Thiết Lập Quan Hệ & Đánh Giá</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="16_tich_hop_2_y_nghia_va_can_thiep.html" class="toc-link">
+            <span class="toc-num">16</span>
+            <span class="toc-name">Chương 16: Tích Hợp II: Kiến Tạo Ý Nghĩa Chung, Thúc Đẩy Thay Đổi & Tinh Chỉnh Can Thiệp</span>
+          </a>
+        </li>
+
+        <li class="toc-item">
+          <a href="17_phu_luc_tong_ket_cac_mo_hinh.html" class="toc-link">
+            <span class="toc-num">17</span>
+            <span class="toc-name">Phụ lục: Phụ Lục: Tổng Kết và Đối Chiếu Các Mô Hình Trị Liệu Gia Đình</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-wrapper">
+      <article class="content-article">
+        <header class="book-header">
+          <div class="chapter-number">Chương 8 (Trang 198 - 220)</div>
+          <h1 class="chapter-title">Trị Liệu Gia Đình Cấu Trúc (Salvador Minuchin)</h1>
+          <div class="chapter-authors">Nguyên tác: <em>STRUCTURAL FAMILY THERAPY</em> &bull; James Robert Bitter, Ed.D.</div>
+        </header>
+
+        <div class="chapter-body">
+          <h2>CHƯƠNG 8</h2>
+<p>Liệu pháp Gia đình Cấu trúc”</p>
+<p>Giới thiệu</p>
+<p>Các khái niệm chính</p>
+<p>Mục tiêu trị liệu</p>
+<p>Vai trò và chức năng của nhà trị liệu</p>
+<p>Kỹ thuật</p>
+<p>Một nhà trị liệu gia đình cấu trúc với gia đình Quest</p>
+<h2>Tóm tắt và đánh giá đa văn hóa</h2>
+<p>Bài đọc được đề xuất</p>
+<p>Tài liệu tham khảo</p>
+<p>Giới thiệu về tôi</p>
+<p>Nguồn gốc của liệu pháp cấu trúc gia đình có thể bắt nguồn từ đầu những năm 1960 khi Salvador Minuchin tiến hành trị liệu, đào tạo và nghiên cứu với những cậu bé phạm tội xuất thân từ các gia đình nghèo tại Trường Wiltwyck ở New York. Cách tiếp cận trị liệu gia đình này phát triển mạnh mẽ</p>
+<p>vào những năm 1970 khi Minuchin và các đồng nghiệp của ông tại Phòng khám Hướng dẫn Trẻ em Philadelphia phát triển lý thuyết và thực hành liệu pháp cấu trúc một cách đầy đủ hơn. Trong cuốn sách Gia đình và Trị liệu Gia đình, Minuchin (1974) tập trung vào sự tương tác của các thành viên trong gia đình như một cách hiểu về cấu trúc hoặc tổ chức của một gia đình. Nhà trị liệu gia đình cấu trúc</p>
+<p>tập trung vào việc các thành viên trong gia đình có quan hệ như thế nào, khi nào và với ai. Thông qua thông tin này</p>
+<p>có thể đánh giá được cấu trúc của một gia đình và những vấn đề đưa gia đình vào trị liệu.</p>
+<p>Trị liệu gia đình theo cấu trúc xem cá nhân như một phần của bối cảnh xã hội, và có nguồn gốc cũng như thực tiễn hiện tại dựa trên sự đánh giá cao và cống hiến cho sự đa dạng văn hóa và làm việc với người nghèo. Điểm đặc biệt của phương pháp này là</p>
+<p>nó nhấn mạnh vào sự thay đổi cấu trúc như là mục tiêu chính của trị liệu và hoạt động tích cực của nhà trị liệu.</p>
+<p>đóng vai trò là tác nhân trong quá trình tái cơ cấu gia đình (Colapinto, 2000). Minuchin (1974) viết:</p>
+<p>ôi Ướt</p>
+<p>*Tôi muốn ghi nhận những nỗ lực và đóng góp cần mẫn của Tiến sĩ Harry Aponte trong việc phát triển chương này và đảm bảo nó được cập nhật.</p>
+<p>Trung tâm Minuchen dành cho gia đình</p>
+<p>Salvador Minuchin</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Aldo:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Bà Gonzaga:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Bà Gonzaga:</p>
+<p>Tiến sĩ Hany J. Aponte</p>
+<p>Harry Aponte</p>
+<p>Chương <sup class="footnote-ref">[8]</sup> Trị liệu gia đình theo cấu trúc 167</p>
+<p>Trị liệu dựa trên khuôn khổ này nhằm mục đích thay đổi tổ chức gia đình. Khi cơ cấu của nhóm gia đình thay đổi thì vị trí của các thành viên trong nhóm đó cũng thay đổi theo.</p>
+<p>ingly. Kết quả là trải nghiệm của mỗi cá nhân thay đổi. (trang 2)</p>
+<p>Harry Aponte là một trong những học giả có tài hùng biện nhất về trị liệu gia đình theo cấu trúc. Hơn ai hết, anh ấy đã tiếp tục công việc trị liệu gia đình ban đầu của Minuchin với người nghèo và anh ấy đã phát triển một mô hình cấu trúc sinh thái được thiết kế độc đáo để thách thức sự áp bức dựa trên chủng tộc, văn hóa và nghèo đói.</p>
+<p>Trong cuốn sách Bánh mì và tinh thần: Trị liệu với người nghèo mới, Aponte (1994) kể lại công việc của mình với tư cách là nhà tư vấn trị liệu cho gia đình Gonzaga: “một người xanh-</p>
+<p>gia đình cổ có nguồn gốc dân tộc Mexico” (trang 40). Cha mẹ, cả</p>
+<p>đầu những năm 40, có 5 người con: “Fred, 16, Aida, 14, Esteban, 13, Aldo, 11, và Elena, người</p>
+<p>là 4". Mục đích ban đầu của việc tìm kiếm liệu pháp tập trung vào Aldo, cậu bé đang gặp khó khăn ở trường và cư xử thiếu chín chắn ở nhà. Cha mẹ cũng cho biết có mâu thuẫn đáng kể giữa họ, mặc dù người cha im lặng trong hầu hết các buổi trị liệu và dường như vẫn ở ngoại vi gia đình. Khi buổi trị liệu bắt đầu, Aldo đang ngồi giữa Aponte và ông Gonzaga.</p>
+<p>[với ông Gonzaga] Sao ông không đổi ghế để ngồi cạnh tôi. (Aldo và ông Gonzaga đổi ghế.) Được rồi. Hãy giới thiệu gia đình của bạn với tôi.</p>
+<p>(chỉ vào cậu bé bên cạnh) Aldo.</p>
+<p>Aldo. Aido bao nhiêu tuổi?</p>
+<p>Mười một.</p>
+<p>Và anh ấy? (chỉ vào cậu bé tiếp theo)</p>
+<p>Esteban. (bỏ qua vợ) Elena.</p>
+<p>(tự nhiên xen vào) Elena bốn tuổi.</p>
+<p>(tiếp) Aida, Fred.</p>
+<p>(với ông Gonzaga) Bạn đã đến được vài tháng rồi phải không?</p>
+<p>Sáu, bảy tháng.</p>
+<p>Ba tháng. (trang 42)</p>
+<p>Trong phần đầu của phần này, chúng ta thấy Aponte tham gia cùng với người cha, một người ủng hộ.</p>
+<p>điều đó còn làm mất cân bằng mối quan hệ quyền lực giữa cha và mẹ, củng cố địa vị của người cha và đưa ông ra khỏi vùng ngoại vi của gia đình. Một phần, sự can thiệp trị liệu này được chọn như một phần của giả thuyết</p>
+<p>esis được tạo ra từ dữ liệu trước khi phỏng vấn về gia đình. Gia đình Gonzaga</p>
+<p>đã được hai nhà trị liệu nữ đến gặp trong vài tháng, người mô tả người cha là người “không cam kết với việc trị liệu” (trang 41). Người cha là người Latinh, và không có gì lạ khi những người cha ở những nền văn hóa này luôn ở bên ngoài gia đình. Tuy nhiên, anh ấy vẫn đến dự mọi buổi học. Có lẽ anh ấy chỉ im lặng hoặc bực bội, để lại ấn tượng là anh ấy không quan tâm. Có lẽ các nhà đồng trị liệu không chắc chắn về cách lôi kéo anh ta tham gia và đổ lỗi cho người cha. Aponte đặt ra một số câu hỏi bổ sung cho bản thân trước khi gặp gia đình: "Mối quan hệ của [Aldo] với cha anh ấy trong tam giác này với cha mẹ anh ấy là gì? Có vẻ như anh ấy đã nhận được sự chú ý của mẹ mình vì bà rất tích cực. Anh ấy có đang tìm kiếm cha mình không?"</p>
+<p>(trang 41). à, nếu nhà trị liệu là nam, đặc biệt là nam đến từ một nền văn hóa Tây Ban Nha khác, bạn có nghĩ ông Gonzaga có thể trả lời không</p>
+<p><sup class="footnote-ref">[168]</sup> PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Bà Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Bà Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Bà Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Bà Gonzaga:</p>
+<p>khác với khi anh ấy làm việc với các nữ đồng trị liệu? bạn ơi</p>
+<p>i ¢ Bạn có cảm thấy như vậy về một cô gái trẻ không: rằng cô ấy cần thêm ý kiến ​​từ mẹ mình</p>
+<p>hơn cha cô ấy? ; bạn biết gì về những câu hỏi này không?</p>
+<p>Quay trở lại buổi trị liệu, chúng ta thấy Aponte tham gia cùng người cha và nhận ra-</p>
+<p>tify với sự bối rối của mình trong nỗ lực tìm kiếm trọng tâm cho công việc của họ:</p>
+<p>(với ông Gonzaga) Tôi đã nghe [các nhà đồng trị liệu] mô tả một chút về những gì đang diễn ra. Nó phức tạp đến mức tôi không thể theo kịp nó.</p>
+<p>Đúng vậy. (cười)</p>
+<p>... nhưng dường như có rất nhiều điều khiến bạn phải đấu tranh và có rất nhiều điều khiến bạn phải lo lắng. Hai người có vấn đề và Aldo cũng có vấn đề. Dù sao thì, có vẻ như có quá nhiều thứ nên tôi đã bối rối rồi. .. . Vì vậy, nếu bạn có thể chọn chỉ một điều, chỉ một vấn đề mà chúng ta có thể tập trung vào trong giờ này trong số tất cả những điều bạn đã nói đến, thì chúng ta có thể cố gắng làm điều gì đó về nó....</p>
+<p>Bạn muốn nói về điều gì?</p>
+<p>Đây là gia đình của bạn. .. . Bạn chỉ cần chọn ra một thứ và chúng tôi sẽ giải quyết vấn đề đó.</p>
+<p>À, chúng tôi đến đây vì Aldo. Đó là lý do tại sao chúng tôi đến. Mọi thứ đã được thảo luận cùng với Aldo, nhưng chúng tôi vẫn chưa giải quyết được vấn đề của Aldo, tại sao đôi khi anh ấy lại cư xử như vậy, tại sao anh ấy lại chậm tiến độ trong công việc, tại sao anh ấy không theo kịp, tại sao anh ấy lại làm như vậy.</p>
+<p>hành động trẻ con....</p>
+<p>Trong số tất cả những vấn đề khác mà bạn gặp phải, bạn muốn nói về Aldo hơn?</p>
+<p>Chà, những đứa trẻ khác vẫn ổn, và ... chúng tôi cứ thế đi lòng vòng, chồng tôi và tôi. Anh ấy nghĩ một đằng, tôi nghĩ một nẻo, nhưng giờ đây chúng tôi đã hiểu nhau hơn vì chúng tôi biết điều đó sẽ không bao giờ thay đổi. Bạn biết đấy, nó sẽ</p>
+<p>theo cách đó mọi lúc. (cười)</p>
+<p>Đó là một cách để giải quyết vấn đề (cười).</p>
+<p>Anh nghĩ một đằng, tôi nghĩ một nẻo. Chúng ta không thể thay đổi điều đó…. Chúng tôi làm việc để hiểu nhau nhưng chúng tôi tôn trọng nhau. Kiểu như anh ấy nghĩ mình là ông chủ, còn tôi để anh ấy nghĩ mình là ông chủ. (cười)</p>
+<p>(với ông Gonzaga) Điều đó có nghĩa là bạn không phải là [ông chủ]? (cười) Nhưng... trong tất cả những điều này, bạn muốn nói về điều gì trong giờ này. ...</p>
+<p>Được thôi, bất cứ điều gì bạn muốn nói về. Tôi không có quá nhiều vấn đề lớn. Tôi biết mình phải làm gì. Tôi đoán là vấn đề của cô ấy hoặc của Aldo. Chúng tôi lo lắng cho Aldo vì cậu ấy bị tụt hậu quá nhiều ở trường.</p>
+<p>Aldo. Vậy là cả hai bạn đã quyết định rằng đó là Aldo? Được rồi, còn bạn [Ms. Gonzaga] đã mô tả những gì bạn nghĩ đang xảy ra với Aldo. Tôi nghĩ bạn đã nói rằng anh ấy hành động chưa trưởng thành, giống như một đứa trẻ và không theo kịp giờ học. ... (nói với ông Gonzaga) Ông có thấy đúng như vợ ông mô tả không... ?</p>
+<p>Không, tôi cũng thấy vậy. Đúng như cô ấy nói. [Nhưng] anh ấy hành động nhiều hơn khi cô ấy ở đó. Khi có tôi ở bên, anh ấy không hành động như vậy. . . . Tôi nghĩ có lẽ giống như tôi đã nói với cô ấy. Bạn để anh ta trượt quá nhiều hoặc một cái gì đó. . . . Tất cả những gì cô ấy làm là la hét và la hét, nhưng cô ấy không làm gì cả.</p>
+<p>Vậy thì dễ dàng.... Nếu cô ấy cứng rắn hơn một chút với anh ấy thì bạn sẽ không gặp vấn đề gì.</p>
+<p>Đó là quan điểm của anh ấy, không phải của tôi. ... Anh ấy luôn rất nghiêm khắc với anh ấy. Vì vậy, nghiêm ngặt là</p>
+<p>được thôi, nhưng không phải khi bạn làm anh ấy sợ hãi.</p>
+<p>Đáp án:</p>
+<p>Bà Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Bà Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Chương <sup class="footnote-ref">[8]</sup> Trị liệu gia đình theo cấu trúc 169</p>
+<p>Bạn nghĩ anh ấy quá nghiêm khắc với Aldo?</p>
+<p>Anh ấy nghiêm khắc với tất cả bọn họ.</p>
+<p>Được rồi. (với ông Gonzaga) Hãy hỏi Aldo xem anh ấy có sợ bạn không. (trang 42-45)</p>
+<p>Sự can thiệp cuối cùng này đưa quá trình tư vấn ra khỏi lĩnh vực buộc tội mua bán và tạo ra một ranh giới xung quanh hai cha con, trong đó một chiều hướng mới cho mối quan hệ của họ có thể trở nên khó khăn hơn.</p>
+<p>5 cha con cùng nhau giao lưu, trò chuyện.</p>
+<p>Bạn có sợ tôi không?</p>
+<p>KHÔNG.</p>
+<p>Bạn có sợ tôi không? (với giọng đe dọa)</p>
+<p>KHÔNG.</p>
+<p>(đùa với Aldo) Tốt hơn hết bạn nên đưa ra câu trả lời đúng nếu không anh ta sẽ đấm vào miệng bạn. (Ông Gonzaga và Aponte đều cười.)</p>
+<p>... Có điều gì mà bạn phải sợ không?</p>
+<p>Đánh.</p>
+<p>Đó là vấn đề của bạn và mẹ bạn - bà ấy không đánh bạn. Đó là những gì tôi nghĩ.</p>
+<p>Họ không bao giờ có được...</p>
+<p>(với bà Gonzaga) Đợi đã. Chờ đợi. Đây là giữa họ.</p>
+<p>Cô ấy liên tục nói với anh ấy, "Đừng làm điều này." ...và anh ấy cứ đi và đi mãi... . Anh ta</p>
+<p>cứ tiếp tục làm việc đó.</p>
+<p>Tuy nhiên, bạn có tin anh ấy không khi anh ấy nói rằng anh ấy không sợ bạn?</p>
+<p>Theo cách tôi làm và theo cách nào đó - anh ấy không thực sự sợ tôi. Đó chỉ là một vấn đề mà anh ấy gặp phải, hãy tôn trọng theo cách nào đó nếu anh ấy không làm mọi việc theo cách anh ấy phải làm—nếu tôi nói với anh ấy nhiều hơn ba hoặc bốn lần, tôi sẽ....</p>
+<p>Anh ấy sẽ có được nó.</p>
+<p>Đúng vậy.</p>
+<p>Nhưng bạn có nghĩ rằng bây giờ anh ấy đã nói đủ [vì vậy] bạn tin những gì anh ấy nói với bạn vừa rồi rằng anh ấy không phải lúc nào cũng sống trong sợ hãi bạn không?</p>
+<p>Anh ấy chơi với tôi, bạn biết đấy. Chúng tôi đùa giỡn với nhau và tôi không thấy điều đó khiến anh ấy</p>
+<p>sợ tôi, bởi vì nếu anh ấy có thể đùa giỡn với tôi, thì anh ấy, anh ấy sẽ không sợ tôi....</p>
+<p>Kiểm tra nó với anh ta.</p>
+<p>Bạn có đồng ý với tôi hay không - những gì tôi vừa nói xong?</p>
+<p>Đúng.</p>
+<p>Anh ấy có hiểu ý bạn không?</p>
+<p>Tôi đã nói gì cơ?</p>
+<p>Bạn nói rằng nếu tôi làm không đúng và bạn nhắc nhở tôi khoảng năm lần thì bạn sẽ</p>
+<p>đánh tôi.</p>
+<p>Còn gì nữa?</p>
+<p>Rằng tôi không sợ bạn, vì tôi luôn đùa giỡn với bạn....</p>
+<p>S</p>
+<p>Bạn có biết thử thách thực sự để xem một đứa trẻ có sợ bạn hay không là gì không?</p>
+<p>Nó là gì?</p>
+<p>Liệu anh ấy có thể không đồng ý với bạn hay không.</p>
+<p>Một mình?</p>
+<p>PHẦN 2. Lý thuyết và kỹ thuật trị liệu và tham vấn gia đình</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>Aldo:</p>
+<p>Ông Gonzaga:</p>
+<p>s Aponte:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Đó là bài kiểm tra.</p>
+<p>... (với Aldo) Có điều gì bạn có thể không đồng ý với tôi không - bạn nghĩ tôi sai à?</p>
+<p>KHÔNG.</p>
+<p>Rằng bạn không đồng ý với tôi. Thế thì bất cứ điều gì tôi nói đều đúng….</p>
+<p>Không có gì cả.</p>
+<p>Được rồi. Bạn không thích điều gì hoặc....</p>
+<p>Khi bạn ép buộc tôi.</p>
+<p>Ồ, làm sao tôi có thể ép buộc bạn?</p>
+<p>Giống như bạn nói, “đi, đi đọc” ngay cả sau khi tôi đã làm điều đó.</p>
+<p>Sau đó thì sao?</p>
+<p>Thế thì tôi cứ làm đi.</p>
+<p>Ồ, bạn không muốn đi đọc. Đó là nó, hay nó là gì?</p>
+<p>Không, vì tôi đã làm rồi.</p>
+<p>Ồ, đó là lúc tôi cử bạn đi đọc sách lần nữa - bạn đọc khi tôi không có nhà, phải không? Sau đó tôi</p>
+<p>bảo bạn đọc lại đi.</p>
+<p>Thỉnh thoảng.</p>
+<p>Đó là khi bạn không đồng ý với tôi. Tại sao bạn không nói gì cả? Bạn vừa chứng minh cho tôi thấy (im lặng)—Tôi đoán là vì bạn sợ tôi… . Có đúng không?</p>
+<p>Nhận dạng. (tạm dừng)</p>
+<p>(với Aponte) Và bạn đã đúng về tôi. Anh ấy đi cùng tôi nếu anh ấy thích</p>
+<p>nó hay không.</p>
+<p>Họ phải học cách có thể nói—như, bạn biết đấy—tôi chắc chắn—bạn làm loại công việc gì?</p>
+<p>Tôi là một người đóng gói.</p>
+<p>Tôi chắc chắn rằng bạn có ai đó ở bên cạnh bạn, một quản đốc hoặc ai đó. .. . Bạn không đồng ý với người đó... bạn biết cách nói, "Này, đó không phải là cách để làm điều đó" hoặc "Đây không phải là lúc" mà không trở thành vấn đề lớn... . Nếu anh ấy không học cách làm điều đó, anh ấy sẽ không trưởng thành.</p>
+<p>Tại thời điểm này, người mẹ khẳng định rằng bà đã cố gắng dạy các cậu bé cách đứng lên bảo vệ bản thân, chống trả khi cảm thấy mình bị ngược đãi. Tuy nhiên, Aponte quay lại với người cha và lưu ý rằng người mẹ không thể dạy các cậu bé cách trở thành đàn ông: Người cha phải làm điều đó. Anh ấy phải dạy họ “cách không đồng ý với [anh ấy] một cách tôn trọng” (trang 48). Ông chỉ đạo ông Gonzaga</p>
+<p>để làm điều đó với Aldo. Người cha bắt đầu ngập ngừng. Anh ấy không chắc chắn làm thế nào để làm điều đó. Ông nhờ một người con trai khác, Esteban, giúp đỡ. Cùng nhau, họ xác định rằng Aldo có xu hướng làm</p>
+<p>mặt nhưng không nói chuyện. "Vậy vấn đề của Aldo không phải là anh ấy đánh nhau với bạn. Vấn đề của anh ấy là anh ấy không đánh nhau với bạn" (tr. 49).</p>
+<p>Bị loại khỏi cuộc tranh giành quyền lực với vợ, {bố] phải chịu trách nhiệm</p>
+<p>về vấn đề này, và [Aponte] giữ anh ta lại với nó. [Aponte] rất nhạy cảm với những kỳ vọng văn hóa về phẩm chất đàn ông và sự tôn trọng. Anh kêu gọi người cha dạy con trai không đồng tình</p>
+<p>để giúp anh ta trở thành một người đàn ông theo hình ảnh của chính mình. Rằng nhà trị liệu cũng là nam giới và</p>
+<p>độ tuổi tương tự cho phép anh ta đến gần người cha với tình cảm đồng chí. Một liệu pháp</p>
+<p>Tất nhiên, những người có tính cách, giới tính hoặc hoàn cảnh khác nhau sẽ phải tìm ra con đường hướng tới những mục tiêu giống nhau phù hợp với hoàn cảnh của mình.</p>
+<p>Tôi nghĩ đó là vấn đề của anh ấy, nhưng đó là vấn đề của tôi. (cười)</p>
+<p>Đó chắc chắn là vấn đề của bạn.</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Đáp án:</p>
+<p>Ông Gonzaga:</p>
+<p>Chương <sup class="footnote-ref">[8]</sup> Trị liệu gia đình theo cấu trúc 171</p>
+<p>Tốt hơn là tôi, tôi đoán vậy.... Ừ. Phải. Đến lượt tôi. (vỗ vai Aldo) Chúng ta sẽ ổn thôi, Aldo. Đó là vấn đề của tôi. Tôi đoán bạn đúng về điều đó. Tôi phải bắt đầu ở đâu đó. |</p>
+<p>giải quyết nó. (trang 50)</p>
+<p>Trong phần tiếp theo của buổi học, một vấn đề tương tự xảy ra với Freddie sẽ xuất hiện. Trong cuộc thảo luận này, có thể thấy rõ rằng người mẹ thường cố gắng bước vào giữa</p>
+<p>khó khăn giữa người cha và con trai. Cô cố gắng hòa giải và bảo vệ.</p>
+<p>(với ông Gonzaga) ... Tôi không muốn họ nói về bạn theo cách này, bởi vì bạn sẽ không nói chuyện với họ theo cách bạn nói chuyện với họ nếu bạn không quan tâm đến họ, phải không?</p>
+<p>Vâng, tôi nghĩ bạn đúng.</p>
+<p>...] muốn họ tôn trọng bạn, bạn biết đấy, nhưng tôi cũng muốn họ gần gũi với bạn. Điều này có nghĩa là chúng phải học từ bạn, không phải từ tôi, không phải từ mẹ chúng....Am | đang giáng xuống bạn quá khó khăn?</p>
+<p>Không, không. Bạn đang tiến triển khá tốt.</p>
+<p>Được rồi. (trang 54)</p>
+<p>Freddie và cha anh ấy tham gia vào một số cuộc nói chuyện rất thẳng thắn về việc Freddie</p>
+<p>cảm thấy khi cha anh ấy buồn bã và đặt anh ấy xuống.</p>
+<p>... Anh ấy cần hoàn thiện bản thân hơn, nhưng anh ấy cần cảm thấy rằng bạn cũng tôn trọng anh ấy và bạn quan tâm. Anh ấy phải nghĩ rằng, “Trong mắt bố tôi, anh ấy là một người nào đó, một người đáng được lắng nghe, một người đáng được quan tâm,” bởi vì nếu anh ấy không cảm thấy</p>
+<p>rằng bạn tôn trọng anh ấy thì anh ấy biết gì - có ai tôn trọng anh ấy nếu cha của anh ấy không thể tôn trọng anh ấy không?</p>
+<p>Vâng, bạn nói đúng. Tôi cũng có một người cha.</p>
+<p>... Bạn là người đàn ông quan trọng nhất trên thế giới đối với những đứa trẻ này. (im lặng lâu)</p>
+<p>... Điều anh ấy thực sự đang nói là... . rằng điều quan trọng là phải giao tiếp giữa anh ấy và tôi, nói ra và giải quyết. (trang 55)</p>
+<p>Khái niệm chính về Ma</p>
+<p>Trị liệu gia đình theo cấu trúc là một cách tiếp cận để hiểu bản chất của gia đình, vấn đề hiện tại và quá trình thay đổi. Theo quan điểm này, các khái niệm chính là cấu trúc gia đình, các tiểu hệ thống gia đình và ranh giới, mỗi khái niệm này được mô tả ngắn gọn dưới đây.</p>
+<p>Cấu trúc gia đình</p>
+<p>Theo Minuchin (1974), cấu trúc của gia đình là tập hợp vô hình các nhu cầu chức năng</p>
+<p>hoặc các quy tắc tổ chức cách các thành viên trong gia đình liên hệ với nhau. Cơ cấu quản lý</p>
+<p>Có thể hiểu được các giao dịch của một gia đình bằng cách quan sát hành động của gia đình đó hoặc bằng cách quan sát sự tương tác diễn ra giữa các thành viên trong gia đình trong các buổi trị liệu. Để hiểu được một gia đình</p>
+<p>cấu trúc, sẽ rất hữu ích nếu chú ý xem ai nói gì với ai, theo cách nào và với kết quả gì. Bằng cách chú ý đến tiến trình của gia đình, thay vì chỉ lắng nghe nội dung, nhà trị liệu có thể phát hiện ra những giao dịch có vấn đề. Trình tự lặp đi lặp lại xuất hiện trong một buổi trị liệu</p>
+<p>bộc lộ các mô hình cấu trúc cứng nhắc của một gia đình. Điều đặc biệt quan tâm là sự phù hợp của cơ cấu thứ bậc trong gia đình.</p>
+<p>Ví dụ, nếu mỗi khi người phụ nữ phàn nàn về chồng mình, anh ta lại cúi đầu và không nói gì, thì chủ đề của quá trình này là tránh xung đột. Nếu một người cha bày tỏ-</p>
+<p>Sự tức giận gần như chắc chắn sẽ dẫn đến cơn hen suyễn ở con gái ông, trình tự như sau:</p>
+<p><sup class="footnote-ref">[172]</sup> PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p>
+<p>Chồng:</p>
+<p>Vợ:</p>
+<p>Chồng:</p>
+<p>Vợ:</p>
+<p>Chồng [la hét]:</p>
+<p>Vợ [hét lại]:</p>
+<p>bổ sung (trao đổi các loại hành vi trái ngược nhau) và bộc lộ những vấn đề trong cơ cấu quyền lực giữa cha mẹ và con cái. Trong những gia đình bạo lực, các nhà trị liệu thường tìm thấy một trình tự đối xứng (trao đổi các hành vi tương tự) trong đó mỗi người đảm nhận một vị trí tuyệt đối trong một cuộc tranh luận mà không ai có thể rút lui. Mỗi phần của trình tự đối xứng xảy ra cùng một lúc, khiến cuộc chiến gần như tự động leo thang.</p>
+<p>(Người cá, 1993). Một ví dụ về lập luận như vậy là:</p>
+<p>Bạn đang đi đâu?</p>
+<p>Ngoài.</p>
+<p>Tôi có nói là bạn có thể ra ngoài không?!</p>
+<p>Bạn không bảo tôi phải làm gì!</p>
+<p>Chết tiệt, tôi không làm vậy!</p>
+<p>Bạn làm cái quái gì vậy!</p>
+<p>Aponte (1994) nói về ba khía cạnh cấu trúc mà các gia đình sử dụng để tổ chức chúng-</p>
+<p>bản thân. Chúng là sự liên kết, sức mạnh (hoặc quyền lực) và các ranh giới mà bây giờ chúng ta sẽ xem xét</p>
+<p>sâu sắc hơn.</p>
+<p>... sự liên kết đề cập đến sự tham gia hoặc đối lập của một thành viên trong gia đình với thành viên khác</p>
+<p>khi gia đình thực hiện một ca phẫu thuật. Lực lượng (hoặc quyền lực) xác định mức độ ảnh hưởng tương đối của mỗi thành viên đến kết quả của một hoạt động. Ranh giới cho biết ai được bao gồm và loại trừ khỏi hoạt động được đề cập và vai trò của mỗi người trong hoạt động</p>
+<p>chuyện. (trang 18)</p>
+<p>Các gia đình kém tổ chức có các mô hình và sự tương tác tuần tự mô tả các quá trình của họ với nhau, nhưng chúng khó chẩn đoán hơn và thường có vẻ hỗn loạn. Họ thiếu sự nhất quán cần thiết để tạo nên sự tin cậy; sự mạch lạc để tương thích nội bộ; Và</p>
+<p>Cấu trúc linh hoạt để đối phó:</p>
+<p>Đây là những cơ chế cơ bản của một cấu trúc gia đình có tổ chức. Tuy nhiên, người ta không thể nói rằng một gia đình hoạt động tốt chỉ vì nó có một cơ cấu khả thi. Những cái này</p>
+<p>chỉ là cơ khí. Tinh thần gia đình là điều mang lại ý nghĩa cho cơ cấu đó.</p>
+<p>ture. (trang 19)</p>
+<p>Hệ thống con gia đình</p>
+<p>Gia đình được coi là một hệ thống cơ bản của con người, bao gồm nhiều hệ thống con khác nhau. Thuật ngữ hệ thống con bao gồm nhiều loại và vai trò khác nhau: vợ chồng (vợ và chồng), cha mẹ (mẹ và cha), anh chị em (con cái) và người thân (ông bà, những người khác).</p>
+<p>người thân, thậm chí cả nhà thờ, trường học và cộng đồng). [Không ai làm được nhiều việc để thể hiện rõ sự tích hợp giữa trị liệu gia đình và cộng đồng hơn Harry Aponte (1994).] Các thành viên của các hệ thống con tham gia cùng nhau để thực hiện các nhiệm vụ cần thiết cho hoạt động của</p>
+<p>hệ thống con đó, cũng như hệ thống gia đình tổng thể. Việc xác định rằng hệ thống con cha mẹ tách biệt một cách thích hợp với hệ thống con con là trọng tâm của liệu pháp cấu trúc. Điều quan trọng cần lưu ý là mỗi thành viên trong gia đình đóng vai trò trong các nhóm nhỏ khác nhau. Ví dụ, Tom là một người cha trong hệ thống con của cha mẹ, một người chồng trong hệ thống con vợ chồng và là anh trai thứ ba trong hệ thống con anh chị em của chính gia đình gốc của anh ta. Ann là con gái của Tom, nhưng cô ấy cũng là em gái của Julie trong hệ thống con anh chị em của cô ấy, vợ của Hank trong vợ của cô ấy.</p>
+<p>hệ thống con sal, và là thành viên của dàn hợp xướng nhà thờ trong hệ thống con cộng đồng mở rộng của cô ấy. Các hệ thống con thường được xác định bởi các yếu tố như giới tính, tuổi tác, sở thích chung và</p>
+<p>chức năng vai trò. Các hệ thống con này cũng được xác định bởi các quy tắc và ranh giới.</p>
+<p>Trong liệu pháp cấu trúc gia đình, các hệ thống con có nhiệm vụ và chức năng phù hợp. Khi các thành viên gia đình của một hệ thống con khác tiếp quản hoặc xâm phạm vào một hệ thống con mà họ không làm</p>
+<p>Chương <sup class="footnote-ref">[8]</sup> Trị liệu Cấu trúc Gia đình 173</p>
+<p>thuộc về, kết quả thường là một số dạng khó khăn về cấu trúc. Chẳng hạn, đời sống tình dục của người lớn trong gia đình thuộc hệ thống con vợ chồng; khi con cái được phép chứng kiến, bình luận hoặc điều tra hoạt động tình dục của cha mẹ, chúng sẽ tham gia một cách không thích hợp vào hệ thống con của vợ chồng. Ví dụ cực đoan này có thể dễ hiểu hơn việc lưu ý rằng cha mẹ phải cho phép con cái hình thành các mối quan hệ của riêng mình, bao gồm cả việc tự giải quyết những bất đồng hoặc đánh nhau. Ví dụ thứ hai này cũng quan trọng như ví dụ đầu tiên: Giải quyết mối quan hệ anh chị em là nhiệm vụ của hệ thống con anh chị em, không phải hệ thống con của cha mẹ. Cha mẹ có những hoạt động và chức năng riêng cần giải quyết.</p>
+<p>ranh giới</p>
+<p>Những rào cản cảm xúc nhằm bảo vệ và nâng cao tính toàn vẹn của các cá nhân, hệ thống con và gia đình được gọi là ranh giới. Việc phân định ranh giới chi phối mức độ tiếp xúc với người khác. Những ranh giới giữa các cá nhân này tốt nhất có thể được khái niệm hóa trên một phạm vi liên tục, từ ranh giới cứng nhắc (thoát khỏi) đến ranh giới phân tán (sự vướng víu).</p>
+<p>Những ranh giới cứng nhắc dẫn đến những rào cản không thể vượt qua giữa các hệ thống con và với các hệ thống con bên ngoài họ. Trong một số trường hợp, do khoảng cách thế hệ, cha mẹ và con cái có thể không hiểu hoặc không liên hệ được với nhau. Trong quá trình tách rời này, các cá nhân hoặc hệ thống phụ trở nên bị cô lập và các mối quan hệ bị ảnh hưởng hoặc thậm chí xấu đi. Các thành viên trong gia đình trở nên cô lập không chỉ với nhau mà còn với các hệ thống khác trong cộng đồng. Trong trường hợp một giáo viên thông báo với cảnh sát rằng một học sinh lớp 6 của cô đã mất tích vài ngày và cô không thể xác định được.</p>
+<p>hành động của cha mẹ mình bất chấp nhiều lần cố gắng, cảnh sát đã đến nhà để điều tra. Tìm thấy người cha ở nhà và tham gia vào các dự án cá nhân, họ hỏi thăm về con trai ông. Họ phát hiện ra rằng cả cha và mẹ đều không hề biết cậu bé cũng đã mất tích ở nhà 3 ngày. Một lần nữa, đây là một hình thức thảnh thơi tột độ minh họa cho sự mệt mỏi về thể chất.</p>
+<p>cũng như sự cắt đứt cảm xúc.</p>
+<p>Ở đầu bên kia của quang phổ là ranh giới giữa các cá nhân lan tỏa, bị xóa nhòa</p>
+<p>đến mức người khác có thể xâm nhập vào chúng. Một ranh giới lan tỏa dẫn đến sự ràng buộc, được đặc trưng bởi sự tham gia quá mức của các thành viên trong gia đình vào cuộc sống của nhau. Cái này</p>
+<p>có thể được trải nghiệm như một hình thức hỗ trợ cực đoan hoặc quá nhiều chỗ ở. Trong một số nền văn hóa tập thể, sự vướng mắc có thể vừa bình thường vừa mang tính chức năng, một lối sống được chấp nhận (Sue & Sue, 2003). Tuy nhiên, trong hầu hết các nền văn hóa Âu-Mỹ, sự ràng buộc có xu hướng</p>
+<p>là một vấn đề. Mặc dù cha mẹ quan tâm quá mức dành nhiều sự quan tâm cho con cái nhưng họ thường có xu hướng nuôi dưỡng sự phụ thuộc và khiến trẻ khó hình thành mối quan hệ với những người bên ngoài gia đình. Điều này dẫn đến việc mất đi sự độc lập của cả trẻ và cha mẹ.</p>
+<p>Minuchin, khi làm việc với một gia đình tâm thần, đã từng thể hiện sự bất hòa</p>
+<p>trong buổi trị liệu bằng cách véo một cô con gái 12 tuổi mắc bệnh tiểu đường và hỏi người cha xem ông có cảm thấy đau khi bị véo không. Người cha trả lời là có. Khi Minuchin hỏi câu hỏi tương tự với người mẹ, cô ấy nói rằng cô ấy không cảm thấy đau mà chỉ thấy “tội nghiệp”.</p>
+<p>lưu thông” (Fishman, 1993, tr. 43).</p>
+<p>Ở giữa sự liên tục giữa các ranh giới cứng nhắc và phân tán là các ranh giới rõ ràng hoặc lành mạnh, bao gồm sự pha trộn thích hợp giữa các đặc điểm cứng nhắc và phân tán.</p>
+<p>địa lý. Những ranh giới lành mạnh giúp một cá nhân đạt được ý thức về bản sắc riêng của mình nhưng vẫn cho phép cảm giác thân thuộc trong hệ thống gia đình tổng thể. Trong những gia đình khỏe mạnh, có</p>
+<p>là khả năng đối phó một cách hiệu quả với những căng thẳng khác nhau trong cuộc sống bằng cách duy trì ý thức đoàn kết trong gia đình, đồng thời, có sự linh hoạt cho phép tái cơ cấu gia đình và đáp ứng nhu cầu phát triển cá nhân của các thành viên. Chỗ ở</p>
+<p>là cần thiết để đối phó chức năng. Vợ chồng phải đáp ứng những khác biệt và nhu cầu của nhau, còn cha mẹ phải học cách đáp ứng nhu cầu của con cái với tư cách là gia đình.</p>
+<p><sup class="footnote-ref">[174]</sup> PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p>
+<p>trải qua các giai đoạn phát triển trong vòng đời gia đình (Carter & McGoldrick, 2005). Các nhà trị liệu gia đình theo cấu trúc cảnh báo chúng ta không nên bệnh hoạn hóa những gia đình đang tham gia vào quá trình chuyển đổi bình thường và những căng thẳng liên quan đến sự thay đổi và phát triển cá nhân.</p>
+<p>Các nhà trị liệu gia đình theo cấu trúc cũng đưa ra quan điểm rằng các dịch vụ cộng đồng được thiết lập để giúp đỡ gia đình và các thành viên cá nhân trong gia đình thường tham gia vào một hình thức đặc biệt của cả ranh giới lan tỏa và cứng nhắc (Aponte, 1994; Elizur & Minuchin, 1989; Fishman, 1993). Trong một số trường hợp, cố vấn trường học tham gia với trẻ em, cũng như cố vấn sức khỏe tâm thần cộng đồng với trẻ em và các thành viên gia đình cùng lúc với các cơ quan phúc lợi xã hội tham gia quản lý trường hợp. Đối với một số thỏa thuận này, chúng tôi cũng có thể bổ sung các cơ sở cải huấn và biện pháp can thiệp hoặc trung tâm điều trị nội trú và dịch vụ tâm thần cho một số thành viên trong gia đình. Mặc dù tất cả các hệ thống cộng đồng này có thể trao đổi rất nhiều thông tin về gia đình (các ranh giới lan tỏa), một số trong đó thậm chí có thể vi phạm các yêu cầu bảo mật của tư vấn và trị liệu, nhưng chúng hiếm khi chia sẻ hoặc tổ chức các mục tiêu, mục đích và quy trình của các cơ quan can thiệp khác nhau (thay vào đó là duy trì các ranh giới cứng nhắc). Trong những điều kiện như vậy, nhiều hình thức trợ giúp được cung cấp cho gia đình và các thành viên trong gia đình thường xuyên hoạt động với những mục đích khác nhau.</p>
+<p>Mục tiêu trị liệu Mm</p>
+<p>Mục tiêu của liệu pháp cấu trúc gia đình là biến đổi hệ thống bằng cách mang lại những tác động mang tính cấu trúc.</p>
+<p>thay đổi trong hệ thống, sửa đổi các quy tắc giao dịch của gia đình và phát triển thêm “gbbiaiiatainomreeres Colapinto (2000) chỉ ra rằng bằng cách giải phóng các thành viên trong gia đình khỏi</p>
+<p>vai trò và chức năng rập khuôn của họ, hệ thống có thể huy động các nguồn lực của mình và</p>
+<p>: cải thiện khả năng đối phó với căng thẳng và xung đột. Khi hệ thống được chuyển đổi, các triệu chứng rối loạn chức năng sẽ thuyên giảm. Aponte (1994) và Fishman (1993) đều lưu ý tầm quan trọng của việc hợp tác với các hệ thống cộng đồng khác trong nỗ lực điều phối các dịch vụ và can thiệp trị liệu với các gia đình.</p>
+<p>Nhìn chung, mục tiêu của các gia đình là tạo ra một cơ cấu thứ bậc hiệu quả. — Cha mẹ có trách nhiệm với con cái và cho chúng ngày càng độc lập, tự do khi chúng trưởng thành. Nhà trị liệu gia đình cấu trúc cố gắng thay đổi các quy tắc chi phối các mô hình tương tác để từng thành viên trong gia đình (và các hệ thống con của gia đình) có ranh giới rõ ràng. Một gia đình lành mạnh được đặc trưng bởi một hệ thống hỗ trợ sự phát triển của từng thành viên, đồng thời khuyến khích sự phát triển của đơn vị gia đình. Khi làm việc với các gia đình có sự ràng buộc, mục đích là hỗ trợ các cá nhân đạt được sự cá nhân hóa cao hơn. Trong trường hợp các gia đình không có sự gắn kết, mục tiêu là tăng cường sự tương tác giữa các thành viên.</p>
+<p>Các nhà trị liệu cấu trúc không chỉ giới hạn sự can thiệp của họ trong phạm vi gia đình; họ quan tâm</p>
+<p>trong vai trò của cộng đồng trong mối quan hệ với gia đình. Trong cuốn sách Thể chế hóa sự điên rồ: Gia đình, Trị liệu và Xã hội, Elizur và Minuchin (1989) phát triển ý tưởng rằng, vì cấu trúc xã hội lớn hơn ảnh hưởng đến tổ chức của một gia đình, nên điều cần thiết là phải xem xét ảnh hưởng của cộng đồng đối với gia đình.</p>
+<p>Fishman (1993) báo cáo một trường hợp chứng minh tác động của việc hệ thống gia đình và cộng đồng làm việc cùng nhau:</p>
+<p>Một phụ nữ 19 tuổi chậm phát triển nhẹ đang sống trong một hệ thống được tổ chức để đáp ứng mọi nhu cầu của cô ấy. Xã hội cung cấp rất nhiều dịch vụ giúp đỡ, và giữa gia đình và những người giúp đỡ bên ngoài, người phụ nữ trẻ bị ngăn cản trở nên độc lập hơn. Sau nỗ lực tự tử một cách thận trọng, cô tâm sự với nhà trị liệu rằng cô rất muốn tìm việc làm trong một vườn ươm làm vườn, kiếm sống xa nhà và tự quản lý tiền bạc của mình. (trang 44)</p>
+<p>Chương <sup class="footnote-ref">[8]</sup> Trị liệu gia đình theo cấu trúc 175</p>
+<p>Mong muốn của cô con gái vừa có thể đạt được vừa hữu ích, nhưng các dịch vụ xã hội được thành lập để giúp đỡ cô thực sự đang cản trở cô. Điều tra sâu hơn cho thấy rằng chính những nguồn lực cộng đồng này đã hỗ trợ cho sự bảo vệ quá mức của cha mẹ, do đó hai hệ thống con chính dường như tạo ra một hệ thống cấu trúc mà trên thực tế nó không thể thực hiện được.</p>
+<p>có thể trốn thoát. “Nỗ lực tự tử thận trọng” của cô con gái đã giúp cô có thể tranh thủ được sự hỗ trợ của nhà trị liệu để thực hiện một sự thay đổi cần thiết. Aponte (1991) nói rõ rằng việc tích hợp liệu pháp cấu trúc gia đình với công tác xã hội đòi hỏi kỹ năng tổ chức cộng đồng và đào tạo chuyên môn cho nhà trị liệu.</p>
+<p>MM Vai trò và chức năng của nhà trị liệu</p>
+<p>Minuchin (1974) xác định ba chức năng tương tác của nhà trị liệu: (1) tham gia gia đình với vai trò lãnh đạo, (2) lập bản đồ cấu trúc cơ bản của nó và (3) can thiệp theo cách mà các nhà trị liệu cấu trúc cho rằng sự thay đổi cá nhân sẽ là kết quả của việc sửa đổi tổ chức của gia đình và từ việc thay đổi các mô hình giao dịch của nó. Nhiệm vụ cơ bản của nhà trị liệu là tích cực gắn kết gia đình như một đơn vị</p>
+<p>Ss. Các nhà trị liệu cấu trúc đang tích cực thách thức các mô hình giao dịch cứng nhắc đặc trưng.</p>
+<p>vận động một số gia đình khi họ cố gắng tự tổ chức để đối phó với tình huống căng thẳng.</p>
+<p>ations. Nỗ lực trị liệu liên quan đến việc thúc đẩy các ranh giới rõ ràng hơn, tăng mức độ linh hoạt trong tương tác gia đình và sửa đổi cấu trúc gia đình rối loạn chức năng.</p>
+<p>ture (Goldenberg & Goldenberg, 2004). Công việc của các nhà trị liệu cấu trúc là tham gia cùng gia đình, ngăn chặn các mô hình tương tác rập khuôn và tạo điều kiện thuận lợi cho sự phát triển của các giao dịch linh hoạt hơn. Đây là những gì Harry Aponte đã làm trong ví dụ ở đầu chương này khi ông đề nghị ông Gonzaga hỏi con trai mình, Aldo, xem cậu bé có sợ cha mình không. Bạn sẽ nhớ rằng khi người mẹ cố gắng can thiệp, nhà trị liệu đã chặn lại.</p>
+<p>sự tham gia của cô ấy vào cuộc trò chuyện.</p>
+<p>Colapinto (2000) viết rằng các nhà trị liệu cấu trúc đóng một số vai trò khác nhau với</p>
+<p>gia đình, tùy theo giai đoạn điều trị. Ngay từ buổi đầu tiên, các nhà trị liệu đã tham gia khiêu vũ cùng gia đình. Ngay sau khi điệu nhảy này bắt đầu, họ trở thành đạo diễn sân khấu, người</p>
+<p>tôi những người viết văn đặt nền móng cho một tình huống cụ thể, tạo ra một kịch bản, phân công vai trò và nhiệm vụ cho một gia đình, một PipmemnlinnatisiandantonslyeeeP x Scenario</p>
+<p>cần phải duy trì một số bằng sáng chế nhất định aa i are et RES Họ phải có sự chấp thuận</p>
+<p>sự cân bằng riêng tư giữa việc giúp đỡ và thương lượng với một gia đình.</p>
+<p>Kỹ Thuật Mi —</p>
+<p>Cần phải đề cập rằng, ngoài việc là một tập hợp các kỹ thuật, liệu pháp cấu trúc gia đình còn cung cấp bối cảnh để xem xét một gia đình, đưa ra mô tả rõ ràng về cách một gia đình nên vận hành. Cách tiếp cận của Minuchin, chứ không phải là cái nhìn sâu sắc, mặc dù những phát triển gần đây trong cách tiếp cận của ông cho thấy rằng ông ít nhất quan tâm đến việc kết nối các mô hình hiện tại với những trải nghiệm đã học được trong thời thơ ấu (Minuchin, 2004; Minuchin, Nichols, & Lee, 2007). Tuy nhiên, ban đầu ông tin rằng hành động sẽ thay đổi hành vi mà không cần</p>
+<p>cái nhìn thấu suốt. Các đạo luật cũng mang đến những cơ hội dẫn đến những trải nghiệm mới và chuyển đổi các tổ chức gia đình.</p>
+<p>Trị liệu gia đình theo cấu trúc nhằm mục đích sửa đổi tổ chức hiện tại của gia đình với việc thăm dò và giải thích tối thiểu về quá khứ. Các nhà trị liệu tham gia vào hệ thống gia đình họ</p>
+<p>đang giúp đỡ và họ thực hiện các biện pháp can thiệp được thiết kế để chuyển đổi tổ chức của</p>
+<p><sup class="footnote-ref">[176]</sup> PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p>
+<p>gia đình. Khi gia đình chấp nhận sự lãnh đạo của nhà trị liệu thì người đó có thể can thiệp một cách tích cực. Nhà trị liệu tham gia gia đình với mục đích điều chỉnh chức năng của gia đình chứ không phải để giải quyết vấn đề của gia đình. Để nhà trị liệu trở thành một phần của hệ thống gia đình, điều quan trọng là họ phải thiết lập mối quan hệ bằng cách nhạy cảm với từng thành viên trong gia đình. Thông qua quá trình tham gia, gia đình biết được rằng nhà trị liệu hiểu các thành viên và đang làm việc cùng và vì mỗi người trong số họ. Gia đình và hình thức trị liệu</p>
+<p>a heen aes to Soe NIP <sup class="footnote-ref">[5]</sup> Eroreonemstee ne</p>
+<p>QUAY & Bishinant 1981, tr. 29). Bằng cách tham gia thân thiện ea Aenean để</p>
+<p>phong cách của nó, nhà trị liệu có được bức tranh về cách các thành viên đối phó với các vấn đề và với nhau. Mục đích là để thay đổi các mô hình rối loạn chức năng khi chúng xảy ra trong phiên; có</p>
+<p>tập trung vào việc sắp xếp lại các hệ thống phân cấp bị lỗi và sửa chữa cấu trúc gia đình.</p>
+<p>Aponte (1994) tích hợp yếu tố tinh thần vào mô hình cấu trúc sinh thái của mình và lưu ý rằng các nhà trị liệu không thể tham gia cùng gia đình từ một vị trí vô giá trị.</p>
+<p>Luận điểm của tôi ở đây là, những thành kiến ​​của yalue lan tràn trong mọi khía cạnh của trị liệu. Câu hỏi không phải là liệu các giá trị của nhà trị liệu có đối mặt với</p>
+<p>. các nhà trị liệu làm việc với các giá trị nghề nghiệp và cá nhân của họ để mang lại lợi ích cho gia đình họ điều trị? Việc đàm phán các giá trị làm cơ sở cho việc xác định, đánh giá, can thiệp trị liệu và thiết lập mục tiêu trở thành trọng tâm của quá trình trị liệu. (trang 175)</p>
+<p>Trong cuốn sách Kỹ thuật trị liệu gia đình, Minuchin và Fishman (1981) nhấn mạnh tầm quan trọng của việc nhà trị liệu sử dụng bản thân. Họ tin rằng các nhà trị liệu cần phải cảm thấy thoải mái với các mức độ tham gia khác nhau. Một loạt các kỹ thuật có thể được sử dụng, tùy thuộc vào những gì phù hợp với hoàn cảnh, gia đình và nhà trị liệu. Đôi khi, nhà trị liệu có thể muốn tách khỏi gia đình bằng cách đưa ra một lộ trình hành động. Vào những lúc khác, họ có thể tham gia và hoạt động như một huấn luyện viên. Tuy nhiên, vào những lúc khác, họ có thể liên kết với một thành viên trong gia đình, một quá trình được gọi là mất cân bằng, liên quan đến việc nhà trị liệu cho mượn quyền lực và sức nặng của mình để phá vỡ sự bế tắc do hệ thống gia đình duy trì.</p>
+<p>Cách tiếp cận chuyên nghiệp của Minuchin i. Phong cách của anh ấy</p>
+<p>thường quyết đoán và đôi khi thậm chí còn thẳng thừng. Việc anh ấy hỏi không phải là hiếm,</p>
+<p>Chẳng hạn, con cái trong gia đình giải quyết vấn đề giữa anh chị em bằng cách thảo luận vấn đề đó mà không có sự can thiệp của cha mẹ. Sau đó anh ta sẽ chặn mọi nỗ lực can thiệp của cha mẹ. Vào những lúc khác, anh ấy sẽ yêu cầu bọn trẻ tham khảo ý kiến ​​của cha mẹ về khả năng thay đổi (Minuchin, 2004). Những kỹ thuật trị liệu này cần phải phù hợp với đặc điểm cá nhân của Anit Minuchin rút ra từ nhiều phương pháp tiếp cận và chiến lược kết hợp khác. Mặc dù của anh ấy</p>
+<p>lý thuyết asic vẫn tương đối ổn định, ông đã chuyển sang chủ nghĩa chiết trung trong kỹ thuật (Nichols & Schwartz, 2006). Các kỹ thuật bao gồm tham gia, điều chỉnh, làm việc với các tương tác gia đình, theo dõi trình tự, dàn dựng tương tác (enactment), tăng cường, tạo ranh giới, tái cơ cấu (tăng cường các ranh giới lan tỏa và làm mềm các ranh giới cứng nhắc), sắp xếp lại, dàn dựng tương tác (enactment)</p>
+<p>chỉ thị, và lập bản đồ gia đình. Ba trong số này bây giờ sẽ được phác thảo ngắn gọn: Lập bản đồ gia đình, dàn dựng tương tác (enactment) và sắp xếp lại trong Hình 8.1-8.3.</p>
+<p>Bản đồ gia đình. Minuchin (1974) đã phát triển một phương pháp lập bản đồ cấu trúc của</p>
+<p>gia đình. Khi vẽ bản đồ gia đình, nhà trị liệu xác định các ranh giới là cứng nhắc, lan tỏa hoặc rõ ràng; phong cách giao dịch được xác định là vướng mắc hoặc thảnh thơi. Một số ký hiệu đã được sử dụng để biểu thị các cấu trúc này:</p>
+<p>Chương <sup class="footnote-ref">[8]</sup> Trị liệu gia đình theo cấu trúc 177</p>
+<p>Sự tách rời Tính linh hoạt Sự ràng buộc</p>
+<p>Ranh giới cứng nhắc Ranh giới rõ ràng Ranh giới lan tỏa</p>
+<p>Sơ đồ ranh giới cứng nhắc, rõ ràng và lan tỏa trong liệu pháp cấu trúc gia đình.</p>
+<p>Nhiều loại bản đồ có thể làm nổi bật chức năng và bản chất của các mối quan hệ giữa các cá nhân trong gia đình và có thể được sử dụng một cách hiệu quả trong các buổi trị liệu. Ví dụ:</p>
+<p>MIF Ver M — ASCO khu vực eh /t CG (S Cc</p>
+<p>Cha mẹ thảnh thơi Cha mẹ quấn lấy con Mẹ con vướng mắc</p>
+<p>chống lại trường học chống lại cha</p>
+<p>Ví dụ về các bản đồ được sử dụng trong liệu pháp cấu trúc gia đình để mô tả các mối quan hệ gia đình khác nhau.</p>
+<p>Ngoài ra, các ký hiệu sau đây được sử dụng để biểu thị các phản ứng cảm xúc và các mô hình liên hệ giữa các cá nhân.</p>
+<p>Liên minh được biểu thị bằng ký hiệu: }</p>
+<p>Xung đột được xác định bằng ký hiệu: ————| /#-—</p>
+<p>Đường vòng được thể hiện bằng ký hiệu? <=></p>
+<p>Sự tham gia được biểu thị bằng hai đường song song:</p>
+<p>Sự tham gia quá mức được thể hiện bằng ba đường thẳng song song:</p>
+<p>Việc cha mẹ xung đột với nhau đưa đứa con làm vật tế thần có thể được hiểu như thế này:</p>
+<p>Được rồi</p>
+<h2>G</h2>
+<p>Các biểu tượng được sử dụng trong liệu pháp cấu trúc gia đình để đáp lại những phản ứng cảm xúc và những mô hình liên lạc nhất quán giữa các cá nhân.</p>
+<p>Hầu hết các quy trình lập bản đồ của Minuchin đều được đưa vào cuốn sách về biểu đồ gen của McGoldrick, Gerson và Shellenberger (1999).</p>
+<p><sup class="footnote-ref">[178]</sup> PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p>
+<p>Dàn dựng tương tác (enactment). Trong các màn biểu diễn, nhà trị liệu yêu cầu các thành viên trong gia đình diễn lại một tình huống xung đột sẽ xảy ra ở nhà. Điều này cho phép nhà trị liệu quan sát cách các thành viên trong gia đình tương tác và đưa ra kết luận về cấu trúc của gia đình. Nhà trị liệu cũng ngăn chặn các khuôn mẫu hiện có, xác định khả năng của gia đình trong việc tuân theo các quy tắc khác nhau và khuyến khích các thành viên trong gia đình thử nghiệm các quy tắc mang tính chức năng hơn. Sự thay đổi xảy ra là kết quả của việc thực hiện và xử lý các vấn đề, thay vì chỉ đơn thuần nói về những vấn đề này (Colapinto, 2000).</p>
+<p>Tái định hình. Khi nhà trị liệu điều chỉnh lại, họ sẽ đưa ra một góc nhìn mới và đưa ra cách giải thích khác về tình huống có vấn đề trong gia đình. Vấn đề hiện tại có thể được khám phá theo những cách cho phép gia đình hiểu khiếu nại ban đầu từ nhiều góc độ. Thông qua việc tái đóng khung (reframing), chúng ta có thể nắm bắt được cấu trúc cơ bản của gia đình đang góp phần gây ra vấn đề của một cá nhân. Bằng cách này, một thành viên trong gia đình không phải chịu toàn bộ trách nhiệm về một vấn đề hoặc toàn bộ trách nhiệm giải quyết vấn đề đó.</p>
+<p>Trong một buổi học tại Viện Gia đình Boston, Minuchin (1979) đã chứng minh việc tái đóng khung (reframing), dàn dựng tương tác (enactment) và thiết lập ranh giới với một gia đình có một bé gái 12 tuổi mắc chứng biếng ăn. Sau khi gợi ý rằng vấn đề của cô gái không phải là chứng biếng ăn mà là sự bướng bỉnh và mong muốn trở thành con út, đứa con trong gia đình (điều chỉnh lại), Minuchin yêu cầu các anh chị em thảo luận về cách họ sẽ xử lý cơn giận dữ và tính bướng bỉnh của cô gái. Ông theo dõi việc dàn dựng tương tác (enactment) này rất cẩn thận nhằm nỗ lực phân biệt thứ bậc tồn tại giữa những đứa trẻ. Thỉnh thoảng, anh ta dùng tay làm một động tác nhằm ngăn chặn người mẹ can thiệp vào cuộc thảo luận của trẻ, đặt ra ranh giới phù hợp cho nhiệm vụ được chỉ đạo. Thông qua việc tái cơ cấu và thiết lập ranh giới, Minuchin đã có thể chuyển đổi cả gánh nặng lẫn khuôn mẫu trong gia đình để các thành viên linh hoạt hơn trong việc giải quyết các vấn đề hiện tại.</p>
+<p>vấn đề.</p>
+<p>Mm Một nhà trị liệu gia đình cấu trúc với gia đình Quest</p>
+<p>Paul và Jane Quest đưa cả bốn đứa con của họ đến buổi gặp đầu tiên với một nhà trị liệu cấu trúc gia đình. Nhà trị liệu cấu trúc gia đình có một số cảm nhận về gia đình qua một cuộc phỏng vấn ngắn qua điện thoại và biết rằng đây là một gia đình đang phát triển và đang tìm kiếm sự trợ giúp để hòa nhập thành một thể thống nhất hài hòa hơn. Nhà trị liệu nhận thức được rằng Paul đang vắng mặt trong những cuộc đấu tranh gia đình thông qua công việc của anh ấy, và cô ấy đã nghe thấy sự tuyệt vọng dường như có trong giọng nói của Jane khi cô ấy nói về “các cậu bé”.</p>
+<p>Bây giờ chúng ta sẽ xem xét các phần cuộc trò chuyện mà nhà trị liệu gia đình cấu trúc đã thực hiện với gia đình trong một số buổi tư vấn. Chuyển động từ đánh giá cá nhân và tổ chức đến theo dõi trình tự, khám phá trải nghiệm thời thơ ấu của cha mẹ đến thực hiện một quy trình mới thông qua đối thoại đều là một phần của liệu pháp.</p>
+<p>Bắt đầu với Paul, cô hỏi các bậc cha mẹ họ hy vọng đạt được điều gì thông qua các buổi họp gia đình mà họ sẽ có cùng nhau. Paul cho biết rằng anh ấy rất bận rộn cả với công việc lẫn các dự án cộng đồng, nhưng nói rằng anh ấy luôn luôn</p>
+<p>bận. Anh ấy cảm thấy mình phải dựa vào Jane để giải quyết các vấn đề ở nhà, nhưng anh ấy cũng muốn được tham gia. Khi cơ hội lần đầu tiên xuất hiện, anh ấy rất hào hứng với việc đưa các cậu bé gia nhập gia đình, nhưng những thay đổi cần thiết đã gây khó khăn cho tất cả mọi người, đặc biệt là Jane, và anh ấy muốn bất cứ sự giúp đỡ nào mà gia đình có thể nhận được. Jane lưu ý rằng cô ấy cảm thấy nhẹ nhõm khi được</p>
+<p>ở đó. Cô ấy cảm thấy mình không thể đương đầu nếu không có sự giúp đỡ, và gia đình dường như đang “suy sụp”.</p>
+<p>xa nhau.' Cả Amy và Ann đều cố gắng giúp đỡ các chàng trai, nhưng họ có cuộc sống riêng và Jane không cảm thấy rằng các cô gái thực sự kết nối với Luke và Jason. Nó giống như “Tôi có hai gia đình riêng biệt”.</p>
+<p>Nhà trị liệu:</p>
+<p>Phao-lô:</p>
+<p>Nhà trị liệu:</p>
+<p>Phao-lô:</p>
+<p>Nhà trị liệu:</p>
+<p>Phao-lô:</p>
+<p>Nhà trị liệu:</p>
+<p>Phao-lô:</p>
+<p>Chương <sup class="footnote-ref">[8]</sup> Trị liệu gia đình theo cấu trúc 179</p>
+<p>Amy và Ann ngồi cùng nhau cạnh bố và đối diện với hai chiếc ghế trống đặt gần Jane dành cho các cậu bé. Jason và Luke đã đứng dậy và di chuyển xung quanh. Nói chuyện với Paul trước, nhà trị liệu bắt đầu buổi trị liệu.</p>
+<p>Bạn biết đấy, Paul, tôi nghĩ Jane đã quen với việc nuôi dạy các bé gái và có lẽ cô ấy biết</p>
+<p>rất nhiều về điều đó, nhưng cô ấy dường như gần như lạc lõng khi nhắc đến những cậu bé.</p>
+<p>Với hai chàng trai này, tôi nghĩ tất cả chúng ta đều lạc lối. [nhà trị liệu gật đầu] Amy và Ann đều xinh đẹp</p>
+<p>dễ nuôi.</p>
+<p>Đúng, nhưng ít nhất bạn biết làm con trai là như thế nào và bạn có ý tưởng nào đó về cách</p>
+<p>một người cha nuôi dạy con trai. Hay bạn? Cuộc sống của bố và bạn thế nào?</p>
+<p>À, anh ấy là một bác sĩ phẫu thuật có kinh nghiệm làm việc rộng rãi. Mẹ tôi chủ yếu nuôi tôi lớn lên. Tôi ngưỡng mộ cha mình khi lớn lên và tôi muốn được như ông, nhưng tôi thực sự không biết nhiều về ông cho đến khi vào trường y.</p>
+<p>Vậy là bạn cũng xa nhà giống như bố bạn vậy. Bạn biết đấy, Paul, tôi không nghĩ</p>
+<p>điều đó sẽ có tác dụng rất tốt với hai chàng trai này. Có vẻ như họ cần được chú ý nhiều hơn—</p>
+<p>thực sự, có sự quan tâm và đóng góp trực tiếp từ bạn.</p>
+<p>Ý bạn là dành nhiều thời gian hơn cho họ?</p>
+<p>Đúng, nhưng cũng để dạy họ nhiều điều và giúp họ học cách xử lý cuộc sống và những khó khăn theo một cách mới. Mọi chuyện của Jason và Luke thế nào trước khi họ đến sống với bạn?</p>
+<p>Cả hai chàng trai đều bị tổn thương rất nhiều theo những cách thực sự khủng khiếp. Một số điều họ làm với nhau và thậm chí với thú cưng và những người khác, họ đã làm với họ. Jason thích trở thành ông chủ của Luke, và Luke đôi khi đồng ý và đôi khi không. Jason rất ồn ào và anh ấy sẽ thực thi mong muốn của mình. Luke trầm tính hơn và tôi thường thấy anh ấy trở nên trầm tính hơn.</p>
+<p>một nạn nhân có liên quan đến Jason. Jason không thích bị ẵm hay nhét vào—thậm chí không kể một câu chuyện</p>
+<p>hoặc một bài hát trước khi đi ngủ. Đây là những điều tôi thường làm với Amy và Ann. Chưa hết,</p>
+<p>Jason đôi khi có thể đẩy bạn ra xa nhưng anh ấy không thể chịu đựng được việc ở một mình. Anh ấy luôn cần một người nào đó gắn bó với mình.</p>
+<p>Ngay khi nhà trị liệu chuẩn bị hỏi một câu hỏi khác, một cuộc chiến nhỏ nổ ra giữa các chàng trai. Jane ngay lập tức đứng dậy với ý định bắt cả hai chàng trai ngồi vào vòng tròn.</p>
+<p>Nhà trị liệu: "Janey tôi tự hỏi liệu bạn có để Paul xử lý việc này không. Tôi muốn xem mọi việc diễn ra như thế nào. (Jane ~</p>
+<p>Nhà trị liệu:</p>
+<p>Jane:</p>
+<p>Nhà trị liệu:</p>
+<p>Phao-lô:</p>
+<p>Nhà trị liệu:</p>
+<p>Paul hỏi Amy và Ann liệu họ có phiền khi ngồi cạnh mẹ không? Không nói gì, cả hai cô gái trẻ đều di chuyển. Paul đứng dậy, nắm tay từng cậu bé và dẫn họ đến những chiếc ghế bên cạnh. Với một giọng nói có vẻ bình tĩnh nhưng đầy lo lắng.</p>
+<p>bị troll và khá cứng rắn, Paul nói "Ngồi đó và đừng cử động." Các cậu bé gần như im lặng ngay lập tức và ngồi đó, nhìn nhau, rồi nhìn bố, rồi lại nhìn nhau.</p>
+<p>Việc đó diễn ra thế nào?</p>
+<p>Nó sẽ không kéo dài.</p>
+<p>Không có gì kéo dài. Nhưng, Paul, điều đó đối với anh thế nào? (Paul im lặng.) Bạn có nhận thấy rằng họ dường như lắng nghe bạn và làm theo yêu cầu của bạn không?</p>
+<p>Jane nói đúng. Nó sẽ không kéo dài.</p>
+<p>Có lẽ không. Nhưng có điều gì đó cần phải xảy ra, và bạn buộc nó phải xảy ra… . Tôi tự hỏi liệu bạn và Jane có thể nói chuyện về những điều Jason và Luke cần học, những gì họ cần giải quyết và ai trong số các bạn có thể truyền đạt những thông điệp cần thiết này đến họ một cách tốt nhất.</p>
+<p>PHẦN 2. Lý thuyết và kỹ thuật trị liệu và tham vấn gia đình</p>
+<p>Nhà trị liệu:</p>
+<p>Jane:</p>
+<p>Nhà trị liệu:</p>
+<p>Jane:</p>
+<p>Nhà trị liệu:</p>
+<p>Jane:</p>
+<p>Nhà trị liệu:</p>
+<p>Phao-lô:</p>
+<p>Nhà trị liệu:</p>
+<p>Phao-lô:</p>
+<p>Nhà trị liệu:</p>
+<p>Jane:</p>
+<p>Nhà trị liệu:</p>
+<p>Jane:</p>
+<p>Nhà trị liệu:</p>
+<p>Paul và Jane xác định một số mối lo ngại về việc các cậu bé sử dụng bạo lực</p>
+<p>để giải quyết xung đột về những nhu cầu đặc biệt mà họ sẽ có liên quan đến giáo dục. Phao-lô đề cập đến các môn thể thao, câu cá và cắm trại. Jane muốn dạy nhạc cho bọn con trai - có lẽ là violin. Paul đề nghị thỉnh thoảng đưa họ đến làm việc với anh ấy. Jane</p>
+<p>quan tâm đến việc phát triển tình yêu nghệ thuật (bảo tàng, phòng trưng bày, v.v.). Cả hai ngang bằng</p>
+<p>mọi người nghĩ rằng Jason và Luke nên tham gia vào công việc gia đình, nhưng Paul có nghĩa là làm việc ngoài sân và Jane có nghĩa là dọn dẹp phòng của họ và</p>
+<p>phòng tắm.</p>
+<p>ngay lập tức đưa ra ý tưởng của riêng cô ấy - gần như thay thế cho ý tưởng của Paul</p>
+<p>gợi ý. Paul bắt đầu nói, và sau đó Jane đề cập đến những gì họ luôn làm với các cô gái. “Và nó đã có tác dụng.” Sau đó Paul im lặng một lúc trước khi đưa ra một khả năng khác hoặc đáp lại ý tưởng của Jane.</p>
+<p>Tôi nghĩ cuộc trò chuyện này đang diễn ra như thế nào, Jane, rằng phải có một cách đúng đắn để giúp Jason và Luke, và Paul dường như không biết đó là gì trừ khi bạn hướng dẫn anh ấy?</p>
+<p>Tôi chỉ muốn anh ấy tham gia nhiều hơn với các chàng trai.</p>
+<p>Có lẽ sẽ không xảy ra nếu không có điều gì anh ấy muốn làm với chúng được coi là có thể chấp nhận được. Tại sao bạn không thích ý tưởng của anh ấy?</p>
+<p>Có quá nhiều việc phải làm và điều anh ấy muốn có vẻ giống như vậy hơn. . . ờ, chơi đi.</p>
+<p>Tôi không biết điều đó có đúng không. Giống như tôi đã nói trước đây: Tôi nghĩ bạn biết rất nhiều về việc nuôi dạy Ann và Amy. Bạn đã làm rất tốt với họ, nhưng con trai còn khó hơn. Họ cần điều gì đó khác biệt, có lẽ điều gì đó mà chỉ Paul mới có thể mang lại cho họ, chẳng hạn như cách trở thành một người đàn ông dịu dàng, quan tâm khi ở bên cả phụ nữ và những người đàn ông khác.</p>
+<p>Vậy bạn đang nói rằng đưa họ đi chơi bóng chày, câu cá hay làm việc với anh ta là đủ?</p>
+<p>Có thể chưa đủ nhưng đó là một khởi đầu tốt. (quay sang Paul) Nói lại cho tôi biết đó là gì</p>
+<p>như dành cho bạn với bố của bạn. Bạn có đi xem bóng chày hay câu cá không?</p>
+<p>Không nhiều. Cha tôi rất bận rộn. Nhưng tôi luôn muốn đi. Và khi anh ấy nói rằng chúng tôi có thể đi, tôi sẽ rất phấn khích - mặc dù hầu hết thời gian, anh ấy sẽ nói như vậy.</p>
+<p>để hủy bỏ. Tôi sẽ rất thất vọng, nhưng tôi đã cố gắng hiểu. Anh ấy đã làm công việc quan trọng.</p>
+<p>Vậy tôi có hiểu rằng bạn không muốn làm Jason hoặc Luke thất vọng không?</p>
+<p>Đúng vậy. Nếu tôi nói tôi sẽ làm gì đó với họ, tôi chắc chắn sẽ có mặt để làm việc đó.</p>
+<p>Tôi không biết, nhưng điều đó nghe có vẻ cũng khá quan trọng với tôi. (quay sang Jane) Chuyện gì vậy</p>
+<p>như thế nào đối với bạn, Jane, với bố mẹ bạn?</p>
+<p>Mẹ tôi điều hành mọi việc. Cha tôi là một cảnh sát đánh đập. Anh ấy là người tốt, được mọi người kính trọng nhưng khi về đến nhà, anh ấy luôn mệt mỏi. Anh ấy muốn đọc báo hoặc xem TV.</p>
+<p>Chính mẹ là người đảm bảo cho chúng tôi được học nhạc, được tiếp xúc với nghệ thuật và tham gia các hoạt động sau giờ học. Cô ấy đã đăng ký cho chúng tôi và đưa chúng tôi đến đó.</p>
+
+<div class="case-study">
+  <div class="case-study-header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+    Trường Hợp Lâm Sàng Thực Tế
+  </div>
+  <p></p><p>Bố bạn và anh trai bạn thế nào?</p><p>Họ không có nhiều mối quan hệ. Bố sẽ giúp đỡ Joey bất cứ khi nào ông có thể, nhưng Joey rõ ràng là người được mẹ yêu quý nhất và mẹ để anh ấy thoát khỏi mọi việc. Anh ấy thực sự được nuông chiều - thậm chí cho đến ngày nay.</p><p>Vì vậy, bạn không chắc chắn chính xác sẽ như thế nào khi một người đàn ông tham gia vào việc nuôi dạy con trai mình.</p><p>Chương 8 Trị liệu gia đình theo cấu trúc 181</p><p>Jane: Không, tôi đoán là không.</p><p>Nhà trị liệu: Amy, tôi đang tự hỏi khi còn trẻ bạn sẽ như thế nào? Có phải mẹ bạn đã làm</p><p>không gian để bạn và Ann có thời gian với bố bạn hay bạn cũng phải gây chuyện để ông dành thời gian cho bạn?</p><p>Ami: [| nghĩ rằng chúng tôi có thời gian với bố - tất nhiên là không nhiều như với mẹ - nhưng chúng tôi có thời gian. Ann thường chuẩn bị bữa sáng cho anh ấy trên giường và họ ngồi nói chuyện. Và anh ấy luôn đọc cho chúng tôi nghe trước khi đi ngủ vào buổi tối. Anh ấy đưa chúng tôi đi câu cá một lần và chơi một hoặc hai trận bóng, nhưng chúng tôi thực sự không thích điều đó.</p><p>Ann: Điều tôi nhớ nhất là những kỳ nghỉ mà chúng tôi có. Đôi khi, chúng tôi cắm trại, nhưng nhiều khi đó là những chuyến đi dài bằng ô tô để xem các di tích quốc gia hoặc di tích lịch sử.</p><p>các trang web. Bố biết rất nhiều về những địa điểm và lịch sử khác nhau. Và mẹ sẽ bảo tất cả chúng tôi hát trong xe hoặc chơi trò chơi trên xe.</p><p>họ biết những cách mà họ có thể hạnh phúc hơn cùng nhau. Nhà trị liệu hỏi Amy và Ann: “Ví dụ, hai bạn biết điều gì có thể giúp ích cho trẻ 6 và</p><p>một cậu bé 4 tuổi tìm được chỗ đứng trong gia đình?” Trong một thời gian, Amy và Ann nói chuyện với</p><p>Jason trong khi Luke lắng nghe. Thỉnh thoảng, Jane muốn xen vào điều gì đó nhưng nhà trị liệu đã nắm tay cô và tiếp tục cuộc trò chuyện giữa bốn đứa trẻ. Amy và Ann nói về những điều rất cụ thể mà họ từng làm khi còn nhỏ—mỗi người có cha mẹ khác nhau và theo cặp hoặc với tư cách là một gia đình. Khi họ nói chuyện, họ bắt đầu có vẻ vừa hoài niệm vừa phấn khích. Ann thường hỏi: “Đó có phải là điều bạn cũng muốn làm không?” Jason hầu như luôn trả lời khẳng định và Luke gật đầu. Một loại kết nối khác đang hình thành. Sau đó</p><p>tạm nghỉ trong phiên...</p><p>Nhà trị liệu: Amy và Ann, các em nghĩ điều gì có thể xảy ra giữa bố và mẹ các em sẽ giúp ích cho mọi việc ở đây? Bạn có thể nói chuyện với họ về điều đó không?</p><p>Ann: [nghĩ họ...</p><p>Nhà trị liệu: Nói chuyện trực tiếp với họ. Họ ở ngay đây.</p><p>Ann: [Mẹ phải nói rằng, con nghĩ ý tưởng để bố làm nhiều việc hơn với Jason và Luke là</p><p>một ý tưởng hay—ngay cả khi nó có vẻ giống như một trò chơi. Hai cậu bé chỉ mới 6 và 4 tuổi: Chơi là việc chúng nên làm.</p><p>Jane: Và chúng ta phải làm gì khi một trong số chúng tông vào hàng xóm hoặc con chó—và bố cậu đang ở nơi làm việc?</p><p>Ann: [| không biết. Có thể chúng ta sẽ nói: “Đợi bố về đã!”</p><p>Amy: Bố chỉ cần cố gắng ở nhà nhiều hơn thôi, có lẽ không phải làm quá nhiều việc cho con nữa.</p><p>thị trấn cho đến khi Jason và Luke cảm thấy họ là một phần của chúng tôi hơn.</p><p>Paul: Vậy bạn cũng nghĩ tôi nên làm nhiều hơn với Jason và Luke?</p><p>Amy: Con nghĩ bố phải làm thế, bố ạ. Chúng tôi không thể nữa. Ann và tôi có cuộc sống riêng của mình. tôi sẽ là</p><p>sắp vào đại học. Khi mẹ hoảng sợ hoặc lo lắng, tôi nghĩ bạn chỉ cần nói với mẹ rằng bạn biết mẹ sợ, nhưng bạn sẽ xử lý được và mọi chuyện sẽ ổn thôi. Không phải về mọi thứ, mà là về những điều quan trọng.</p><p>Paul: Giống như câu cá.</p><p>Ann: Thích câu cá, bóng chày, kem và dọn dẹp phòng nữa.</p><p>Qua tất cả cuộc thảo luận này, Paul gật đầu. Anh ấy dường như hiểu những gì đang được đề xuất và khi được hỏi về phản ứng của mình, anh ấy nói, “Tôi nghĩ tôi chỉ cần</p><p>một kế hoạch và biết phải làm gì.” Nhà trị liệu chỉ ra rằng Paul luôn biết</p><p>182 PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p><p>phải làm gì. Anh ấy chỉ cần một không gian gia đình để anh ấy có thể làm được điều đó. Nhà trị liệu hỏi Jane liệu cô ấy có đồng ý với các con gái của mình rằng có lẽ cô ấy 5 (Jane) có thể lùi lại một chút để không nhận toàn bộ trách nhiệm về việc</p><p>cuộc sống với các cậu con trai trôi qua và cho phép chồng cô nhúng tay nhiều hơn vào cả việc ‘kỷ luật các cậu bé và giúp chúng trưởng thành. Jane đồng ý làm điều này và phiên kết thúc.</p><p>Tóm tắt và đánh giá đa văn hóa</p><p>Các quá trình cơ bản của liệu pháp cấu trúc gia đình đã được Becvar và Becvar mô tả</p><p>(2003). Trọng tâm là cơ cấu hoặc tổ chức trong một gia đình. Các nhà trị liệu quan sát quá trình</p><p>các khuôn mẫu và khuôn mẫu, và tham gia vào việc tham gia, chấp nhận và tôn trọng gia đình trong những nỗ lực của mình.</p><p>để tổ chức lại và đạt được mục tiêu của mình. Quá trình đánh giá này khám phá các triệu chứng và tổ chức của gia đình trước, trong và sau khi thực hiện các triệu chứng. Bản đồ cấu trúc</p><p>được hình thành, tạo cơ sở cho nhà trị liệu can thiệp một cách chắc chắn và trực tiếp để gia đình hướng tới sức khỏe. Đối với những đánh giá ban đầu này, Minuchin (2004; cũng như Minuchin, Nichols, & Lee, 2007) bổ sung thêm việc khám phá các chuỗi nguồn gốc gia đình thời thơ ấu của mỗi bậc cha mẹ để xem các mô hình và chu kỳ ban đầu được hình thành ở đâu và ý nghĩa nào được gắn vào</p><p>cho họ. Ông cũng yêu cầu trẻ và cha mẹ tham gia vào các cuộc trò chuyện để khám phá các khả năng</p><p>buộc phải thay đổi thay vì chỉ giao việc kế hoạch hóa gia đình cho cha mẹ. Các thành viên trong gia đình đều được hỗ trợ và thử thách khi họ thử những hành vi mới trong buổi học.</p><p>Đóng góp cho các vấn đề về giới và tư vấn đa văn hóa Không có cách tiếp cận hiện đại nào đối với trị liệu gia đình có hệ thống có thể làm được nhiều việc hơn để cải thiện hoàn cảnh của</p><p>tôi 1 tôi . công việc</p><p>bắt đầu với những gia đình ở khu ổ chuột (Minuchin, Montalvo, Guerney, Rosman, & Schumer,</p><p>1967) đã được duy trì qua bốn thập kỷ phục vụ tận tình, quan tâm và chăm sóc</p><p>(xem Aponte, 1994; Elizer & Minuchin, 1989; và Minuchin, Colapinto, & Minuchin, 1998). Tác động của nghèo đói đối với các gia đình thuộc nhiều nền văn hóa (từ các gia đình nghèo và thuộc tầng lớp lao động da trắng đến những gia đình thuộc các nền văn hóa bị gạt ra ngoài lề xã hội) đã được Hart và Risley (1995) mô tả cẩn thận. Tuy nhiên, chính các nhà trị liệu gia đình mang tính cấu trúc đã biến sự hiểu biết về tác động này thành những biện pháp can thiệp thực tế và thậm chí là tinh thần. Vì những người nghèo ở Hoa Kỳ bao gồm một số lượng lớn các cá nhân bị áp bức và các nền văn hóa bị phân biệt đối xử, nhiều nhà lãnh đạo của trị liệu gia đình cấu trúc đã phát triển sự nhạy cảm đặc biệt đối với các vấn đề phân biệt chủng tộc và việc bị gạt ra ngoài lề một cách công khai của các nền văn hóa nói tiếng Tây Ban Nha, người Mỹ gốc Phi và châu Á. Thực vậy; sự đánh giá cao về sự đa dạng văn hóa dường như được tích hợp vào mọi phần của quá trình trị liệu của họ. McGoldrick (1998) và</p><p>McGoldrick, Giordano, và Garcia-Preto (2005) đã thảo luận rất kỹ về các vấn đề và quy trình liên quan đến trị liệu sắc tộc và gia đình. Một lần nữa, có vẻ như đó là các nhà trị liệu gia đình cấu trúc OEE : adic -stuaheniemmanndensennnnas :</p><p>Việc Minuchin mở rộng quy trình mang tính hệ thống sang các hệ thống lớn hơn đáng được hoan nghênh. Anh ấy và</p><p>các đồng nghiệp của ông đã giải quyết (a) sự chia cắt và tan vỡ của các gia đình do hệ thống chăm sóc sức khỏe tâm thần ở một số quốc gia thực thi (Elizur & Minuchin, 1989), (b) sự phát triển của các mô hình cấu trúc sinh thái (Aponte, 1994; Minuchin và cộng sự, 1998), và (c) việc áp dụng phương pháp này đối với các cá nhân và hệ thống bị áp bức, bao gồm cả các cặp đồng tính nam và đồng tính nữ, nơi trị liệu gia đình cấu trúc không tìm thấy sự khác biệt nào trong các quy trình mang tính hệ thống được quan sát. Vì nguồn gốc Argentina của Minuchin cũng như nền văn hóa Tây Ban Nha của nhiều đồng nghiệp của anh nên khả năng tham gia trị liệu gia đình thành công của những người cha là một thế mạnh đặc biệt.</p><p>Chương 8 Trị liệu gia đình theo cấu trúc 183</p><p>và nó làm cho mô hình này đặc biệt phù hợp với những nền văn hóa coi trọng quyền lực của người cha. Jose Szapocznik và các đồng nghiệp đã áp dụng liệu pháp cấu trúc gia đình cho các bé trai gốc Tây Ban Nha, các gia đình Cuba, thanh thiếu niên tị nạn, lạm dụng ma túy và gần đây nhất là HIV/AIDS (Pequegnat & Szapocznik, 2000; Szapocznik, 1985, 1989; Szapocznik</p><p>và cộng sự, 1989; Szapocznik & Herrera, 1978).</p><p>Có rất ít hạn chế liên quan đến phương pháp này trong môi trường đa văn hóa. Một sen-</p><p>sự quan tâm tích cực và đánh giá cao đại gia đình và văn hóa đã trở thành một phần của mô hình trị liệu gia đình mang tính cấu trúc. Mặc dù ý tưởng về sự ràng buộc là không hiệu quả, nhưng việc thiết lập các ranh giới rõ ràng và trở nên cá nhân hóa hơn sẽ không phù hợp với một số nhóm.</p><p>các nền văn hóa chủ nghĩa (Berg & Jaya, 1993; Itai & McRae 1994; Sue & Sue, 2003), Aponte và các nhà trị liệu gia đình cấu trúc khác hiểu điều này và điều chỉnh mô hình cho phù hợp. Việc họ tập trung vào cha mẹ như những đối tác giải quyết các vấn đề cả bên trong và bên ngoài hệ thống rất phù hợp với cả nền văn hóa cá nhân và chủ nghĩa tập thể.</p><p>Boyd-Franklin (2003) rất ủng hộ việc sử dụng liệu pháp cấu trúc gia đình với các gia đình người Mỹ gốc Phi. Cô lưu ý rằng việc đánh giá quyền lực trong các gia đình người Mỹ gốc Phi rất phức tạp, bởi vì quyền ra quyết định trong một gia đình có thể là một người họ hàng khác hoặc thậm chí là một người nào đó bên ngoài hệ thống đại gia đình:</p><p>Người này có thể là bà, ông, dì, chú, mẹ, cha,</p><p>ister, bạn trai hoặc bạn gái. Từ góc độ trị liệu, điều này tạo ra một tình huống phức tạp vì những cá nhân này thường không xuất hiện sớm trong quá trình điều trị và thậm chí thường không được những người tham dự buổi điều trị nhắc đến.</p><p>(trang 207)</p><p>Boyd-Franklin (2003) gợi ý những câu hỏi sau để khám phá xem ai là người ra quyết định thực sự trong các gia đình người Mỹ gốc Phi:</p><p>¢ Bạn đã nói chuyện với ai trước khi đưa ra quyết định đó?</p><p>e Có ai không đồng ý với bạn về vấn đề đó không?</p><p>¢ Ai là người đưa ra quyết định cuối cùng về vấn đề đó trong gia đình bạn?</p><p>e Bạn lắng nghe ai khi cần lời khuyên? (trang 207)</p><p>Trao quyền cho các gia đình trước sự áp bức do những người được chỉ định gây ra</p><p>với tư cách là người trợ giúp là trọng tâm thiết yếu của mô hình này. Minuchin và cộng sự. (1998) mô tả đặc điểm</p><p>công việc của họ với người nghèo như một cuộc đấu tranh cho những người “đi ngược dòng xuôi dòng” (trang 4). Sự nhấn mạnh của họ là cả về cứu hộ và phòng ngừa. Công việc của họ với các cơ quan và những người giúp đỡ để mang lại những dịch vụ cần thiết cho người nghèo là một trong những đóng góp lớn hơn cho phong trào trị liệu gia đình.</p><p>Aponte (1992, 1994) đặc biệt đã lồng ghép sự tập trung vào tính đa dạng vào việc đào tạo các nhà trị liệu gia đình cấu trúc. Ông lưu ý rằng sự phân cực của nhận dạng và phân biệt</p><p>tồn tại bên trong chúng ta dưới dạng biện chứng, thường nổi lên như một ý thức mới về bản thân. Theo nghĩa tương tự, sự đa dạng và phổ quát (điều giống nhau ở tất cả chúng ta) cũng có tính biện chứng: Bạn không thể có cái này mà không có cái kia.</p><p>Sự giống nhau trở nên cũ kỹ mà không có sự đa dạng. Sự đa dạng là hỗn loạn mà không có sự giống nhau. Sự đồng nhất bùng nổ mà không có sự tách biệt. Sự tách biệt phân tán mà không có sự thống nhất. Mọi người cần cốt lõi của truyền thống gia đình cùng với bản sắc văn hóa và chủng tộc. Họ</p><p>cũng cần sự độc đáo của bản thân hiện sinh của họ. ... Sự căng thẳng của sự đa dạng là đối tác của sự hài hòa của sự thống nhất. Những phép biện chứng phức tạp về tính đa dạng này là trục quan điểm của các nhà trị liệu về bản sắc cá nhân và xã hội của con người. (Aponte, 1994, trang 149)</p><p>Mặc dù các nhà hoạt động nữ quyền sẽ tham gia cùng Minuchin trong việc xem xét các hệ thống lớn hơn ảnh hưởng đến gia đình, nhưng ông vẫn chưa có thiện cảm với những can thiệp của nữ quyền nhằm mục đích</p><p>cứu người phụ nữ bằng cái giá phải trả của đơn vị gia đình. Các nhà nữ quyền lưu ý và chỉ trích sớm</p><p>184 PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p><p>và giai đoạn giữa của quá trình phát triển của Minuchin khi anh ấy tham gia cùng với người cha trong cơ cấu gia đình, củng cố chế độ phụ hệ và quyền lực của nam giới trong hệ thống (Luepnitz,</p><p>1988). Thật vậy, quá trình mất cân bằng được phát triển trong mô hình này (và cũng được các nhà trị liệu Bowen và các nhà thực hành chiến lược sử dụng) thường được sử dụng để có lợi cho nam giới và gây bất lợi cho phụ nữ, ngay cả trong những tình huống có khả năng bị lạm dụng và nguy hiểm. Mặc dù ngày nay đây không phải là lời chỉ trích mà người ta thường nghe về các bậc thầy của phương pháp này, nhưng đây vẫn là một cảnh báo quan trọng cần phải thừa nhận đối với những người đang nghiên cứu toàn bộ các biện pháp can thiệp trị liệu theo cấu trúc.</p><p>Các nhà trị liệu gia đình theo cấu trúc bổ sung các lăng kính tổ chức và trình tự để giúp những người thực hành gia đình khám phá và hiểu các mô hình, quy trình và tương tác trong tổ chức hoặc cấu trúc của gia đình. Ống kính giải trình tự cũng được hỗ trợ nhiều trong</p><p>trị liệu gia đình tegic (Haley, 1984; Madanes, 1981). Theo dõi trình tự hoặc mô hình là trọng tâm của sự khác biệt giữa liệu pháp hệ thống gia đình với các phương pháp tiếp cận khác. Trình tự tồn tại</p><p>trong sự tham gia trực tiếp, hiện tại của các cặp vợ chồng và các thành viên trong gia đình, cũng như trong việc dàn dựng tương tác (enactment) các quy tắc và thói quen trong cơ cấu gia đình. Những chuỗi dài hơn cũng xuất hiện trong các mô hình trải qua trong quá trình phát triển thăng trầm của cả cá nhân và gia đình, trong sự tương tác giữa các thế hệ và trong sự tương tác của các thành viên trong gia đình với nhà thờ, trường học cũng như các chức năng và cơ quan khác của cộng đồng (Breunlin, Schwartz, & MacKune-Karrer, 1992). Khi các nhà trị liệu trở nên thành thạo trong việc theo dõi trình tự, mọi thứ từ tham gia, đánh giá đến dàn dựng tương tác (enactment) và can thiệp để thay đổi đều bị ảnh hưởng.</p><p>Nếu bạn muốn nghiên cứu sâu hơn về phương pháp này, chúng tôi đề xuất các nguồn sau: Aponte (1994); Aponte và DiCesare (2002); Colapinto (2000); Ngư ông</p><p>(1993); Minuchin (1974, 1984); và Minuchin và Người cá (1981).</p><p>Bài tập phát triển cá nhân và nghề nghiệp</p><p>Hãy bắt đầu bằng cách xem xét lại biểu đồ gen của bạn:</p><p>¢ Mặc dù phần lớn bản đồ cấu trúc đã được đưa vào biểu đồ gen</p><p>phát triển, bạn có thể muốn tìm kiếm những lĩnh vực trong gia đình mình mà có thể đã từng xảy ra, ví dụ như sự tách rời, vướng mắc, xung đột, liên minh,</p><p>hoặc thậm chí là vật tế thần. Khi bạn tìm thấy những phần tử này trong biểu đồ gen của mình, hãy cố gắng xác định các quy tắc họ và trình tự giao dịch đặc trưng cho những vấn đề này.</p><p>¢ Ngoài ra, hãy tìm những lĩnh vực trong gia đình bạn có những quy định rõ ràng và phù hợp.</p><p>ranh giới: Nơi mà các cá nhân có không gian riêng nhưng vẫn có thể thuộc về</p><p>A và đóng góp cho toàn bộ hệ thống; nơi mà các thành viên của hệ thống con có thể tự giải quyết mối quan hệ của mình mà không có sự can thiệp từ bên ngoài; và những nơi mà các cá nhân là một phần của nhiều hệ thống con có thể di chuyển tự do giữa chúng mà không bị nhầm lẫn hoặc rối loạn chức năng. Một lần nữa, gia đình là gì</p><p>các quy tắc và trình tự giao dịch hỗ trợ các bộ phận hoạt động tốt trong cuộc sống gia đình bạn?</p><p>Bốn trong số những nhiệm vụ quan trọng hơn trong liệu pháp cấu trúc gia đình là tham gia, lập bản đồ, thiết lập</p><p>ranh giới và dàn dựng tương tác (enactment). Đây là cơ hội để thử những biện pháp can thiệp này.</p><p>Guy và Patsy có một cậu bé tên là Steve. Quá trình sinh nở của Steve khá khó khăn và ngay từ nhỏ anh đã mắc phải một số căn bệnh nghiêm trọng khi còn nhỏ, một trong số đó có thể gây tử vong. Khi bắt đầu nói, anh ấy phát triển chứng lưỡng lự trong lời nói mà chưa bao giờ được giải quyết một cách hiệu quả. Do đó, người mẹ Patsy trở nên bảo vệ và thậm chí nuông chiều con quá mức. Guy là một người làm việc chăm chỉ nhưng anh ấy luôn tránh xa</p><p>Chương 8 Trị liệu gia đình theo cấu trúc 185</p><p>con trai, thầm cảm thấy vợ chiều chuộng con. Tuy nhiên, Guy giữ suy nghĩ của mình cho riêng mình và thậm chí còn làm việc chăm chỉ hơn. Patsy tạo ra một cuộc sống được xây dựng xung quanh con trai cô và thực sự không bận tâm đến việc Guy luôn ra đi.</p><p>Chúng ta có thể lập sơ đồ cấu trúc họ này theo cách sau:</p><p>¢ Sử dụng các hình vẽ trong chương này, sơ đồ này gợi ý điều gì?</p><p>e Ban đầu bạn sẽ tham gia cùng ai trong nỗ lực thay đổi hệ thống gia đình này?</p><p>Hãy tưởng tượng Steve gặp rắc rối với pháp luật về sử dụng ma túy. Patsy nói rằng đó chỉ là một cậu bé đang thử nghiệm: "Không có gì to tát cả!" Guy cho rằng đó là dấu hiệu của những điều tồi tệ hơn sắp xảy ra. Anh ấy-</p><p>gợi ý rằng mẹ của Steve “giữ Steve quá gần với bà và khiến anh ấy không thể lớn lên.” Hãy nghĩ xem bạn có thể nói gì khi tham gia cùng gia đình này: Viết những biện pháp can thiệp của bạn dưới đây:</p><p>Được rồi, hãy xem bạn có thể làm gì với một gia đình khác. Trong gia đình này, Helen,</p><p>người mẹ và người cha Tim đã chờ đợi 10 năm dài để chờ đợi sự ra đời của đứa con Alex của họ. Cặp đôi đã trải qua liệu pháp hormone, quá trình thụ tinh trong ống nghiệm và thụ tinh nhân tạo. Helen đã phải chịu đựng gần 7 tháng nằm trên giường sau khi mang thai để đảm bảo rằng Alex chào đời khỏe mạnh. Alex sinh non và phải nằm viện một tháng mới về nhà. Alex bắt đầu ngủ trên cái mà Helen và Tim gọi là “chiếc giường gia đình”. Bây giờ cậu đã đến tuổi đi học và vẫn nằm trên giường với họ, giữa bố và mẹ. Trong bảy-</p><p>những tuần sau khi Alex bắt đầu học lớp một, cả bố mẹ cậu ấy (Tim đều làm việc cả đêm</p><p>shift) sẽ đến trường cùng anh ấy và dành cả ngày ở đó. Khi nhà trường gợi ý rằng Alex nên đến trường một mình, phụ huynh đã phản đối và đồng ý.</p><p>trong một cuộc chiến với trường học kể từ đó.</p><p>Chúng ta có thể lập sơ đồ cấu trúc tập hợp các mối quan hệ này theo cách này:</p><p>M F e/. Trường học!</p><p>Cc</p><p>¢ Giả vờ như bạn được yêu cầu tham khảo ý kiến ​​của gia đình và nhà trường. Cái gì</p><p>bạn có nghĩ bố mẹ sẽ nói điều này trong cuộc họp không? Lãnh đạo nhà trường sẽ nói gì?</p><p>¢ Mỗi bên sẽ làm cách nào để kéo Alex vào quá trình này?</p><p>e Bạn muốn đặt ra ranh giới nào, nếu có, giữa gia đình và</p><p>trường học?</p><p>¢ Bạn muốn đặt ra những ranh giới nào, nếu có, ở nhà?</p><p>¢ Bạn có thể nghĩ ra một đạo luật nào mà bạn có thể đề xuất sẽ giúp thiết lập</p><p>có ranh giới hệ thống con hợp lý không?</p><p>e Bạn có thể nghĩ ra một đạo luật nào mà bạn có thể sử dụng để thay đổi gia đình</p><p>hệ thống và mối quan hệ của nó với nhà trường?</p><p>186 PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p><p>Đi đâu từ đây</p><p>Minuchin đã chuyển nhà nhiều lần kể từ khi rời Trung tâm Hướng dẫn Trẻ em Philadelphia. Ông đã đào tạo nhiều bác sĩ lâm sàng và giáo viên từ mọi ngành nghề trợ giúp. Dễ dàng tìm thấy đào tạo về trị liệu gia đình theo cấu trúc nhất ở New York tại Trung tâm Trị liệu Gia đình Minuchin và ở Philadelphia tại Trung tâm Đào tạo Trị liệu Gia đình và Trẻ em Philadelphia, nơi trị liệu gia đình cấu trúc tiếp tục được giảng dạy và phát triển. Thông tin về các hội thảo và chương trình đào tạo do giảng viên cung cấp từ</p><p>hai trung tâm này có sẵn tại:</p><p>Trung tâm Minuchin cho gia đình</p><p>114 East 32nd Street, Suite 406 New York, New York 10016 Điện thoại: 212-481-3144, fax: 212-481-5395 E-mail: MinuchinCenter@minuchincenter.org</p><p>Và</p><p>Trung tâm Đào tạo Trị liệu Gia đình và Trẻ em Philadelphia, Inc. Marion Lindblad-Goldberg, Tiến sĩ, Giám đốc</p><p>P.O. Hộp 4092</p><p>Philadelphia, Pa. 19118-8092 Điện thoại: 215-242-0949, fax: 215-831-2639 E-mail: marionlg@philafamily.com</p><p>Aponte, H. J. (1994). Bánh mì và rượu mạnh: Trị liệu bằng</p><p>nghèo mới. New York: Norton. Cuốn sách này là sự mô tả của Harry Aponte về trị liệu gia đình theo cấu trúc sinh thái và là một đóng góp thực sự cho sự phát triển con người của nhà trị liệu và tâm linh trong cấu trúc.</p><p>Trị liệu gia đình Tural. Aponte, H. J., & Van Deusen, J. M. (1981). Kết cấu</p><p>trị liệu gia đình. Trong A. S. Gurman & D. P. Kniskern</p><p>(Eds.), Cẩm nang trị liệu gia đình (trang 310-360).</p><p>. New York: Brunner Mazel. Ở độ cao của cấu trúc</p><p>sự phổ biến của trị liệu gia đình, Aponte và Van Deusen đã đóng góp một trong những trình bày rõ ràng nhất.</p><p>các mô hình từng được viết. Colapinto, J. (1991). Liệu pháp cấu trúc gia đình. Ở A. S.</p><p>Gurman & D. P. Kniskern (Eds.), Cẩm nang trị liệu gia đình (Tập Il: trang 417-443). New York:</p><p>Brunner Mazel. Trong cuốn sổ tay thứ hai về trị liệu gia đình, Colapinto cung cấp phần tiếp theo có giá trị kéo dài 10 năm cho chương gốc của Aponte và Van Deusen (1981). Người cá, H. C. (1993). Liệu pháp cấu trúc chuyên sâu:</p><p>Đối xử với các gia đình trong bối cảnh xã hội của họ. New York:</p><p>Sách cơ bản. Với trường hợp được minh họa tuyệt vời trước</p><p>Bài đọc được đề xuất</p><p>gửi đi, Fishman trình bày một cuốn sách hay về các kỹ thuật trị liệu gia đình, lập luận về việc đưa một mạng lưới rộng hơn vào các buổi trị liệu gia đình. Minuchin, S. (1974). Gia đình và trị liệu gia đình. Cam-</p><p>cầu, MA: Nhà xuất bản Đại học Harvard. Đây là cuốn sách</p><p>trong đó Minuchin đặt nền tảng cho liệu pháp cấu trúc gia đình và thậm chí hiện nay là một liệu pháp cổ điển, nó là cơ sở để mọi sự phát triển tiếp theo của mô hình này phát triển. Minuchin, S., & Người cá, H. C. (1981). Trị liệu gia đình</p><p>kỹ thuật. Cambridge, MA: Đại học Harvard</p><p>Nhấn. Trong cuốn sách này, Minuchin và Người cá đã mô tả</p><p>ăn các biện pháp can thiệp đã thay đổi trọng tâm của trị liệu gia đình và cung cấp cho các học viên hướng dẫn đánh giá và can thiệp. Minuchin, S., Lee, W-Y., & Simon, G. M. (1996). Làm chủ trị liệu gia đình: Hành trình trưởng thành và</p><p>sự biến đổi. New York: Wiley. Cuốn sách về hành trình cá nhân và sự phát triển trong cuộc sống và công việc của các nhà trị liệu gia đình. Minuchin, S., Montalvo, B., Guerney, B., Rosman, B., &</p><p>Schumer, F. (1967). Những gia đình ở khu ổ chuột. New York: Sách cơ bản. Đây là tác phẩm gốc Minuchin</p><p>và các cộng sự đã tiến hành với các gia đình nghèo. Nền tảng của liệu pháp cấu trúc gia đình được trình bày trong bối cảnh những trường hợp ban đầu mà từ đó mô hình được phát triển. Minuchin, S., Rosman, B., & Baker, L. (1978). tâm thần-</p><p>gia đình matic: Chán ăn tâm thần trong bối cảnh. Cambridge,</p><p>Chương 8 Trị liệu gia đình theo cấu trúc 187</p><p>MA: Nhà xuất bản Đại học Harvard. Minuchin và các đồng nghiệp trình bày ứng dụng của họ về liệu pháp cấu trúc gia đình đối với các vấn đề liên quan đến chứng biếng ăn và trong quá trình đó, họ đã thay đổi cách khái niệm các bệnh lý trong hệ thống gia đình.</p><p>Tài liệu tham khảo DVD</p><p>Salvador Minuchin và các cộng sự đã xây dựng tổ chức, quyền lực và chức năng trong gia đình</p><p>trọng tâm cho cả việc đánh giá và can thiệp. Trong mô hình này, phần lớn ngôn ngữ định nghĩa liệu pháp hệ thống gia đình ban đầu được phát triển và sử dụng. Trong mô hình này, chúng tôi</p><p>được giới thiệu các khái niệm về thứ bậc, hệ thống vĩ mô và hệ thống con, ranh giới, sự tách rời và sự ràng buộc cũng như các quá trình trị liệu về việc tham gia và điều chỉnh, lập bản đồ cấu trúc, mất cân bằng, dàn dựng tương tác (enactment) và thiết lập các ranh giới.</p><p>Phân đoạn video trị liệu gia đình mang tính cấu trúc này dựa trên buổi trị liệu ban đầu do Salvador Minuchin thực hiện. Vấn đề trình bày hơi khác một chút và tất nhiên những người liên quan cũng khác nhau, nhưng cả phiên này và các vấn đề ban đầu đều đề cập đến chứng rối loạn ăn uống trong một gia đình đông con, có nhiều người thân, đứng đầu là một người mẹ phải tham gia vào mọi khía cạnh trong cuộc sống của con mình. Video này tập trung vào việc thiết lập ranh giới trong trị liệu, sử dụng cả biện pháp can thiệp bằng lời nói và thể chất để thiết lập và duy trì một ranh giới phù hợp.</p><p>ăn ranh giới hệ thống con trong họ.</p><p>Tài liệu tham khảo</p><p>Aponte, H. J. (1991). Đào tạo về con người của nhà trị liệu</p><p>pist để làm việc với người nghèo và dân tộc thiểu số. Trong K. G. Lewis (Ed.), Ứng dụng hệ thống gia đình vào công tác xã hội: Đào tạo và thực hành lâm sàng (trang 23-40). New York: Haworth. Aponte, H. J. (1992). Đào tạo con người của trị liệu</p><p>pist trong liệu pháp cấu trúc gia đình. Tạp chí Trị liệu Hôn nhân và Gia đình, 18(3), 269-281. Aponte, H. J. (1994). Bánh mì và rượu mạnh: Trị liệu bằng</p><p>người nghèo mới—Sự đa dạng về chủng tộc, văn hóa và giá trị. New York: Norton. Aponte, H. J., & DiCesare, E. J. (2002). Họ kết cấu</p><p>liệu pháp. Trong J. Carlson & D. Kjos (Eds.), Lý thuyết và</p><p>chiến lược trị liệu gia đình (trang 1-18). Boston: Allyn & Bacon. Aponte, H. J., & Van Deusen, J. M. (1981). Kết cấu</p><p>trị liệu gia đình. Trong A. S. Gurman & D. P. Kniskern</p><p>(Eds.), Cẩm nang trị liệu gia đình (trang 310-360). New York: Brunner Mazel. ; Becvar, D. S., & Becvar, R. J. (2003). Trị liệu gia đình:</p><p>Tích hợp hệ thống (tái bản lần thứ 5). Boston: Allyn & Bacon.</p><p>Berg, I., & Jaya, A. (1993). Khác và giống nhau: Gia đình</p><p>trị liệu với các gia đình người Mỹ gốc Á. Tạp chí Trị liệu Hôn nhân và Gia đình, 19, 31-38. Boyd-Franklin, N. (2003). Gia đình da đen trong trị liệu:</p><p>Tìm hiểu trải nghiệm của người Mỹ gốc Phi (tái bản lần thứ 2). New York: Guilford. Breunlin, D. C., Schwartz, R. C., & MacKune-Karrer, B.</p><p>(1992). Metaframeworks: Vượt qua các mô hình trị liệu gia đình. San Francisco: Jossey Bass.</p><p>Carter, B., & McGoldrick, M. (Eds.). (2005). Việc mở rộng</p><p>Vòng đời gia đình: Quan điểm cá nhân, gia đình và xã hội</p><p>câu chuyện (tái bản lần thứ 3). Boston: Allyn & Bacon. Colapinto, J. (1991). Liệu pháp cấu trúc gia đình. Ở A. S.</p><p>Gurman & D. P. Kniskern (Eds.), Cẩm nang trị liệu gia đình (Tập Il, trang 417-443). New York:</p><p>Brunner/Mazel.</p><p>Colapinto, J. (2000). Liệu pháp cấu trúc gia đình. Ở A.H.</p><p>Horne (Ed.), Tư vấn và trị liệu gia đình (thứ 3</p><p>chủ biên, trang 140-169). Itasca, IL: E E. Peacock.</p><p>Elizur, J., & Minuchin, S. (1989). Thể chế hóa điên rồ-</p><p>ness: Gia đình, trị liệu và xã hội. New York: Sách cơ bản.</p><p>188 PHẦN 2. Lý thuyết và Kỹ thuật Trị liệu và Tư vấn Gia đình</p><p>Người cá, H. C. (1993). Liệu pháp cấu trúc chuyên sâu:</p><p>Đối xử với các gia đình trong bối cảnh xã hội của họ. New York:</p><p>Sách cơ bản. Goldenberg, I., & Goldenberg, H. (2004). Trị liệu gia đình:</p><p>Tổng quan (tái bản lần thứ 6). Pacific Grove, CA: Brooks/</p><p>Cole. Haley, J. (1984). Liệu pháp thử thách: Những cách khác thường để thay đổi</p><p>hành vi. San Francisco: Jossey Bass.</p><p>Hart, B., & Risley, T. R. (1995). Sự khác biệt có ý nghĩa trong</p><p>những trải nghiệm hàng ngày của trẻ nhỏ người Mỹ. Baltimore, MD: Paul H. Brookes.</p><p>Itai, G., & McRae, G. (1994). Tư vấn người Nhật lớn tuổi</p><p>Thân chủ Mỹ: Tổng quan và quan sát. ngày-</p><p>nal của Tư vấn và Phát triển, 72, 373-377. Luepnitz, D. A. (1988). Gia đình diễn giải: Nữ quyền</p><p>lý thuyết trong thực hành lâm sàng. New York: Sách cơ bản. Madanes, C. (1981). Trị liệu gia đình chiến lược. San Francisco:</p><p>Jossey Bass. McGoldrick, M. (1998). Nhìn lại trị liệu gia đình:</p><p>Chủng tộc, văn hóa và giới tính trong thực hành lâm sàng. New York: Guilford. McGoldrick, M., Gerson, R. và Shellenberger, S.</p><p>(1999). Genegrams: Đánh giá và can thiệp (tái bản lần 2). New York: Norton. McGoldrick, M., Giordano, J., & Garcia-Preto, N. (2005). Trị liệu dân tộc và gia đình (tái bản lần thứ 3). New York: Guilford. Minuchin, S. (1974). Gia đình và trị liệu gia đình. Cam-</p><p>cầu, MA: Nhà xuất bản Đại học Harvard. Minuchin, S. (1979). Chán ăn: Đó là một từ Hy Lạp. Boston: Viện Gia đình Boston. Minuchin, S. (1984). Kính vạn hoa gia đình. Cambridge,</p><p>MA: Nhà xuất bản Đại học Harvard. Minuchin, S. (Diễn giả). (2004, tháng 6). Những diễn biến mới:</p><p>40 năm sau. Bài thuyết trình tại cuộc họp thường niên của Hiệp hội Trị liệu Hôn nhân và Gia đình Nam Carolina, Mount Pleasant, SC.</p><p>Minuchin, P., Colapinto, J., & Minuchin, S. (1998).</p><p>Làm việc với gia đình người nghèo. New York:</p><p>Guilford. Minuchin, S., & Người cá, H. C. (1981). Trị liệu gia đình</p><p>kỹ thuật. Cambridge, MA: Đại học Harvard</p><p>Nhấn. Minuchin, S., Montalvo, B., Guerney, B., Rosman, B., &</p><p>Schumer, F. (1967). Những gia đình ở khu ổ chuột. New York:</p><p>Sách cơ bản. Minuchin, S., Nichols, M. P, & Lee, W-Y. (2007). Đánh giá gia đình và vợ chồng: Từ triệu chứng đến</p><p>hệ thống. Boston: Allyn & Bacon. Minuchin, S., Rosman, B. L., & Baker, L. (1978). Các gia đình tâm lý: Chán ăn tâm thần trong bối cảnh. Cambridge, MA: Nhà xuất bản Đại học Harvard. Nichols, M. P., & Schwartz, R. C. (2006). Trị liệu gia đình:</p><p>Các khái niệm và phương pháp (tái bản lần thứ 7). Boston: Allyn & Bacon. Pequegnat, W., & Szapocznik, J. (2000). Làm việc với</p><p>gia đình trong thời đại HIV/AIDS. ngàn cây sồi,</p><p>CA: Hiền nhân. Sue, D. W., & Sue, D. (2003). Tư vấn văn hóa</p><p>phong phú. New York: Wiley. Szapocznik, J. (1985). Đối phó với thanh thiếu niên tị nạn:</p><p>Chiếc thuyền nâng Mariel. Westport, CT: Praeger. Szapocznik, J. (1989). Những đột phá trong trị liệu gia đình</p><p>với vấn đề lạm dụng ma túy và thanh niên có vấn đề. New York: Mùa xuân.</p><p>Szapocznik, J., & Herrera, M. C. (1978). Người Mỹ gốc Cuba:</p><p>Sự tiếp biến, điều chỉnh và gia đình. Miami, FL:</p><p>Ediciones phổ quát. Szapocznik, J., Rio, A., Murray, E., Cohen, R., Scopetta,</p><p>M., Rivas-Vazquez, A., Hervis, O., Posada, V., & Kurtines, W. (1989). Gia đình có cấu trúc và liệu pháp tâm động học dành cho trẻ em dành cho các bé trai gốc Tây Ban Nha có vấn đề. Tạp chí Tư vấn và Tâm lý học lâm sàng, Wy DHS.</p>
+</div>
+        </div>
+
+        <nav class="chapter-nav">
+          
+        <a href="07_tri_lieu_bieu_tuong_trai_nghiem_whitaker.html" class="chapter-nav-prev">
+          <span class="nav-label">&larr; Chương 7</span>
+          <span class="nav-title">Trị Liệu Gia Đình Biểu Tượng - Trải Nghiệm (Carl Whitaker)</span>
+        </a>
+          
+        <a href="09_tri_lieu_gia_dinh_chien_luoc.html" class="chapter-nav-next">
+          <span class="nav-label">Chương 9 &rarr;</span>
+          <span class="nav-title">Trị Liệu Gia Đình Chiến Lược (MRI, Milan, Washington)</span>
+        </a>
+        </nav>
+      </article>
+    </main>
+  </div>
+
+  <button class="btn-back-to-top" id="btn-back-to-top" title="Lên đầu trang">&uarr;</button>
+
+  <script src="../reader.js"></script>
+</body>
+</html>

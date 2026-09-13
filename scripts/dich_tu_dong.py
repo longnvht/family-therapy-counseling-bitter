@@ -55,6 +55,11 @@ GLOSSARY_REPLACEMENTS = [
     (r"\btái định hình\b", "tái đóng khung (reframing)"),
     (r"\bcâu hỏi kỳ diệu\b", "câu hỏi phép màu (miracle question)"),
     (r"\bCâu hỏi kỳ diệu\b", "Câu hỏi phép màu (miracle question)"),
+    # Tên riêng hay bị Google Translate dịch nhầm thành nghĩa đen khi đứng
+    # tách biệt trong trích dẫn tài liệu tham khảo (không có ngữ cảnh câu).
+    (r"[Cc]hâm biếm", "Satir"),
+    (r"\bCay đắng\b", "Bitter"),
+    (r"\bĐắng\b", "Bitter"),
 ]
 
 CHAPTER_METADATA = [
@@ -393,9 +398,16 @@ def _page_blocks_in_reading_order(page):
 
     page_width = page.rect.width
     mid = page_width / 2
-    left = sorted([b for b in blocks if b["bbox"][0] < mid], key=lambda b: b["bbox"][1])
-    right = sorted([b for b in blocks if b["bbox"][0] >= mid], key=lambda b: b["bbox"][1])
-    return left + right
+    left = [b for b in blocks if b["bbox"][0] < mid]
+    right = [b for b in blocks if b["bbox"][0] >= mid]
+    # Chỉ coi là bố cục 2 cột thật (như trang Tài liệu tham khảo) khi cả hai
+    # bên đều có nhiều khối. Nếu không, một nhãn lẻ ở góc phải (vd "CHAPTER 7"
+    # in sát mép phải đầu chương) sẽ bị đẩy sai vị trí trong thứ tự đọc.
+    if len(left) >= 3 and len(right) >= 3:
+        left = sorted(left, key=lambda b: b["bbox"][1])
+        right = sorted(right, key=lambda b: b["bbox"][1])
+        return left + right
+    return sorted(blocks, key=lambda b: (round(b["bbox"][1]), b["bbox"][0]))
 
 
 def _looks_like_real_heading(text):
@@ -484,8 +496,15 @@ def extract_chapter_content(doc, meta):
                 continue
 
             # Bỏ số trang / running header lặp lại (lọc theo VỊ TRÍ, không theo
-            # danh sách chuỗi cố định của sách khác).
-            if _is_running_header(stripped, bbox, page_height):
+            # danh sách chuỗi cố định của sách khác). Trừ nhãn "CHAPTER N" thật
+            # ở đầu chương - nó cũng nằm sát lề trên nên dễ bị lọc nhầm.
+            if not CHAPTER_LABEL_RE.match(stripped) and _is_running_header(stripped, bbox, page_height):
+                continue
+
+            # Bỏ chú thích ảnh/lề trang rất hẹp (vd credit ảnh chân dung tác giả
+            # xen giữa sơ đồ, dòng chữ dọc theo lề) - không phải nội dung chính,
+            # nếu để lẫn sẽ làm gãy mạch đoạn văn hoặc lời thoại ca lâm sàng.
+            if (bbox[2] - bbox[0]) < 70 and len(stripped) < 60:
                 continue
 
             text = clean_paragraph_text(raw)
@@ -582,7 +601,15 @@ def extract_chapter_content(doc, meta):
             # Nếu đoạn đang gộp dở kết thúc bằng ":" thì khối tiếp theo gần như
             # chắc chắn là bullet đầu tiên của một danh sách (dù ký tự đầu dòng
             # của nó không rơi vào dải Latin-1 đặc biệt - OCR không ổn định).
-            buf_ends_colon = bool(paragraph_buf) and paragraph_buf[-1].rstrip().endswith(':')
+            # Chỉ áp dụng khi phần trước dấu ":" là một CÂU đủ dài giới thiệu
+            # danh sách thật - tránh nhận nhầm nhãn người nói trong ca lâm sàng
+            # (vd "Satir:", "Jerry:") thành phần mở đầu bullet.
+            buf_ends_colon = (
+                bool(paragraph_buf)
+                and paragraph_buf[-1].rstrip().endswith(':')
+                and len(paragraph_buf[-1].rstrip()) >= 35
+                and ' ' in paragraph_buf[-1].strip()
+            )
             is_list_continuation = buf_ends_colon and len(text) < 200
             if is_bullet or is_num or is_list_continuation:
                 flush_paragraph()
